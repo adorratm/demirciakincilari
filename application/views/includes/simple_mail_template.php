@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div class="content">
-        <img src="<?= get_picture("settings_v", $settings->logo) ?>" width="250" style="filter:drop-shadow(1px 1px 1px black)">
+        <img src="<?= get_picture("settings_v", $settings->logo) ?>" width="250">
 		<h4 class="p-0 m-0"><?=$subject; ?></h4>
 		<p><?= $message ?></p>
 	</div>

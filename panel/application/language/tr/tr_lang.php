@@ -113,11 +113,9 @@ $lang['successMessageText'] = 'İletişim Formu Başarıyla Gönderildi. Gönder
 $lang['errorEmailMessageText'] = 'İletişim Formu E-Maili Gönderilirken Hata Oluştu. Lütfen Tekrar Deneyin.';
 $lang['services'] = 'Hizmetlerimiz';
 $lang['service_categories'] = 'Neler Yapıyoruz?';
-$lang['service'] = 'HİZMEt';
-$lang["selectDepartment"] = "Başvurmak İstediğiniz Departmanı Seçiniz";
-$lang["cv"] = "Özgeçmiş Dosyanız (PDF veya DOCX)";
+$lang['service'] = 'HİZMET';
 $lang["ourWorks"] = "Markalarımız";
-$lang["whyWe"] = "Neden {company_name}?";
+$lang["about"] = "Hakkımızda";
 $lang["company_name"] = "Firma Adı";
 // ROUTES
 $lang['routes_services'] = 'hizmetlerimiz';

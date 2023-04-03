@@ -1,201 +1,233 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
-<div class="page-wrapper">
-    <header class="main-header-two">
-        <div class="main-header-two__top">
-            <div class="main-header-two__top-wrapper">
-                <div class="main-header-two__top-inner">
-                    <div class="main-header-two__top-left">
-                        <ul class="list-unstyled main-header-two__contact-list">
-                            <li>
-                                <div class="icon">
-                                    <i class="icon-location"></i>
-                                </div>
-                                <div class="text">
-                                    <p>
-                                        <?php if (!empty(@json_decode($settings->address, TRUE)[0])) : ?>
-                                            <a rel="dofollow" title="<?= lang("address") ?>" href="<?= base_url(lang("routes_contact")) ?>"><i class="fa-solid fa-map-marker-alt"></i> <?= @json_decode($settings->address, TRUE)[0] ?></a>
-                                        <?php endif ?>
-                                    </p>
-                                </div>
+<!-- main header -->
+<header class="main-header">
+    <!-- header-top-one -->
+    <div class="header-top-one p_relative d-none d-xl-block">
+        <div class="auto-container">
+            <div class="top-inner clearfix p_relative">
+                <div class="shape p_absolute t_0" style="background-image: url(<?= asset_url("public/images/shape/shape-1.webp") ?>);"></div>
+                <div class="top-left pull-left">
+                    <ul class="social-links clearfix">
+                        <li class="p_relative d_iblock fs_16 float_left mr_25 lh_55"><?= lang("social") ?>:</li>
+                        <?php if (!empty($settings->facebook)) : ?>
+                            <li class="p_relative d_iblock fs_16 float_left mr_25 lh_55">
+                                <a class="p_relative d_iblock fs_16" rel="nofollow" href="<?= $settings->facebook ?>" title="Facebook" target="_blank">
+                                    <i aria-hidden="true" class="fa fa-facebook"></i>
+                                </a>
                             </li>
-                        </ul>
-                    </div>
-                    <div class="main-header-two__top-right">
-                        <div class="main-heaader-two__top-social-box">
-                            <div class="main-heaader-two__email-box">
-                                <div class="main-heaader-two__email-icon">
-                                    <span class="icon-email-mail"></span>
-                                </div>
-                                <div class="main-heaader-two__email-address">
-                                    <p>
-                                        <?php if (!empty($settings->email)) : ?>
-                                            <a rel="dofollow" title="Email" href="mailto:<?= $settings->email ?>"><i class="fa-solid fa-envelope-open"></i> <?= $settings->email ?></a>
-                                        <?php endif ?>
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="main-heaader-two__top-social-title"><?= lang("social") ?></p>
-                            <div class="main-header-two__top-social">
-                                <?php if (!empty($settings->facebook)) : ?>
-                                    <a class="facebook" rel="nofollow" href="<?= $settings->facebook ?>" title="Facebook" target="_blank">
-                                        <i aria-hidden="true" class="fa fa-facebook"></i>
-                                    </a>
+                        <?php endif ?>
+                        <?php if (!empty($settings->twitter)) : ?>
+                            <li class="p_relative d_iblock fs_16 float_left mr_25 lh_55">
+                                <a class="p_relative d_iblock fs_16" rel="nofollow" href="<?= $settings->twitter ?>" title="Twitter" target="_blank">
+                                    <i aria-hidden="true" class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                        <?php endif ?>
+                        <?php if (!empty($settings->instagram)) : ?>
+                            <li class="p_relative d_iblock fs_16 float_left mr_25 lh_55">
+                                <a class="p_relative d_iblock fs_16" rel="nofollow" href="<?= $settings->instagram ?>" title="Instagram" target="_blank">
+                                    <i aria-hidden="true" class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                        <?php endif ?>
+                        <?php if (!empty($settings->linkedin)) : ?>
+                            <li class="p_relative d_iblock fs_16 float_left mr_25 lh_55">
+                                <a class="p_relative d_iblock fs_16" rel="nofollow" href="<?= $settings->linkedin ?>" title="Linkedin" target="_blank">
+                                    <i aria-hidden="true" class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                        <?php endif ?>
+                        <?php if (!empty($settings->youtube)) : ?>
+                            <li class="p_relative d_iblock fs_16 float_left mr_25 lh_55">
+                                <a class="p_relative d_iblock fs_16" rel="nofollow" href="<?= $settings->youtube ?>" title="Youtube" target="_blank">
+                                    <i aria-hidden="true" class="fa fa-youtube"></i>
+                                </a>
+                            </li>
+                        <?php endif ?>
+                        <?php if (!empty($settings->medium)) : ?>
+                            <li class="p_relative d_iblock fs_16 float_left mr_25 lh_55">
+                                <a class="p_relative d_iblock fs_16" rel="nofollow" href="<?= $settings->medium ?>" title="Medium" target="_blank">
+                                    <i aria-hidden="true" class="fa fa-medium"></i>
+                                </a>
+                            </li>
+                        <?php endif ?>
+                        <?php if (!empty($settings->pinterest)) : ?>
+                            <a class="p_relative d_iblock fs_16" rel="nofollow" href="<?= $settings->pinterest ?>" title="Pinterest" target="_blank">
+                                <i aria-hidden="true" class="fa fa-pinterest"></i>
+                            </a>
+                        <?php endif ?>
+                    </ul>
+                </div>
+                <div class="top-right pull-right">
+                    <ul class="info clearfix">
+                        <li class="p_relative d_iblock float_left mr_60 lh_55 fs_16">
+                            <?php if (!empty(@json_decode($settings->address, TRUE)[0])) : ?>
+                                <p><a rel="dofollow" title="<?= lang("address") ?>" href="<?= base_url(lang("routes_contact")) ?>"><i class="fa-solid fa-map-marker-alt"></i> <?= @json_decode($settings->address, TRUE)[0] ?></a></p>
+                            <?php endif ?>
+                        </li>
+                        <li class="p_relative d_iblock float_left mr_60 lh_55 fs_16">
+                            <p>
+                                <?php if (!empty(@json_decode($settings->phone, TRUE)[0])) : ?>
+                                    <a rel="dofollow" title="<?= lang("phone") ?>" href="tel:<?= @json_decode($settings->phone, TRUE)[0] ?>"><i class="fa fa-phone-volume"></i> <?= @json_decode($settings->phone, TRUE)[0] ?></a>
                                 <?php endif ?>
-                                <?php if (!empty($settings->twitter)) : ?>
-                                    <a class="twitter" rel="nofollow" href="<?= $settings->twitter ?>" title="Twitter" target="_blank">
-                                        <i aria-hidden="true" class="fa fa-twitter"></i>
-                                    </a>
+                            </p>
+                        </li>
+                        <li class="p_relative d_iblock float_left lh_55 fs_16">
+                            <p>
+                                <?php if (!empty($settings->email)) : ?>
+                                    <a rel="dofollow" title="Email" href="mailto:<?= $settings->email ?>"><i class="fa-solid fa-envelope-open"></i> <?= $settings->email ?></a>
                                 <?php endif ?>
-                                <?php if (!empty($settings->instagram)) : ?>
-                                    <a class="instagram" rel="nofollow" href="<?= $settings->instagram ?>" title="Instagram" target="_blank">
-                                        <i aria-hidden="true" class="fa fa-instagram"></i>
-                                    </a>
-                                <?php endif ?>
-                                <?php if (!empty($settings->linkedin)) : ?>
-                                    <a class="linkedin" rel="nofollow" href="<?= $settings->linkedin ?>" title="Linkedin" target="_blank">
-                                        <i aria-hidden="true" class="fa fa-linkedin"></i>
-                                    </a>
-                                <?php endif ?>
-                                <?php if (!empty($settings->youtube)) : ?>
-                                    <a class="youtube" rel="nofollow" href="<?= $settings->youtube ?>" title="Youtube" target="_blank">
-                                        <i aria-hidden="true" class="fa fa-youtube"></i>
-                                    </a>
-                                <?php endif ?>
-                                <?php if (!empty($settings->medium)) : ?>
-                                    <a class="medium" rel="nofollow" href="<?= $settings->medium ?>" title="Medium" target="_blank">
-                                        <i aria-hidden="true" class="fa fa-medium"></i>
-                                    </a>
-                                <?php endif ?>
-                                <?php if (!empty($settings->pinterest)) : ?>
-                                    <a class="pinterest" rel="nofollow" href="<?= $settings->pinterest ?>" title="Pinterest" target="_blank">
-                                        <i aria-hidden="true" class="fa fa-pinterest"></i>
-                                    </a>
-                                <?php endif ?>
-                            </div>
-                        </div>
-                    </div>
+                            </p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <nav class="main-menu main-menu-two">
-            <div class="main-menu-two__wrapper">
-                <div class="main-menu-two__wrapper-inner">
-                    <div class="main-menu-two__left">
-                        <div class="main-menu-two__logo">
-                            <a rel="dofollow" href="<?= base_url() ?>" title="<?= $settings->company_name ?>">
-                                <picture>
-                                    <img style="filter: drop-shadow(1px 1px 1px black);" width="220" height="58" data-src="<?= get_picture("settings_v", $settings->logo) ?>" alt="<?= $settings->company_name ?>" class="lazyload img-fluid">
-                                </picture>
-                            </a>
-                        </div>
-                        <div class="main-menu-two__main-menu-box">
-                            <a rel="dofollow" href="<?= base_url() ?>" title="<?= $settings->company_name ?>" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+    </div>
+    <!-- header-lower -->
+    <div class="header-lower">
+        <div class="container-fluid px-3 px-xl-5">
+            <div class="outer-box">
+                <div class="logo-box">
+                    <figure class="logo">
+                        <a rel="dofollow" href="<?= base_url() ?>" title="<?= $settings->company_name ?>">
+                            <picture>
+                                <img width="150" height="150" data-src="<?= get_picture("settings_v", $settings->logo) ?>" alt="<?= $settings->company_name ?>" class="lazyload img-fluid">
+                            </picture>
+                        </a>
+                    </figure>
+                </div>
+                <div class="menu-area clearfix">
+                    <!--Mobile Navigation Toggler-->
+                    <div class="mobile-nav-toggler">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <nav class="main-menu navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                             <?= $menus ?>
                         </div>
-                    </div>
-                    <div class="main-menu-two__right">
-                        <div class="main-menu-two__call-search-btn">
-                            <div class="main-menu-two__call">
-                                <div class="main-menu-two__call-icon">
-                                    <span class="fa fa-phone-volume"></span>
-                                </div>
-                                <div class="main-menu-two__call-content">
-                                    <p><?= lang("weAreJustAPhoneCallAway") ?></p>
-                                    <h4>
-                                        <?php if (!empty(@json_decode($settings->phone, TRUE)[0])) : ?>
-                                            <a rel="dofollow" title="<?= lang("phone") ?>" href="tel:<?= @json_decode($settings->phone, TRUE)[0] ?>"><?= @json_decode($settings->phone, TRUE)[0] ?></a>
-                                        <?php endif ?>
-                                    </h4>
-                                </div>
-                            </div>
-                            <div class="main-menu-two__btn-box ms-2">
-                                <a rel="dofollow" title="<?= lang("contact") ?>" href="<?= base_url(lang("routes_contact")) ?>" class="main-menu-two__btn"><?= lang("contact") ?></a>
-                            </div>
-                        </div>
-                    </div>
+                    </nav>
+                </div>
+                <div class="btn-box">
+                    <a rel="dofollow" title="<?= lang("contact") ?>" href="<?= base_url(lang("routes_contact")) ?>" class="theme-btn theme-btn-one"><?= lang("contact") ?><i class="fa fa-arrow-right"></i></a>
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <div class="stricky-header stricked-menu main-menu main-menu-two d-none">
-        <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
-    </div><!-- /.stricky-header -->
-
-    <div class="mobile-nav__wrapper">
-        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
-        <!-- /.mobile-nav__overlay -->
-        <div class="mobile-nav__content">
-            <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
-
-            <div class="logo-box">
-                <a rel="dofollow" href="<?= base_url() ?>" title="<?= $settings->company_name ?>">
-                    <picture>
-                        <img width="200" height="90" data-src="<?= get_picture("settings_v", $settings->logo) ?>" alt="<?= $settings->company_name ?>" class="lazyload img-fluid">
-                    </picture>
-                </a>
-            </div>
-            <!-- /.logo-box -->
-            <div class="mobile-nav__container"></div>
-            <!-- /.mobile-nav__container -->
-
-            <ul class="mobile-nav__contact list-unstyled">
-                <li>
-                    <i class="fa fa-envelope"></i>
-                    <?php if (!empty($settings->email)) : ?>
-                        <a rel="dofollow" title="Email" href="mailto:<?= $settings->email ?>"><?= $settings->email ?></a>
-                    <?php endif ?>
-                </li>
-                <li>
-                    <i class="fa fa-phone-alt"></i>
-                    <?php if (!empty(@json_decode($settings->phone, TRUE)[0])) : ?>
-                        <a rel="dofollow" title="<?= lang("phone") ?>" href="tel:<?= @json_decode($settings->phone, TRUE)[0] ?>"><?= @json_decode($settings->phone, TRUE)[0] ?></a>
-                    <?php endif ?>
-                </li>
-            </ul><!-- /.mobile-nav__contact -->
-            <div class="mobile-nav__top">
-                <div class="mobile-nav__social">
-                    <?php if (!empty($settings->facebook)) : ?>
-                        <a class="facebook" rel="nofollow" href="<?= $settings->facebook ?>" title="Facebook" target="_blank">
-                            <i aria-hidden="true" class="fa fa-facebook"></i>
-                        </a>
-                    <?php endif ?>
-                    <?php if (!empty($settings->twitter)) : ?>
-                        <a class="twitter" rel="nofollow" href="<?= $settings->twitter ?>" title="Twitter" target="_blank">
-                            <i aria-hidden="true" class="fa fa-twitter"></i>
-                        </a>
-                    <?php endif ?>
-                    <?php if (!empty($settings->instagram)) : ?>
-                        <a class="instagram" rel="nofollow" href="<?= $settings->instagram ?>" title="Instagram" target="_blank">
-                            <i aria-hidden="true" class="fa fa-instagram"></i>
-                        </a>
-                    <?php endif ?>
-                    <?php if (!empty($settings->linkedin)) : ?>
-                        <a class="linkedin" rel="nofollow" href="<?= $settings->linkedin ?>" title="Linkedin" target="_blank">
-                            <i aria-hidden="true" class="fa fa-linkedin"></i>
-                        </a>
-                    <?php endif ?>
-                    <?php if (!empty($settings->youtube)) : ?>
-                        <a class="youtube" rel="nofollow" href="<?= $settings->youtube ?>" title="Youtube" target="_blank">
-                            <i aria-hidden="true" class="fa fa-youtube"></i>
-                        </a>
-                    <?php endif ?>
-                    <?php if (!empty($settings->medium)) : ?>
-                        <a class="medium" rel="nofollow" href="<?= $settings->medium ?>" title="Medium" target="_blank">
-                            <i aria-hidden="true" class="fa fa-medium"></i>
-                        </a>
-                    <?php endif ?>
-                    <?php if (!empty($settings->pinterest)) : ?>
-                        <a class="pinterest" rel="nofollow" href="<?= $settings->pinterest ?>" title="Pinterest" target="_blank">
-                            <i aria-hidden="true" class="fa fa-pinterest"></i>
-                        </a>
-                    <?php endif ?>
-                </div><!-- /.mobile-nav__social -->
-            </div><!-- /.mobile-nav__top -->
-
-
-
         </div>
-        <!-- /.mobile-nav__content -->
     </div>
-    <!-- /.mobile-nav__wrapper -->
+
+    <!--sticky Header-->
+    <div class="sticky-header">
+        <div class="container-fluid px-3 px-xl-5">
+            <div class="outer-box">
+                <div class="logo-box">
+                    <figure class="logo">
+                        <a rel="dofollow" href="<?= base_url() ?>" title="<?= $settings->company_name ?>">
+                            <picture>
+                                <img width="150" height="150" data-src="<?= get_picture("settings_v", $settings->logo) ?>" alt="<?= $settings->company_name ?>" class="lazyload img-fluid">
+                            </picture>
+                        </a>
+                    </figure>
+                </div>
+                <div class="menu-area clearfix">
+                    <nav class="main-menu clearfix">
+                        <!--Keep This Empty / Menu will come through Javascript-->
+                    </nav>
+                </div>
+                <div class="btn-box">
+                    <a rel="dofollow" title="<?= lang("contact") ?>" href="<?= base_url(lang("routes_contact")) ?>" class="theme-btn theme-btn-one"><?= lang("contact") ?><i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- main-header end -->
+
+<!-- Mobile Menu  -->
+<div class="mobile-menu">
+    <div class="menu-backdrop"></div>
+    <div class="close-btn"><i class="fas fa-times"></i></div>
+
+    <nav class="menu-box">
+        <div class="nav-logo">
+            <a rel="dofollow" href="<?= base_url() ?>" title="<?= $settings->company_name ?>">
+                <picture>
+                    <img width="150" height="150" data-src="<?= get_picture("settings_v", $settings->logo) ?>" alt="<?= $settings->company_name ?>" class="lazyload img-fluid">
+                </picture>
+            </a>
+        </div>
+        <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+        <div class="contact-info">
+            <h4><?= lang("contact") ?></h4>
+            <ul>
+                <li>
+                    <?php if (!empty(@json_decode($settings->address, TRUE)[0])) : ?>
+                        <p><a rel="dofollow" title="<?= lang("address") ?>" href="<?= base_url(lang("routes_contact")) ?>"><i class="fa-solid fa-map-marker-alt"></i> <?= @json_decode($settings->address, TRUE)[0] ?></a></p>
+                    <?php endif ?>
+                </li>
+                <li>
+                    <?php if (!empty(@json_decode($settings->phone, TRUE)[0])) : ?>
+                        <a rel="dofollow" title="<?= lang("phone") ?>" href="tel:<?= @json_decode($settings->phone, TRUE)[0] ?>"><i class="fa fa-phone-volume"></i> <?= @json_decode($settings->phone, TRUE)[0] ?></a>
+                    <?php endif ?>
+                </li>
+                <li>
+                    <?php if (!empty($settings->email)) : ?>
+                        <a rel="dofollow" title="Email" href="mailto:<?= $settings->email ?>"><i class="fa-solid fa-envelope-open"></i> <?= $settings->email ?></a>
+                    <?php endif ?>
+                </li>
+            </ul>
+        </div>
+        <div class="social-links">
+            <ul class="clearfix">
+                <?php if (!empty($settings->facebook)) : ?>
+                    <li>
+                        <a rel="nofollow" href="<?= $settings->facebook ?>" title="Facebook" target="_blank">
+                            <span aria-hidden="true" class="fa fa-facebook"></span>
+                        </a>
+                    </li>
+                <?php endif ?>
+                <?php if (!empty($settings->twitter)) : ?>
+                    <li>
+                        <a rel="nofollow" href="<?= $settings->twitter ?>" title="Twitter" target="_blank">
+                            <span aria-hidden="true" class="fa fa-twitter"></span>
+                        </a>
+                    </li>
+                <?php endif ?>
+                <?php if (!empty($settings->instagram)) : ?>
+                    <li>
+                        <a rel="nofollow" href="<?= $settings->instagram ?>" title="Instagram" target="_blank">
+                            <span aria-hidden="true" class="fa fa-instagram"></span>
+                        </a>
+                    </li>
+                <?php endif ?>
+                <?php if (!empty($settings->linkedin)) : ?>
+                    <li>
+                        <a rel="nofollow" href="<?= $settings->linkedin ?>" title="Linkedin" target="_blank">
+                            <span aria-hidden="true" class="fa fa-linkedin"></span>
+                        </a>
+                    </li>
+                <?php endif ?>
+                <?php if (!empty($settings->youtube)) : ?>
+                    <li>
+                        <a rel="nofollow" href="<?= $settings->youtube ?>" title="Youtube" target="_blank">
+                            <span aria-hidden="true" class="fa fa-youtube"></span>
+                        </a>
+                    </li>
+                <?php endif ?>
+                <?php if (!empty($settings->medium)) : ?>
+                    <li>
+                        <a rel="nofollow" href="<?= $settings->medium ?>" title="Medium" target="_blank">
+                            <span aria-hidden="true" class="fa fa-medium"></span>
+                        </a>
+                    </li>
+                <?php endif ?>
+                <?php if (!empty($settings->pinterest)) : ?>
+                    <li>
+                        <a rel="nofollow" href="<?= $settings->pinterest ?>" title="Pinterest" target="_blank">
+                            <span aria-hidden="true" class="fa fa-pinterest"></span>
+                        </a>
+                    </li>
+                <?php endif ?>
+            </ul>
+        </div>
+    </nav>
+</div><!-- End Mobile Menu -->

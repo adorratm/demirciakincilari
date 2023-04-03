@@ -4,36 +4,32 @@
 	color: #f22450;
 }
 
-.handle-preloader{
-	background: -webkit-linear-gradient(0deg, #c335dc, #ff3c56 100%);
-}
-
 .handle-preloader.home-2{
 	background: -webkit-linear-gradient(0deg, #41a0ea, #f18e95 75%);
 }
 
 .header-top-one .social-links li a:hover{
-  background: -webkit-linear-gradient(45deg, #bd1ec7, #f92542 100%);
+  background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .header-top-one .info li i{
-	background: -webkit-linear-gradient(45deg, #bd1ec7, #f92542 100%);
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .header-top-one .info li p a:hover{
-	background: -webkit-linear-gradient(45deg, #bd1ec7, #f92542 100%);
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .header-top-one .info li.search-box-outer .search-box-btn:hover i{
-	background: -webkit-linear-gradient(45deg, #bd1ec7, #f92542 100%);
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .main-header .search-panel .search-btn{
-	background: -webkit-linear-gradient(45deg, #bd1ec7, #f92542 100%);
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .theme-btn.btn-one{
-	background: -webkit-linear-gradient(0deg, #bd1ec7, #f92542 100%);
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .main-menu .navigation > li.current > a,
@@ -63,7 +59,7 @@
 }
 
 .list-style-one li:before{
-	background: -webkit-linear-gradient(45deg, #bd1ec7, #f92542 100%);
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .service-block-one .inner-box h4 a:hover{
@@ -79,7 +75,7 @@
 }
 
 .feature-block-one .inner-box .icon-box:before{
-	background: -webkit-linear-gradient(45deg, #bd1ec7, #f92542 100%);
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .content_block_two .content-box .inner-box .single-item h4 a:hover{
@@ -87,11 +83,11 @@
 }
 
 .processing-block-one .inner-box .icon-box:before{
-	background: -webkit-linear-gradient(45deg, #bd1ec7, #f92542 100%);
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .processing-block-one .inner-box .icon-box .count-box:before{
-	background: -webkit-linear-gradient(45deg, #bd1ec7, #f92542 100%);
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .image_block_three .image-box .text:before{
@@ -99,16 +95,16 @@
 }
 
 .progress-box .bar-inner{
-	background: -webkit-linear-gradient(0deg, #bd1ec7, #f92542 100%);
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .dots-style-one .owl-dots .owl-dot.active span,
 .dots-style-one .owl-dots .owl-dot span:hover{
-	background: -webkit-linear-gradient(0deg, #bd1ec7, #f92542 100%);
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .pricing-one .tab-btn-box .tab-btns li:before{
-	background: -webkit-linear-gradient(0deg, #bd1ec7, #f92542 100%);
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .pricing-block-one .pricing-table .table-header h6{
@@ -2489,7 +2485,7 @@
 }
 
 .main-header.service-page-1  .search-panel .search-btn{
-	background: -webkit-linear-gradient(45deg, #bd1ec7, #f92542 100%);
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .service-block-14 .inner-box h4 a:hover{
@@ -2501,11 +2497,11 @@
 }
 
 .faq-two.service-page-1 .image_block_one .image-box .video-inner .video-btn a{
-	background: -webkit-linear-gradient(45deg, #bd1ec7, #f92542 100%);
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .pricing-block-one .pricing-table .table-content-two .feature-list li:before{
-	background: -webkit-linear-gradient(45deg, #bd1ec7, #f92542 100%);
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .service-19 .tab-btns li.active-btn h6,
@@ -3498,7 +3494,7 @@
 }
 
 .header-top-one .info li.search-box-outer:hover i{
-  background: -webkit-linear-gradient(45deg, #bd1ec7, #f92542 100%);
+  background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 
@@ -3514,13 +3510,13 @@
 }
 
 .theme-btn-one {
-  background: -webkit-linear-gradient(0deg, #bd1ec7, #f92542 100%);
+  background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .theme-btn-one:before {
-  background: -webkit-linear-gradient(0deg, #f92542, #bd1ec7 100%);
+  background: -webkit-linear-gradient(0deg, #000000, #fc2a1e 100%);
 }
 
 .theme-btn-three{
-	background: -webkit-linear-gradient(0deg, #bd1ec7, #f92542 100%);
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }

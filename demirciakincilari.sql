@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 30, 2023 at 03:57 PM
+-- Generation Time: Apr 03, 2023 at 03:45 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -772,18 +772,49 @@ CREATE TABLE `menus` (
 
 INSERT INTO `menus` (`id`, `page_id`, `top_id`, `position`, `target`, `title`, `url`, `lang`, `rank`, `isActive`, `createdAt`, `updatedAt`, `showCategories`, `showSectors`) VALUES
 (1, 0, 0, 'HEADER', '_self', 'Anasayfa', '/', 'tr', 1, 1, '2021-12-28 14:17:07', '2021-12-28 14:51:47', 0, 0),
-(2, 1, 0, 'HEADER', '_self', 'Biz Kimiz?', NULL, 'tr', 2, 1, '2022-01-14 12:40:58', '2023-03-16 20:17:23', 0, 0),
-(3, 0, 0, 'HEADER', '_self', 'Neler Yapıyoruz?', '/hizmetlerimiz', 'tr', 3, 1, '2022-11-14 14:15:06', '2023-03-20 13:38:45', 1, 0),
-(4, 0, 0, 'HEADER', '_self', 'Markalarımız', '/markalarimiz', 'tr', 4, 1, '2023-03-20 11:06:16', '2023-03-24 13:32:15', 0, 0),
-(5, 2, 0, 'HEADER', '_self', 'Kariyer', NULL, 'tr', 5, 1, '2023-03-16 20:18:27', '2023-03-20 13:40:11', 0, 0),
-(6, 0, 0, 'HEADER', '_self', 'Online Ödeme', '/online-odeme', 'tr', 6, 1, '2023-03-20 20:49:37', '2023-03-20 21:06:58', 0, 0),
-(7, 0, 0, 'HEADER', '_self', 'İletişim', '/iletisim', 'tr', 7, 1, '2022-01-03 07:52:56', '2023-03-20 21:07:27', 0, 0),
-(8, 1, 0, 'FOOTER', '_self', 'Biz Kimiz?', NULL, 'tr', 8, 1, '2022-03-05 11:46:13', '2023-03-20 21:07:33', 0, 0),
-(9, 0, 0, 'FOOTER', '_self', 'Neler Yapıyoruz?', '/hizmetlerimiz', 'tr', 9, 1, '2023-03-20 12:46:11', '2023-03-20 21:07:35', 0, 0),
-(10, 0, 0, 'FOOTER', '_self', 'Markalarımız', '/markalarimiz', 'tr', 10, 1, '2023-03-20 12:49:55', '2023-03-24 13:32:25', 0, 0),
-(11, 5, 0, 'FOOTER', '_self', 'Kariyer', NULL, 'tr', 11, 1, '2023-03-20 12:50:09', '2023-03-20 21:07:42', 0, 0),
-(12, 0, 0, 'FOOTER', '_self', 'İletişim', '/iletisim', 'tr', 12, 1, '2022-03-05 14:31:32', '2023-03-20 21:07:44', 0, 0),
-(13, 3, 0, 'FOOTER', '_self', 'KVKK', NULL, 'tr', 13, 1, '2022-03-05 22:02:08', '2023-03-27 09:30:11', 0, 0);
+(2, 1, 0, 'HEADER', '_self', 'Kurumsal', NULL, 'tr', 2, 1, '2022-01-14 12:40:58', '2023-04-03 08:17:56', 0, 0),
+(3, 1, 2, 'HEADER', '_self', 'Derneğimiz Hakkında', NULL, 'tr', 3, 1, '2023-04-03 08:18:20', '2023-04-03 08:22:22', 0, 0),
+(4, 1, 2, 'HEADER', '_self', 'Kuruluş Amacımız', NULL, 'tr', 4, 1, '2023-04-03 08:18:37', '2023-04-03 08:22:23', 0, 0),
+(5, 1, 2, 'HEADER', '_self', 'Tüzüğümüz', NULL, 'tr', 5, 1, '2023-04-03 08:18:52', '2023-04-03 08:22:24', 0, 0),
+(6, 1, 2, 'HEADER', '_self', 'Yönetim Kurulumuz', NULL, 'tr', 6, 1, '2023-04-03 08:19:08', '2023-04-03 08:22:36', 0, 0),
+(7, 1, 2, 'HEADER', '_self', 'Denetleme Kurulumuz', NULL, 'tr', 7, 1, '2023-04-03 08:19:28', '2023-04-03 08:22:41', 0, 0),
+(8, 1, 2, 'HEADER', '_self', 'Destekçilerimiz', NULL, 'tr', 8, 1, '2023-04-03 08:19:45', '2023-04-03 08:22:47', 0, 0),
+(9, 1, 0, 'HEADER', '_self', 'Demirci Akıncıları', NULL, 'tr', 9, 1, '2023-04-03 08:47:17', '2023-04-03 08:47:40', 0, 0),
+(10, 1, 9, 'HEADER', '_self', 'Demirci Akıncıları Hakkında', NULL, 'tr', 10, 1, '2023-04-03 08:48:08', '2023-04-03 08:50:18', 0, 0),
+(11, 1, 9, 'HEADER', '_self', 'Tarihi Şahsiyetlerimiz', NULL, 'tr', 11, 1, '2023-04-03 08:48:27', '2023-04-03 08:50:16', 0, 0),
+(12, 1, 9, 'HEADER', '_self', 'Şiirlerle Demirci Akıncıları', NULL, 'tr', 12, 1, '2023-04-03 08:48:41', '2023-04-03 08:49:36', 0, 0),
+(13, 1, 9, 'HEADER', '_self', 'Türkülerle Demirci Akıncıları', NULL, 'tr', 13, 1, '2023-04-03 08:51:27', '2023-04-03 08:51:55', 0, 0),
+(14, 1, 0, 'HEADER', '_self', 'Şehitlerimiz ve Gazilerimiz', NULL, 'tr', 14, 1, '2023-04-03 08:52:30', '2023-04-03 08:52:42', 0, 0),
+(15, 1, 14, 'HEADER', '_self', 'I. Dünya Savaşı (Çanakkale ve Diğerleri)', NULL, 'tr', 15, 1, '2023-04-03 08:53:17', '2023-04-03 08:54:33', 0, 0),
+(16, 1, 14, 'HEADER', '_self', 'Milli Mücadele', NULL, 'tr', 16, 1, '2023-04-03 08:53:32', '2023-04-03 08:54:31', 0, 0),
+(17, 1, 14, 'HEADER', '_self', 'Son Dönem', NULL, 'tr', 17, 1, '2023-04-03 08:53:45', '2023-04-03 08:54:28', 0, 0),
+(18, 1, 14, 'HEADER', '_self', 'İstiklal Madalyası Sahipleri', NULL, 'tr', 18, 1, '2023-04-03 08:54:03', '2023-04-03 08:54:24', 0, 0),
+(19, 1, 0, 'HEADER', '_self', 'Faaliyetlerimiz', NULL, 'tr', 19, 1, '2023-04-03 09:42:51', '2023-04-03 09:43:05', 0, 0),
+(20, 1, 19, 'HEADER', '_self', 'Geçmiş Faaliyetlerimiz', NULL, 'tr', 20, 1, '2023-04-03 09:43:30', '2023-04-03 09:44:05', 0, 0),
+(21, 1, 19, 'HEADER', '_self', 'Planlanan Faaliyetlerimiz', NULL, 'tr', 21, 1, '2023-04-03 09:43:42', '2023-04-03 09:44:02', 0, 0),
+(22, 1, 0, 'HEADER', '_self', 'Medya Arşivi', NULL, 'tr', 22, 1, '2023-04-03 09:49:20', '2023-04-03 09:49:31', 0, 0),
+(23, 1, 22, 'HEADER', '_self', 'Makaleler', NULL, 'tr', 23, 1, '2023-04-03 10:29:37', '2023-04-03 10:31:33', 0, 0),
+(24, 1, 22, 'HEADER', '_self', 'Tarihi Yerler', NULL, 'tr', 24, 1, '2023-04-03 10:29:57', '2023-04-03 10:31:31', 0, 0),
+(25, 1, 22, 'HEADER', '_self', 'Önemli Kişiler', NULL, 'tr', 25, 1, '2023-04-03 10:30:13', '2023-04-03 10:31:30', 0, 0),
+(26, 1, 22, 'HEADER', '_self', 'Videolar', NULL, 'tr', 26, 1, '2023-04-03 10:30:23', '2023-04-03 10:31:28', 0, 0),
+(27, 1, 22, 'HEADER', '_self', 'Fotoğraflar', NULL, 'tr', 27, 1, '2023-04-03 10:30:36', '2023-04-03 10:31:26', 0, 0),
+(28, 1, 22, 'HEADER', '_self', 'Kitap Özetleri', NULL, 'tr', 28, 1, '2023-04-03 10:30:48', '2023-04-03 10:31:23', 0, 0),
+(29, 1, 0, 'HEADER', '_self', 'Tarihi Gezi Rotaları', NULL, 'tr', 29, 1, '2023-04-03 10:32:40', '2023-04-03 10:32:54', 0, 0),
+(30, 1, 29, 'HEADER', '_self', 'Demirci Merkez', NULL, 'tr', 30, 1, '2023-04-03 11:26:51', '2023-04-03 11:28:43', 0, 0),
+(31, 1, 29, 'HEADER', '_self', 'Akıncılar Yolu', NULL, 'tr', 31, 1, '2023-04-03 11:27:08', '2023-04-03 11:28:41', 0, 0),
+(32, 1, 29, 'HEADER', '_self', 'Sarıçayır', NULL, 'tr', 32, 1, '2023-04-03 11:27:19', '2023-04-03 11:28:39', 0, 0),
+(33, 1, 29, 'HEADER', '_self', 'Sındırgı', NULL, 'tr', 33, 1, '2023-04-03 11:27:30', '2023-04-03 11:28:37', 0, 0),
+(34, 1, 29, 'HEADER', '_self', 'Selendi', NULL, 'tr', 34, 1, '2023-04-03 11:27:43', '2023-04-03 11:28:34', 0, 0),
+(35, 1, 0, 'HEADER', '_self', 'Demirci Hakkında', NULL, 'tr', 35, 1, '2023-04-03 11:29:23', '2023-04-03 11:29:34', 0, 0),
+(36, 1, 35, 'HEADER', '_self', 'Demirci Tarihi', NULL, 'tr', 36, 1, '2023-04-03 11:29:49', '2023-04-03 11:31:33', 0, 0),
+(37, 1, 35, 'HEADER', '_self', 'Turistik ve Tarihi Yerler', NULL, 'tr', 37, 1, '2023-04-03 11:30:06', '2023-04-03 11:31:30', 0, 0),
+(38, 1, 35, 'HEADER', '_self', 'Mesire Alanları', NULL, 'tr', 38, 1, '2023-04-03 11:30:17', '2023-04-03 11:31:26', 0, 0),
+(39, 1, 35, 'HEADER', '_self', 'İlçemizden Yetişenler', NULL, 'tr', 39, 1, '2023-04-03 11:30:29', '2023-04-03 11:31:23', 0, 0),
+(40, 1, 35, 'HEADER', '_self', 'Demirciden Fotoğraflar', NULL, 'tr', 40, 1, '2023-04-03 11:30:46', '2023-04-03 11:31:20', 0, 0),
+(41, 0, 0, 'HEADER', '_self', 'İletişim', '/iletisim', 'tr', 41, 1, '2022-01-03 07:52:56', '2023-04-03 11:31:17', 0, 0),
+(304, 1, 0, 'FOOTER', '_self', 'Biz Kimiz?', NULL, 'tr', 304, 1, '2022-03-05 11:46:13', '2023-04-03 08:49:53', 0, 0),
+(308, 0, 0, 'FOOTER', '_self', 'İletişim', '/iletisim', 'tr', 308, 1, '2022-03-05 14:31:32', '2023-04-03 08:50:07', 0, 0),
+(309, 3, 0, 'FOOTER', '_self', 'KVKK', NULL, 'tr', 309, 1, '2022-03-05 22:02:08', '2023-04-03 08:50:10', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1440,7 +1471,7 @@ ALTER TABLE `linguo_language_strings`
 -- AUTO_INCREMENT for table `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=342;
 
 --
 -- AUTO_INCREMENT for table `our_works`

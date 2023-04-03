@@ -71,19 +71,13 @@
     <link type="text/css" href="<?= asset_url("public/vendors/animate/custom-animate.css") ?>" rel="stylesheet">
     <link type="text/css" href="<?= asset_url("public/css/all.min.css") ?>" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link type="text/css" href="<?= asset_url("public/css/v4-shims.min.css") ?>" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link type="text/css" href="<?= asset_url("public/vendors/jarallax/jarallax.css") ?>" rel="stylesheet">
-    <link type="text/css" href="<?= asset_url("public/vendors/nouislider/nouislider.min.css") ?>" rel="stylesheet">
-    <link type="text/css" href="<?= asset_url("public/vendors/nouislider/nouislider.pips.css") ?>" rel="stylesheet">
-    <link type="text/css" href="<?= asset_url("public/vendors/swiper/swiper.min.css") ?>" rel="stylesheet">
-    <link type="text/css" href="<?= asset_url("public/vendors/tiny-slider/tiny-slider.min.css") ?>" rel="stylesheet">
-    <link type="text/css" href="<?= asset_url("public/vendors/owl-carousel/owl.carousel.min.css") ?>" rel="stylesheet">
-    <link type="text/css" href="<?= asset_url("public/vendors/owl-carousel/owl.theme.default.min.css") ?>" rel="stylesheet">
-    <link type="text/css" href="<?= asset_url("public/vendors/bxslider/jquery.bxslider.css") ?>" rel="stylesheet">
-    <link type="text/css" href="<?= asset_url("public/vendors/bootstrap-select/css/bootstrap-select.min.css") ?>" rel="stylesheet">
-    <link type="text/css" href="<?= asset_url("public/vendors/vegas/vegas.min.css") ?>" rel="stylesheet">
-    <link type="text/css" href="<?= asset_url("public/vendors/jquery-ui/jquery-ui.css") ?>" rel="stylesheet">
-    <link type="text/css" href="<?= asset_url("public/css/bcorz.css") ?>" rel="stylesheet">
-    <link type="text/css" href="<?= asset_url("public/css/bcorz-responsive.css") ?>" rel="stylesheet">
+    <link type="text/css" href="<?= asset_url("public/vendors/css/owl.css") ?>" rel="stylesheet">
+    <link type="text/css" href="<?= asset_url("public/vendors/css/animate.css") ?>" rel="stylesheet">
+    <link type="text/css" href="<?= asset_url("public/vendors/css/color.css") ?>" rel="stylesheet">
+    <link type="text/css" href="<?= asset_url("public/vendors/css/global.css") ?>" rel="stylesheet">
+    <link type="text/css" href="<?= asset_url("public/vendors/css/elpath.css") ?>" rel="stylesheet">
+    <link type="text/css" href="<?= asset_url("public/vendors/css/style.css") ?>" rel="stylesheet">
+    <link type="text/css" href="<?= asset_url("public/vendors/css/responsive.css") ?>" rel="stylesheet">
     <link type="text/css" href="<?= asset_url("public/css/lightgallery.min.css") ?>" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link type="text/css" href="<?= asset_url("public/css/iziModal.min.css") ?>" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <style>
@@ -112,14 +106,15 @@
             box-shadow: -1px 1px 5px 0 rgb(84 84 84 / 35%)
         }
 
-        .fa-instagram.color{
+        .fa-instagram.color {
             color: #c83085;
         }
 
-        .fa-linkedin.color{
+        .fa-linkedin.color {
             color: #0d6efd;
         }
-        .fa-facebook.color{
+
+        .fa-facebook.color {
             color: #0d6efd;
         }
 
@@ -190,7 +185,7 @@
             perspective: 1000px;
         }
 
-        .fixed-linkedin .dropdown-item:focus{
+        .fixed-linkedin .dropdown-item:focus {
             background-color: var(--bs-dropdown-link-hover-bg);
             color: var(--bs-dropdown-link-hover-color);
         }
@@ -230,9 +225,10 @@
             -webkit-transition: all ease 750ms;
             min-height: 250px;
             max-height: 250px;
-            object-fit:cover;
+            object-fit: cover;
         }
-         .fixed-linkedin.dropstart .dropdown-toggle::before{
+
+        .fixed-linkedin.dropstart .dropdown-toggle::before {
             display: none;
         }
     </style>
@@ -249,12 +245,26 @@
 
 </head>
 
-<body class="custom-cursor">
+<body>
+    <div class="boxed_wrapper">
 
-    <div class="custom-cursor__cursor"></div>
-    <div class="custom-cursor__cursor-two"></div>
 
-    <div class="preloader">
-        <div class="preloader__image" style="background-image: url(<?= get_picture("settings_v", $settings->logo) ?>);"></div>
-    </div>
-    <!-- /.preloader -->
+        <!-- mouse-pointer -->
+        <div class="mouse-pointer" id="mouse-pointer">
+            <div class="icon"><i class="far fa-angle-left"></i><i class="far fa-angle-right"></i></div>
+        </div>
+        <!-- mouse-pointer end -->
+
+
+        <!-- preloader -->
+        <div class="loader-wrap">
+            <div class="preloader" >
+                <div class="preloader-close">x</div>
+                <div id="handle-preloader" class="handle-preloader bg-light">
+                    <div class="animation-preloader">
+                        <img loading="lazy" width="220" class="lazyload img-fluid" data-src="<?= get_picture("settings_v", $settings->logo) ?>" alt="<?= $settings->company_name ?>">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- preloader end -->

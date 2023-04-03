@@ -1,4 +1,136 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
+<!-- footer-one -->
+<footer class="footer-one">
+    <div class="pattern-layer">
+        <div class="pattern-1 hero-shape-three"></div>
+        <div class="pattern-2" style="background-image: url(assets/images/shape/shape-28.png);"></div>
+        <div class="pattern-3 hero-shape-three"></div>
+        <div class="pattern-4" style="background-image: url(assets/images/shape/shape-30.png);"></div>
+    </div>
+    <div class="footer-top">
+        <div class="auto-container">
+            <div class="top-inner clearfix">
+                <figure class="footer-logo pull-left">
+                    <a rel="dofollow" href="<?= base_url() ?>" title="<?= $settings->company_name ?>">
+                        <picture>
+                            <img width="150" height="150" data-src="<?= get_picture("settings_v", $settings->logo) ?>" alt="<?= $settings->company_name ?>" class=" rounded-circle bg-white lazyload img-fluid">
+                        </picture>
+                    </a>
+                </figure>
+                <ul class="social-links pull-right clearfix">
+                    <li><a href="index-2.html"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="index-2.html"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="index-2.html"><i class="fab fa-vimeo-v"></i></a></li>
+                    <li><a href="index-2.html"><i class="fab fa-google-plus-g"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-widget-section">
+        <div class="auto-container">
+            <div class="row clearfix">
+                <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                    <div class="footer-widget about-widget wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                        <div class="widget-title">
+                            <h4><?= lang("about") ?></h4>
+                        </div>
+                        <div class="text">
+                            <p>Lorem ipsum dolor amet consecto adi pisicing elit sed eiusm tempor incididunt labore dolore magna aliqua enim ad minim.</p>
+                        </div>
+                        <div class="subscribe-inner">
+                            <form action="http://azim.commonsupport.com/Atrix/contact.html" method="post" class="subscribe-form">
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Your email address" readonly="">
+                                    <button type="submit"><i class="icon-4"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                    <div class="footer-widget links-widget ml_80 wow fadeInUp animated" data-wow-delay="200ms" data-wow-duration="1500ms">
+                        <div class="widget-title">
+                            <h4>Links</h4>
+                        </div>
+                        <div class="widget-content">
+                            <ul class="links-list clearfix">
+                                <li><a href="index-2.html">About</a></li>
+                                <li><a href="index-2.html">Services</a></li>
+                                <li><a href="index-2.html">Job</a></li>
+                                <li><a href="index-2.html">opportunities</a></li>
+                                <li><a href="index-2.html">Location</a></li>
+                                <li><a href="index-2.html">Article</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
+                    <div class="footer-widget links-widget wow fadeInUp animated" data-wow-delay="400ms" data-wow-duration="1500ms">
+                        <div class="widget-title">
+                            <h4>Services</h4>
+                        </div>
+                        <div class="widget-content">
+                            <ul class="links-list clearfix">
+                                <li><a href="index-2.html">About</a></li>
+                                <li><a href="index-2.html">Services</a></li>
+                                <li><a href="index-2.html">Job</a></li>
+                                <li><a href="index-2.html">opportunities</a></li>
+                                <li><a href="index-2.html">Location</a></li>
+                                <li><a href="index-2.html">Article</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                    <div class="footer-widget contact-widget wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        <div class="widget-title">
+                            <h4>Contacts</h4>
+                        </div>
+                        <div class="widget-content">
+                            <ul class="info-list clearfix">
+                                <li>Flat 20, Reynolds Neck, North Helenaville, FV77 8WS</li>
+                                <li><a href="tel:23055873407">+2(305) 587-3407</a></li>
+                                <li><a href="mailto:sample@example.com">sample@example.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="auto-container">
+            <div class="bottom-inner clearfix">
+                <div class="copyright pull-left">
+                    <p><a href="index-2.html">ATRIX</a> &copy; 2022 All Right Reserved</p>
+                </div>
+                <ul class="footer-nav clearfix pull-right">
+                    <li><a href="index-2.html">Terms of Service</a></li>
+                    <li><a href="index-2.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer-one end -->
+
+
+<!--Scroll to top-->
+<div class="scroll-to-top">
+    <div>
+        <div class="scroll-top-inner">
+            <div class="scroll-bar">
+                <div class="bar-inner"></div>
+            </div>
+            <div class="scroll-bar-text g_color"><i class="fa-solid fa-angles-left"></i></div>
+        </div>
+    </div>
+</div>
+<!-- Scroll to top end -->
+
+
+
+
 
 <!--Site Footer Two Start-->
 <footer class="site-footer-two">
@@ -154,10 +286,6 @@
 
 </div>
 
-<!-- BEGIN: Back To Top -->
-<a href="<?= base_url() ?>" rel="dofollow" title="<?= $settings->company_name ?>" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa-solid fa-angles-up"></i></a>
-<!-- END: Back To Top -->
-
 <!-- Jquery -->
 
 <script src="<?= asset_url("public/js/jquery.min.js") ?>"></script>
@@ -193,62 +321,62 @@
 </script>
 <!-- #Jquery -->
 <!--FOOTER END-->
-    <div class="btn-group dropstart fixed-linkedin bg-primary">
-        <a class="dropdown-toggle" href="<?= base_url() ?>" data-bs-title="<?= lang("social") ?>" data-bs-toggle="dropdown" data-bs-placement="left" data-bs-title="<?= lang("social") ?>" aria-expanded="false">
-            <i class="fa fa-comments text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="<?= lang("social") ?>"></i>
-        </a>
-        <ul class="dropdown-menu">
-            <?php if (!empty($settings->facebook)) : ?>
-                <li>
-                    <a class="dropdown-item" rel="nofollow" href="<?= $settings->facebook ?>" title="Facebook" target="_blank">
-                        <i class='fa fa-facebook color'></i> Facebook
-                    </a>
-                </li>
-            <?php endif ?>
-            <?php if (!empty($settings->twitter)) : ?>
-                <li>
-                    <a class="dropdown-item" rel="nofollow" href="<?= $settings->twitter ?>" title="Twitter" target="_blank">
-                        <i class='fa fa-twitter color'></i> Twitter
-                    </a>
-                </li>
-            <?php endif ?>
-            <?php if (!empty($settings->instagram)) : ?>
-                <li>
-                    <a class="dropdown-item" rel="nofollow" href="<?= $settings->instagram ?>" title="Instagram" target="_blank">
-                        <i class='fa fa-instagram color'></i> Instagram
-                    </a>
-                </li>
-            <?php endif ?>
-            <?php if (!empty($settings->linkedin)) : ?>
-                <li>
-                    <a class="dropdown-item" rel="nofollow" href="<?= $settings->linkedin ?>" title="Linkedin" target="_blank">
-                        <i class='fa fa-linkedin color'></i> Linkedin
-                    </a>
-                </li>
-            <?php endif ?>
-            <?php if (!empty($settings->youtube)) : ?>
-                <li>
-                    <a class="dropdown-item" rel="nofollow" href="<?= $settings->youtube ?>" title="Youtube" target="_blank">
-                        <i class='fa fa-youtube color'></i> Youtube
-                    </a>
-                </li>
-            <?php endif ?>
-            <?php if (!empty($settings->medium)) : ?>
-                <li>
-                    <a class="dropdown-item" rel="nofollow" href="<?= $settings->medium ?>" title="Medium" target="_blank">
-                        <i class='fa fa-medium color'></i> Medium
-                    </a>
-                </li>
-            <?php endif ?>
-            <?php if (!empty($settings->pinterest)) : ?>
-                <li>
-                    <a class="dropdown-item" rel="nofollow" href="<?= $settings->pinterest ?>" title="Pinterest" target="_blank">
-                        <i class='fa fa-pinterest color'></i> Pinterest
-                    </a>
-                </li>
-            <?php endif ?>
-        </ul>
-    </div>
+<div class="btn-group dropstart fixed-linkedin bg-primary">
+    <a class="dropdown-toggle" href="<?= base_url() ?>" data-bs-title="<?= lang("social") ?>" data-bs-toggle="dropdown" data-bs-placement="left" data-bs-title="<?= lang("social") ?>" aria-expanded="false">
+        <i class="fa fa-comments text-white" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="<?= lang("social") ?>"></i>
+    </a>
+    <ul class="dropdown-menu">
+        <?php if (!empty($settings->facebook)) : ?>
+            <li>
+                <a class="dropdown-item" rel="nofollow" href="<?= $settings->facebook ?>" title="Facebook" target="_blank">
+                    <i class='fa fa-facebook color'></i> Facebook
+                </a>
+            </li>
+        <?php endif ?>
+        <?php if (!empty($settings->twitter)) : ?>
+            <li>
+                <a class="dropdown-item" rel="nofollow" href="<?= $settings->twitter ?>" title="Twitter" target="_blank">
+                    <i class='fa fa-twitter color'></i> Twitter
+                </a>
+            </li>
+        <?php endif ?>
+        <?php if (!empty($settings->instagram)) : ?>
+            <li>
+                <a class="dropdown-item" rel="nofollow" href="<?= $settings->instagram ?>" title="Instagram" target="_blank">
+                    <i class='fa fa-instagram color'></i> Instagram
+                </a>
+            </li>
+        <?php endif ?>
+        <?php if (!empty($settings->linkedin)) : ?>
+            <li>
+                <a class="dropdown-item" rel="nofollow" href="<?= $settings->linkedin ?>" title="Linkedin" target="_blank">
+                    <i class='fa fa-linkedin color'></i> Linkedin
+                </a>
+            </li>
+        <?php endif ?>
+        <?php if (!empty($settings->youtube)) : ?>
+            <li>
+                <a class="dropdown-item" rel="nofollow" href="<?= $settings->youtube ?>" title="Youtube" target="_blank">
+                    <i class='fa fa-youtube color'></i> Youtube
+                </a>
+            </li>
+        <?php endif ?>
+        <?php if (!empty($settings->medium)) : ?>
+            <li>
+                <a class="dropdown-item" rel="nofollow" href="<?= $settings->medium ?>" title="Medium" target="_blank">
+                    <i class='fa fa-medium color'></i> Medium
+                </a>
+            </li>
+        <?php endif ?>
+        <?php if (!empty($settings->pinterest)) : ?>
+            <li>
+                <a class="dropdown-item" rel="nofollow" href="<?= $settings->pinterest ?>" title="Pinterest" target="_blank">
+                    <i class='fa fa-pinterest color'></i> Pinterest
+                </a>
+            </li>
+        <?php endif ?>
+    </ul>
+</div>
 <?php if (!empty(@json_decode($settings->phone, TRUE)[0])) : ?>
     <a rel="dofollow" class="fixed-phone text-white bg-danger" href="tel:<?= @json_decode($settings->phone, TRUE)[0] ?>" data-bs-title="<?= lang("phone") ?>" data-bs-toggle="tooltip" data-bs-placement="left"><i class="fa fa-phone"></i></a>
 <?php endif ?>
@@ -271,25 +399,19 @@
 <!-- Site Scripts -->
 <script defer src="<?= asset_url("public/js/jquery-migrate.min.js") ?>"></script>
 <script defer src="<?= asset_url("public/js/bootstrap.bundle.min.js") ?>"></script>
-<script defer src="<?= asset_url("public/vendors/jarallax/jarallax.min.js") ?>"></script>
-<script defer src="<?= asset_url("public/vendors/jquery-appear/jquery.appear.min.js") ?>"></script>
-<script defer src="<?= asset_url("public/vendors/jquery-circle-progress/jquery.circle-progress.min.js") ?>"></script>
-<script defer src="<?= asset_url("public/vendors/nouislider/nouislider.min.js") ?>"></script>
-<script defer src="<?= asset_url("public/vendors/swiper/swiper.min.js") ?>"></script>
-<script defer src="<?= asset_url("public/vendors/tiny-slider/tiny-slider.min.js") ?>"></script>
-<script defer src="<?= asset_url("public/vendors/wnumb/wNumb.min.js") ?>"></script>
-<script defer src="<?= asset_url("public/vendors/wow/wow.js") ?>"></script>
-<script defer src="<?= asset_url("public/vendors/isotope/isotope.js") ?>"></script>
-<script defer src="<?= asset_url("public/vendors/owl-carousel/owl.carousel.min.js") ?>"></script>
-<script defer src="<?= asset_url("public/vendors/bxslider/jquery.bxslider.min.js") ?>"></script>
-<script defer src="<?= asset_url("public/vendors/vegas/vegas.min.js") ?>"></script>
-<script defer src="<?= asset_url("public/vendors/jquery-ui/jquery-ui.js") ?>"></script>
-<script defer src="<?= asset_url("public/vendors/circleType/jquery.circleType.js") ?>"></script>
-<script defer src="<?= asset_url("public/vendors/circleType/jquery.lettering.min.js") ?>"></script>
-<script defer src="<?= asset_url("public/vendors/sidebar-content/jquery-sidebar-content.js") ?>"></script>
+<script defer src="<?= asset_url("public/vendors/js/plugins.js") ?>"></script>
+<script defer src="<?= asset_url("public/vendors/js/owl.js") ?>"></script>
+<script defer src="<?= asset_url("public/vendors/js/wow.js") ?>"></script>
+<script defer src="<?= asset_url("public/vendors/js/appear.js") ?>"></script>
+<script defer src="<?= asset_url("public/vendors/js/scrollbar.js") ?>"></script>
+<script defer src="<?= asset_url("public/vendors/js/parallax.min.js") ?>"></script>
+<script defer src="<?= asset_url("public/vendors/js/circle-progress.js") ?>"></script>
+<script defer src="<?= asset_url("public/vendors/js/jquery.countTo.js") ?>"></script>
+<script defer src="<?= asset_url("public/vendors/js/jquery.nice-select.min.js") ?>"></script>
+<script defer src="<?= asset_url("public/vendors/js/parallax-scroll.js") ?>"></script>
 
 <script async defer src="<?= asset_url("public/js/iziModal.min.js") ?>"></script>
-<script defer src="<?= asset_url("public/js/bcorz.js") ?>"></script>
+<script defer src="<?= asset_url("public/vendors/js/script.js") ?>"></script>
 <script defer src="<?= asset_url("public/js/app.js") ?>"></script>
 <!-- #Site Scripts -->
 
