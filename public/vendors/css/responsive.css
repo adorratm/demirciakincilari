@@ -527,9 +527,16 @@
     display: block;
     padding: 10px;
   }
-
   .megamenu ul li:first-child{
-    display: none;
+    border-bottom: 1px solid #f7f7f7;
+  }
+  .megamenu ul li:first-child::before{
+    content: '\f105';
+    font-family: 'Font Awesome 6 Free',sans-serif;
+    font-weight: 900;
+    position: absolute;
+    left: 25px;
+    top:5px
   }
 
   .feature-block-one .inner-box{

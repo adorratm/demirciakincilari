@@ -67,7 +67,6 @@
   height: 100%;
   top: 0px;
   right: 0px;
-  background: red;
   mix-blend-mode: multiply;
   z-index: 1;
 }

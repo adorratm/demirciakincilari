@@ -18,11 +18,11 @@ $lang["(:any)/markalarimiz/(:num)"] = "our_works/index/$2";
 $lang["(:any)/markalarimiz/(:any)"] = "our_works/index/$2";
 $lang["(:any)/markalarimiz/(:any)/(:num)"] = "our_works/index/$2/$3";
 
-$lang["(:any)/hizmetlerimiz"] = "service_categories/index";
-$lang["(:any)/hizmetlerimiz/(:num)"] = "service_categories/index/$2";
-$lang["(:any)/hizmetlerimiz/(:any)"] = "services/index/$2";
-$lang["(:any)/hizmetlerimiz/(:any)/(:num)"] = "services/index/$2/$3";
-$lang["(:any)/hizmetlerimiz/hizmet/(:any)"] = "services/service_detail/$2/$3";
+$lang["(:any)/faaliyetlerimiz"] = "service_categories/index";
+$lang["(:any)/faaliyetlerimiz/(:num)"] = "service_categories/index/$2";
+$lang["(:any)/faaliyetlerimiz/(:any)"] = "services/index/$2";
+$lang["(:any)/faaliyetlerimiz/(:any)/(:num)"] = "services/index/$2/$3";
+$lang["(:any)/faaliyetlerimiz/faaliyet/(:any)"] = "services/service_detail/$2/$3";
 
 $lang['(:any)/iletisim'] = 'contact/index';
 $lang['(:any)/iletisim-formu'] = 'contact/contact_form';

@@ -213,6 +213,25 @@ class Service_categories extends MY_Controller
                 if (!is_dir($url) && file_exists($url)) :
                     unlink($url);
                 endif;
+                /**
+                 * Remove Category Services
+                 */
+                $services = $this->service_model->get_all(["category_id" => $id]);
+                if (!empty($services)) :
+                    $this->service_model->delete(["category_id" => $id]);
+                    foreach ($services as $sKey => $sValue) :
+                        $service_images = $this->service_image_model->get_all(["service_id" => $sValue->id]);
+                        if (!empty($service_images)) :
+                            $this->service_image_model->delete(["service_id" => $sValue->id]);
+                            foreach ($service_images as $key => $value) :
+                                $url = FCPATH . "uploads/{$this->viewFolder}/{$value->url}";
+                                if (!is_dir($url) && file_exists($url)) :
+                                    unlink($url);
+                                endif;
+                            endforeach;
+                        endif;
+                    endforeach;
+                endif;
                 echo json_encode(["success" => true, "title" => "Başarılı!", "message" => "Hizmet Kategorisi Başarıyla Silindi."]);
             else :
                 echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Hizmet Kategorisi Silinirken Hata Oluştu, Lütfen Tekrar Deneyin."]);

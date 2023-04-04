@@ -3,9 +3,9 @@
 <footer class="footer-one">
     <div class="pattern-layer">
         <div class="pattern-1 hero-shape-three"></div>
-        <div class="pattern-2" style="background-image: url(assets/images/shape/shape-28.png);"></div>
+        <div class="pattern-2" style="background-image: url(<?= asset_url("public/images/shape/shape-28.webp") ?>);"></div>
         <div class="pattern-3 hero-shape-three"></div>
-        <div class="pattern-4" style="background-image: url(assets/images/shape/shape-30.png);"></div>
+        <div class="pattern-4" style="background-image: url(<?= asset_url("public/images/shape/shape-30.webp") ?>);"></div>
     </div>
     <div class="footer-top">
         <div class="auto-container">
@@ -18,10 +18,55 @@
                     </a>
                 </figure>
                 <ul class="social-links pull-right clearfix">
-                    <li><a href="index-2.html"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="index-2.html"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="index-2.html"><i class="fab fa-vimeo-v"></i></a></li>
-                    <li><a href="index-2.html"><i class="fab fa-google-plus-g"></i></a></li>
+                    <?php if (!empty($settings->facebook)) : ?>
+                        <li>
+                            <a rel="nofollow" href="<?= $settings->facebook ?>" title="Facebook" target="_blank">
+                                <i aria-hidden="true" class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                    <?php endif ?>
+                    <?php if (!empty($settings->twitter)) : ?>
+                        <li>
+                            <a rel="nofollow" href="<?= $settings->twitter ?>" title="Twitter" target="_blank">
+                                <i aria-hidden="true" class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                    <?php endif ?>
+                    <?php if (!empty($settings->instagram)) : ?>
+                        <li>
+                            <a rel="nofollow" href="<?= $settings->instagram ?>" title="Instagram" target="_blank">
+                                <i aria-hidden="true" class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                    <?php endif ?>
+                    <?php if (!empty($settings->linkedin)) : ?>
+                        <li>
+                            <a rel="nofollow" href="<?= $settings->linkedin ?>" title="Linkedin" target="_blank">
+                                <i aria-hidden="true" class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                    <?php endif ?>
+                    <?php if (!empty($settings->youtube)) : ?>
+                        <li>
+                            <a rel="nofollow" href="<?= $settings->youtube ?>" title="Youtube" target="_blank">
+                                <i aria-hidden="true" class="fa fa-youtube"></i>
+                            </a>
+                        </li>
+                    <?php endif ?>
+                    <?php if (!empty($settings->medium)) : ?>
+                        <li>
+                            <a rel="nofollow" href="<?= $settings->medium ?>" title="Medium" target="_blank">
+                                <i aria-hidden="true" class="fa fa-medium"></i>
+                            </a>
+                        </li>
+                    <?php endif ?>
+                    <?php if (!empty($settings->pinterest)) : ?>
+                        <li>
+                            <a rel="nofollow" href="<?= $settings->pinterest ?>" title="Pinterest" target="_blank">
+                                <i aria-hidden="true" class="fa fa-pinterest"></i>
+                            </a>
+                        </li>
+                    <?php endif ?>
                 </ul>
             </div>
         </div>
@@ -35,62 +80,60 @@
                             <h4><?= lang("about") ?></h4>
                         </div>
                         <div class="text">
-                            <p>Lorem ipsum dolor amet consecto adi pisicing elit sed eiusm tempor incididunt labore dolore magna aliqua enim ad minim.</p>
-                        </div>
-                        <div class="subscribe-inner">
-                            <form action="http://azim.commonsupport.com/Atrix/contact.html" method="post" class="subscribe-form">
-                                <div class="form-group">
-                                    <input type="email" name="email" placeholder="Your email address" readonly="">
-                                    <button type="submit"><i class="icon-4"></i></button>
-                                </div>
-                            </form>
+                            <p><?= $settings->meta_description ?></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
-                    <div class="footer-widget links-widget ml_80 wow fadeInUp animated" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div class="widget-title">
-                            <h4>Links</h4>
-                        </div>
-                        <div class="widget-content">
-                            <ul class="links-list clearfix">
-                                <li><a href="index-2.html">About</a></li>
-                                <li><a href="index-2.html">Services</a></li>
-                                <li><a href="index-2.html">Job</a></li>
-                                <li><a href="index-2.html">opportunities</a></li>
-                                <li><a href="index-2.html">Location</a></li>
-                                <li><a href="index-2.html">Article</a></li>
-                            </ul>
+                <?php if (!empty($footer_menus)) : ?>
+                    <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
+                        <div class="footer-widget links-widget wow fadeInUp animated" data-wow-delay="200ms" data-wow-duration="1500ms">
+                            <div class="widget-title">
+                                <h4><?= lang("corporate") ?></h4>
+                            </div>
+                            <div class="widget-content">
+                                <?= $footer_menus ?>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
-                    <div class="footer-widget links-widget wow fadeInUp animated" data-wow-delay="400ms" data-wow-duration="1500ms">
-                        <div class="widget-title">
-                            <h4>Services</h4>
-                        </div>
-                        <div class="widget-content">
-                            <ul class="links-list clearfix">
-                                <li><a href="index-2.html">About</a></li>
-                                <li><a href="index-2.html">Services</a></li>
-                                <li><a href="index-2.html">Job</a></li>
-                                <li><a href="index-2.html">opportunities</a></li>
-                                <li><a href="index-2.html">Location</a></li>
-                                <li><a href="index-2.html">Article</a></li>
-                            </ul>
+                <?php endif ?>
+                <?php if (!empty($footer_services)) : ?>
+                    <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                        <div class="footer-widget links-widget wow fadeInUp animated" data-wow-delay="400ms" data-wow-duration="1500ms">
+                            <div class="widget-title">
+                                <h4><?= lang("services") ?></h4>
+                            </div>
+                            <div class="widget-content">
+                                <ul class="links-list clearfix">
+                                    <?php foreach ($footer_services as $key => $value) : ?>
+                                        <li><a rel="dofollow" title="<?= $value->title ?>" href="<?= base_url(lang("services") . "/" . $value->seo_url) ?>"><?= $value->title ?></a></li>
+                                    <?php endforeach ?>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php endif ?>
                 <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                     <div class="footer-widget contact-widget wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
                         <div class="widget-title">
-                            <h4>Contacts</h4>
+                            <h4><?= lang("contactUs") ?></h4>
                         </div>
                         <div class="widget-content">
                             <ul class="info-list clearfix">
-                                <li>Flat 20, Reynolds Neck, North Helenaville, FV77 8WS</li>
-                                <li><a href="tel:23055873407">+2(305) 587-3407</a></li>
-                                <li><a href="mailto:sample@example.com">sample@example.com</a></li>
+                                <li>
+                                    <?php if (!empty(@json_decode($settings->address, TRUE)[0])) : ?>
+                                        <a rel="dofollow" title="<?= lang("address") ?>" href="<?= base_url(lang("routes_contact")) ?>"><i class="fa-solid fa-map-marker-alt"></i> <?= @json_decode($settings->address, TRUE)[0] ?></a>
+                                    <?php endif ?>
+                                </li>
+                                <li>
+                                    <?php if (!empty(@json_decode($settings->phone, TRUE)[0])) : ?>
+                                        <a rel="dofollow" title="<?= lang("phone") ?>" href="tel:<?= @json_decode($settings->phone, TRUE)[0] ?>"><i class="fa fa-phone-volume"></i> <?= @json_decode($settings->phone, TRUE)[0] ?></a>
+                                    <?php endif ?>
+                                </li>
+                                <li>
+                                    <?php if (!empty($settings->email)) : ?>
+                                        <a rel="dofollow" title="Email" href="mailto:<?= $settings->email ?>"><i class="fa fa-envelope-open"></i> <?= $settings->email ?></a>
+                                    <?php endif ?>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -102,11 +145,10 @@
         <div class="auto-container">
             <div class="bottom-inner clearfix">
                 <div class="copyright pull-left">
-                    <p><a href="index-2.html">ATRIX</a> &copy; 2022 All Right Reserved</p>
+                    <p>© 2023 <a rel="dofollow" href="<?= base_url() ?>" title="<?= $settings->company_name ?>"><?= $settings->company_name ?></a> <?= lang("allRightsReserved") ?></p>
                 </div>
                 <ul class="footer-nav clearfix pull-right">
-                    <li><a href="index-2.html">Terms of Service</a></li>
-                    <li><a href="index-2.html">Privacy Policy</a></li>
+                    <li><a href="https://mutfakyapim.com"><img width="140" data-src="https://mutfakyapim.com/images/mutfak/logo.png" alt="Mutfak Yapım Dijital Reklam Ajansı" class="lazyload img-fluid" ></a></li>
                 </ul>
             </div>
         </div>
@@ -127,160 +169,6 @@
     </div>
 </div>
 <!-- Scroll to top end -->
-
-
-
-
-
-<!--Site Footer Two Start-->
-<footer class="site-footer-two">
-    <div class="site-footer-two__top">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp mb-3 mb-lg-0" data-wow-delay="100ms">
-                    <div class="footer-widget-two__column footer-widget-two__about">
-                        <div class="footer-widget-two__logo-box">
-                            <div class="footer-widget-two__logo">
-                                <a rel="dofollow" href="<?= base_url() ?>" title="<?= $settings->company_name ?>">
-                                    <picture>
-                                        <img style="filter: drop-shadow(1px 1px 1px black);" width="270" height="58" data-src="<?= get_picture("settings_v", $settings->logo) ?>" alt="<?= $settings->company_name ?>" class="lazyload img-fluid">
-                                    </picture>
-                                </a>
-                            </div>
-                        </div>
-                        <p class="footer-widget-two__text"><?= $settings->meta_description ?></p>
-                        <div class="footer-widget-two__contact">
-                            <div class="icon">
-                                <span class="fa fa-phone-volume"></span>
-                            </div>
-                            <div class="text">
-                                <?php if (!empty(@json_decode($settings->phone, TRUE)[0])) : ?>
-                                    <a rel="dofollow" title="<?= lang("phone") ?>" href="tel:<?= @json_decode($settings->phone, TRUE)[0] ?>"><?= @json_decode($settings->phone, TRUE)[0] ?></a>
-                                <?php endif ?>
-                            </div>
-                        </div>
-                        <div class="footer-widget-two__contact">
-                            <div class="icon">
-                                <span class="fa fa-whatsapp bg-success"></span>
-                            </div>
-                            <div class="text">
-                                <?php if (!empty(@json_decode($settings->whatsapp, TRUE)[0])) : ?>
-                                    <a rel="nofollow" title="<?= lang("phone") ?>" href="https://api.whatsapp.com/send?phone=<?= str_replace(" ", "", @json_decode($settings->whatsapp, TRUE)[0]) ?>&amp;text=<?= urlencode(lang("hello") . " " . $settings->company_name) ?>."><?= @json_decode($settings->phone, TRUE)[0] ?></a>
-                                <?php endif ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-8 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                    <div class="row">
-                        <div class="col-xl-5 col-lg-6 col-md-12 mb-3 mb-lg-0 wow fadeInUp" data-wow-delay="100ms">
-                            <div class="footer-widget-two__get-in-touch mt-0 ms-0">
-                                <h4 class="footer-widget-two__title"><?= lang("contactUs") ?></h4>
-                                <p class="footer-widget-two__get-in-touch-text">
-                                    <?php if (!empty(@json_decode($settings->address, TRUE)[0])) : ?>
-                                        <a rel="dofollow" title="<?= lang("address") ?>" href="<?= base_url(lang("routes_contact")) ?>"><i class="fa-solid fa-map-marker-alt"></i> <?= @json_decode($settings->address, TRUE)[0] ?></a>
-                                    <?php endif ?>
-                                </p>
-                                <div class="footer-widget-two__email-box">
-                                    <?php if (!empty($settings->email)) : ?>
-                                        <a rel="dofollow" title="Email" href="mailto:<?= $settings->email ?>"><i class="fa fa-envelope-open"></i> <?= $settings->email ?></a>
-                                    <?php endif ?>
-                                </div>
-                                <ul class="footer-widget-two__social-box list-unstyled">
-                                    <?php if (!empty($settings->facebook)) : ?>
-                                        <li>
-                                            <a rel="nofollow" href="<?= $settings->facebook ?>" title="Facebook" target="_blank">
-                                                <i class='fa fa-facebook'></i>
-                                            </a>
-                                        </li>
-                                    <?php endif ?>
-                                    <?php if (!empty($settings->twitter)) : ?>
-                                        <li>
-                                            <a rel="nofollow" href="<?= $settings->twitter ?>" title="Twitter" target="_blank">
-                                                <i class='fa fa-twitter'></i>
-                                            </a>
-                                        </li>
-                                    <?php endif ?>
-                                    <?php if (!empty($settings->instagram)) : ?>
-                                        <li>
-                                            <a rel="nofollow" href="<?= $settings->instagram ?>" title="Instagram" target="_blank">
-                                                <i class='fa fa-instagram'></i>
-                                            </a>
-                                        </li>
-                                    <?php endif ?>
-                                    <?php if (!empty($settings->linkedin)) : ?>
-                                        <li>
-                                            <a rel="nofollow" href="<?= $settings->linkedin ?>" title="Linkedin" target="_blank">
-                                                <i class='fa fa-linkedin'></i>
-                                            </a>
-                                        </li>
-                                    <?php endif ?>
-                                    <?php if (!empty($settings->youtube)) : ?>
-                                        <li>
-                                            <a rel="nofollow" href="<?= $settings->youtube ?>" title="Youtube" target="_blank">
-                                                <i class='fa fa-youtube'></i>
-                                            </a>
-                                        </li>
-                                    <?php endif ?>
-                                    <?php if (!empty($settings->medium)) : ?>
-                                        <li>
-                                            <a rel="nofollow" href="<?= $settings->medium ?>" title="Medium" target="_blank">
-                                                <i class='fa fa-medium'></i>
-                                            </a>
-                                        </li>
-                                    <?php endif ?>
-                                    <?php if (!empty($settings->pinterest)) : ?>
-                                        <li>
-                                            <a rel="nofollow" href="<?= $settings->pinterest ?>" title="Pinterest" target="_blank">
-                                                <i class='fa fa-pinterest'></i>
-                                            </a>
-                                        </li>
-                                    <?php endif ?>
-                                </ul>
-                            </div>
-                        </div>
-                        <?php if (!empty($footer_menus)) : ?>
-                            <div class="col-xl-3 col-lg-6 col-md-12 mb-3 mb-lg-0 wow fadeInUp" data-wow-delay="200ms">
-                                <div class="footer-widget-two__quick-links ms-0">
-                                    <h4 class="footer-widget-two__title"><?= lang("corporate") ?></h4>
-                                    <?= $footer_menus ?>
-                                </div>
-                            </div>
-                        <?php endif ?>
-                        <?php if (!empty($footer_service_categories)) : ?>
-                            <div class="col-xl-3 col-lg-6 col-md-12 mb-3 mb-lg-0 wow fadeInUp" data-wow-delay="300ms">
-                                <div class="footer-widget-two__quick-links ms-0">
-                                    <h4 class="footer-widget-two__title"><?= lang("service_categories") ?></h4>
-                                    <ul class="footer-widget-two__quick-links-list list-unstyled">
-                                        <?php foreach ($footer_service_categories as $key => $value) : ?>
-                                            <li>
-                                                <a rel="dofollow" title="<?= $value->title ?>" href="<?= base_url(lang("routes_services") . "/" . $value->seo_url) ?>"><?= $value->title ?></a>
-                                            </li>
-                                        <?php endforeach ?>
-                                    </ul>
-                                </div>
-                            </div>
-                        <?php endif ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="site-footer-two__bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="site-footer-two__bottom-inner">
-                        <div class="site-footer-two__bottom-text">
-                            <p>© 2018 <a rel="dofollow" href="<?= base_url() ?>" title="<?= $settings->company_name ?>"><?= $settings->company_name ?></a> <?= lang("allRightsReserved") ?></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!--Site Footer Two End-->
 
 
 

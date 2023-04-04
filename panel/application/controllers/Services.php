@@ -40,6 +40,7 @@ class Services extends MY_Controller
                     </button>
                     <div class="dropdown-menu rounded-0 dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item updateServiceBtn" href="javascript:void(0)" data-url="' . base_url("services/update_form/$item->id") . '"><i class="fa fa-pen mr-2"></i>Kaydı Düzenle</a>
+                        <a class="dropdown-item remove-btn" href="javascript:void(0)" data-table="serviceTable" data-url="' . base_url("services/delete/$item->id") . '"><i class="fa fa-trash mr-2"></i>Kaydı Sil</a>
                         <a class="dropdown-item" href="' . base_url("services/upload_form/$item->id") . '"><i class="fa fa-image mr-2"></i>Resimler</a>
                     </div>
                 </div>';
@@ -131,6 +132,35 @@ class Services extends MY_Controller
                 echo json_encode(["success" => true, "title" => "Başarılı!", "message" => "Hizmet Başarıyla Güncelleştirildi."]);
             else :
                 echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Hizmet Güncelleştirilirken Hata Oluştu, Lütfen Tekrar Deneyin."]);
+            endif;
+        endif;
+    }
+    public function delete($id)
+    {
+        $service = $this->service_model->get(["id" => $id]);
+        if (!empty($service)) :
+            $delete = $this->service_model->delete(["id"    => $id]);
+            if ($delete) :
+                /**
+                 * Remove Service Image
+                 */
+                $url = FCPATH . "uploads/{$this->viewFolder}/{$service->img_url}";
+                if (!is_dir($url) && file_exists($url)) :
+                    unlink($url);
+                endif;
+                $service_images = $this->service_image_model->get_all(["service_id" => $id]);
+                if (!empty($service_images)) :
+                    $this->service_image_model->delete(["service_id" => $id]);
+                    foreach ($service_images as $key => $value) :
+                        $url = FCPATH . "uploads/{$this->viewFolder}/{$value->url}";
+                        if (!is_dir($url) && file_exists($url)) :
+                            unlink($url);
+                        endif;
+                    endforeach;
+                endif;
+                echo json_encode(["success" => true, "title" => "Başarılı!", "message" => "Hizmet Başarıyla Silindi."]);
+            else :
+                echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Hizmet Silinirken Hata Oluştu, Lütfen Tekrar Deneyin."]);
             endif;
         endif;
     }

@@ -1519,9 +1519,9 @@ img {
 
 .main-menu .navigation > li.dropdown > .megamenu{
   position: absolute;
-  width: 100%;
-  padding: 30px 50px;
-  left: 0px;
+  width: max-content;
+  padding: 15px;
+  margin-top: 0;
 }
 
 .main-menu .navigation li.dropdown .megamenu li h6{
@@ -1536,6 +1536,7 @@ img {
   text-transform: uppercase;
   color: #141417;
   margin-bottom: 3px;
+  white-space: nowrap;
 }
 
 

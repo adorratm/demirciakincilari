@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 03, 2023 at 03:45 PM
+-- Generation Time: Apr 04, 2023 at 11:50 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -789,32 +789,30 @@ INSERT INTO `menus` (`id`, `page_id`, `top_id`, `position`, `target`, `title`, `
 (16, 1, 14, 'HEADER', '_self', 'Milli Mücadele', NULL, 'tr', 16, 1, '2023-04-03 08:53:32', '2023-04-03 08:54:31', 0, 0),
 (17, 1, 14, 'HEADER', '_self', 'Son Dönem', NULL, 'tr', 17, 1, '2023-04-03 08:53:45', '2023-04-03 08:54:28', 0, 0),
 (18, 1, 14, 'HEADER', '_self', 'İstiklal Madalyası Sahipleri', NULL, 'tr', 18, 1, '2023-04-03 08:54:03', '2023-04-03 08:54:24', 0, 0),
-(19, 1, 0, 'HEADER', '_self', 'Faaliyetlerimiz', NULL, 'tr', 19, 1, '2023-04-03 09:42:51', '2023-04-03 09:43:05', 0, 0),
-(20, 1, 19, 'HEADER', '_self', 'Geçmiş Faaliyetlerimiz', NULL, 'tr', 20, 1, '2023-04-03 09:43:30', '2023-04-03 09:44:05', 0, 0),
-(21, 1, 19, 'HEADER', '_self', 'Planlanan Faaliyetlerimiz', NULL, 'tr', 21, 1, '2023-04-03 09:43:42', '2023-04-03 09:44:02', 0, 0),
-(22, 1, 0, 'HEADER', '_self', 'Medya Arşivi', NULL, 'tr', 22, 1, '2023-04-03 09:49:20', '2023-04-03 09:49:31', 0, 0),
-(23, 1, 22, 'HEADER', '_self', 'Makaleler', NULL, 'tr', 23, 1, '2023-04-03 10:29:37', '2023-04-03 10:31:33', 0, 0),
-(24, 1, 22, 'HEADER', '_self', 'Tarihi Yerler', NULL, 'tr', 24, 1, '2023-04-03 10:29:57', '2023-04-03 10:31:31', 0, 0),
-(25, 1, 22, 'HEADER', '_self', 'Önemli Kişiler', NULL, 'tr', 25, 1, '2023-04-03 10:30:13', '2023-04-03 10:31:30', 0, 0),
-(26, 1, 22, 'HEADER', '_self', 'Videolar', NULL, 'tr', 26, 1, '2023-04-03 10:30:23', '2023-04-03 10:31:28', 0, 0),
-(27, 1, 22, 'HEADER', '_self', 'Fotoğraflar', NULL, 'tr', 27, 1, '2023-04-03 10:30:36', '2023-04-03 10:31:26', 0, 0),
-(28, 1, 22, 'HEADER', '_self', 'Kitap Özetleri', NULL, 'tr', 28, 1, '2023-04-03 10:30:48', '2023-04-03 10:31:23', 0, 0),
-(29, 1, 0, 'HEADER', '_self', 'Tarihi Gezi Rotaları', NULL, 'tr', 29, 1, '2023-04-03 10:32:40', '2023-04-03 10:32:54', 0, 0),
-(30, 1, 29, 'HEADER', '_self', 'Demirci Merkez', NULL, 'tr', 30, 1, '2023-04-03 11:26:51', '2023-04-03 11:28:43', 0, 0),
-(31, 1, 29, 'HEADER', '_self', 'Akıncılar Yolu', NULL, 'tr', 31, 1, '2023-04-03 11:27:08', '2023-04-03 11:28:41', 0, 0),
-(32, 1, 29, 'HEADER', '_self', 'Sarıçayır', NULL, 'tr', 32, 1, '2023-04-03 11:27:19', '2023-04-03 11:28:39', 0, 0),
-(33, 1, 29, 'HEADER', '_self', 'Sındırgı', NULL, 'tr', 33, 1, '2023-04-03 11:27:30', '2023-04-03 11:28:37', 0, 0),
-(34, 1, 29, 'HEADER', '_self', 'Selendi', NULL, 'tr', 34, 1, '2023-04-03 11:27:43', '2023-04-03 11:28:34', 0, 0),
-(35, 1, 0, 'HEADER', '_self', 'Demirci Hakkında', NULL, 'tr', 35, 1, '2023-04-03 11:29:23', '2023-04-03 11:29:34', 0, 0),
-(36, 1, 35, 'HEADER', '_self', 'Demirci Tarihi', NULL, 'tr', 36, 1, '2023-04-03 11:29:49', '2023-04-03 11:31:33', 0, 0),
-(37, 1, 35, 'HEADER', '_self', 'Turistik ve Tarihi Yerler', NULL, 'tr', 37, 1, '2023-04-03 11:30:06', '2023-04-03 11:31:30', 0, 0),
-(38, 1, 35, 'HEADER', '_self', 'Mesire Alanları', NULL, 'tr', 38, 1, '2023-04-03 11:30:17', '2023-04-03 11:31:26', 0, 0),
-(39, 1, 35, 'HEADER', '_self', 'İlçemizden Yetişenler', NULL, 'tr', 39, 1, '2023-04-03 11:30:29', '2023-04-03 11:31:23', 0, 0),
-(40, 1, 35, 'HEADER', '_self', 'Demirciden Fotoğraflar', NULL, 'tr', 40, 1, '2023-04-03 11:30:46', '2023-04-03 11:31:20', 0, 0),
-(41, 0, 0, 'HEADER', '_self', 'İletişim', '/iletisim', 'tr', 41, 1, '2022-01-03 07:52:56', '2023-04-03 11:31:17', 0, 0),
-(304, 1, 0, 'FOOTER', '_self', 'Biz Kimiz?', NULL, 'tr', 304, 1, '2022-03-05 11:46:13', '2023-04-03 08:49:53', 0, 0),
-(308, 0, 0, 'FOOTER', '_self', 'İletişim', '/iletisim', 'tr', 308, 1, '2022-03-05 14:31:32', '2023-04-03 08:50:07', 0, 0),
-(309, 3, 0, 'FOOTER', '_self', 'KVKK', NULL, 'tr', 309, 1, '2022-03-05 22:02:08', '2023-04-03 08:50:10', 0, 0);
+(19, 1, 0, 'HEADER', '_self', 'Faaliyetlerimiz', NULL, 'tr', 19, 1, '2023-04-03 09:42:51', '2023-04-04 08:52:40', 1, 0),
+(20, 1, 0, 'HEADER', '_self', 'Medya Arşivi', NULL, 'tr', 20, 1, '2023-04-03 09:49:20', '2023-04-04 09:10:48', 0, 0),
+(21, 1, 20, 'HEADER', '_self', 'Makaleler', NULL, 'tr', 21, 1, '2023-04-03 10:29:37', '2023-04-04 09:30:45', 0, 0),
+(22, 1, 20, 'HEADER', '_self', 'Tarihi Yerler', NULL, 'tr', 22, 1, '2023-04-03 10:29:57', '2023-04-04 09:30:50', 0, 0),
+(23, 1, 20, 'HEADER', '_self', 'Önemli Kişiler', NULL, 'tr', 23, 1, '2023-04-03 10:30:13', '2023-04-04 09:30:52', 0, 0),
+(24, 1, 20, 'HEADER', '_self', 'Videolar', NULL, 'tr', 24, 1, '2023-04-03 10:30:23', '2023-04-04 09:30:55', 0, 0),
+(25, 1, 20, 'HEADER', '_self', 'Fotoğraflar', NULL, 'tr', 25, 1, '2023-04-03 10:30:36', '2023-04-04 09:30:59', 0, 0),
+(26, 1, 20, 'HEADER', '_self', 'Kitap Özetleri', NULL, 'tr', 26, 1, '2023-04-03 10:30:48', '2023-04-04 09:31:06', 0, 0),
+(27, 1, 0, 'HEADER', '_self', 'Tarihi Gezi Rotaları', NULL, 'tr', 27, 1, '2023-04-03 10:32:40', '2023-04-04 09:13:20', 0, 0),
+(28, 1, 27, 'HEADER', '_self', 'Demirci Merkez', NULL, 'tr', 28, 1, '2023-04-03 11:26:51', '2023-04-04 09:31:09', 0, 0),
+(29, 1, 27, 'HEADER', '_self', 'Akıncılar Yolu', NULL, 'tr', 29, 1, '2023-04-03 11:27:08', '2023-04-04 09:31:12', 0, 0),
+(30, 1, 27, 'HEADER', '_self', 'Sarıçayır', NULL, 'tr', 30, 1, '2023-04-03 11:27:19', '2023-04-04 09:31:15', 0, 0),
+(31, 1, 27, 'HEADER', '_self', 'Sındırgı', NULL, 'tr', 31, 1, '2023-04-03 11:27:30', '2023-04-04 09:31:17', 0, 0),
+(32, 1, 27, 'HEADER', '_self', 'Selendi', NULL, 'tr', 32, 1, '2023-04-03 11:27:43', '2023-04-04 09:31:20', 0, 0),
+(33, 1, 0, 'HEADER', '_self', 'Demirci Hakkında', NULL, 'tr', 33, 1, '2023-04-03 11:29:23', '2023-04-04 09:13:36', 0, 0),
+(34, 1, 33, 'HEADER', '_self', 'Demirci Tarihi', NULL, 'tr', 34, 1, '2023-04-03 11:29:49', '2023-04-04 09:31:22', 0, 0),
+(35, 1, 33, 'HEADER', '_self', 'Turistik ve Tarihi Yerler', NULL, 'tr', 35, 1, '2023-04-03 11:30:06', '2023-04-04 09:31:27', 0, 0),
+(36, 1, 33, 'HEADER', '_self', 'Mesire Alanları', NULL, 'tr', 36, 1, '2023-04-03 11:30:17', '2023-04-04 09:31:28', 0, 0),
+(37, 1, 33, 'HEADER', '_self', 'İlçemizden Yetişenler', NULL, 'tr', 37, 1, '2023-04-03 11:30:29', '2023-04-04 09:31:29', 0, 0),
+(38, 1, 33, 'HEADER', '_self', 'Demirciden Fotoğraflar', NULL, 'tr', 38, 1, '2023-04-03 11:30:46', '2023-04-04 09:31:31', 0, 0),
+(39, 0, 0, 'HEADER', '_self', 'İletişim', '/iletisim', 'tr', 39, 1, '2022-01-03 07:52:56', '2023-04-04 09:11:56', 0, 0),
+(40, 1, 0, 'FOOTER', '_self', 'Biz Kimiz?', NULL, 'tr', 40, 1, '2022-03-05 11:46:13', '2023-04-04 09:11:53', 0, 0),
+(41, 0, 0, 'FOOTER', '_self', 'İletişim', '/iletisim', 'tr', 41, 1, '2022-03-05 14:31:32', '2023-04-04 09:11:51', 0, 0),
+(42, 3, 0, 'FOOTER', '_self', 'KVKK', NULL, 'tr', 42, 1, '2022-03-05 22:02:08', '2023-04-04 09:11:48', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -908,14 +906,7 @@ INSERT INTO `services` (`id`, `title`, `description`, `seo_url`, `category_id`, 
 (7, 'Sosyal Medya Reklam Yönetimi', NULL, 'sosyal-medya-reklam-yonetimi', 2, 'tr', 7, 1, '2023-03-20 08:08:00', '2023-03-20 08:13:28'),
 (8, 'Google Ads Reklam Yönetimi', NULL, 'google-ads-reklam-yonetimi', 2, 'tr', 8, 1, '2023-03-20 08:08:21', '2023-03-20 08:08:21'),
 (9, 'Haritalara Kayıt Hizmeti', NULL, 'haritalara-kayit-hizmeti', 2, 'tr', 9, 1, '2023-03-20 08:08:34', '2023-03-20 08:08:34'),
-(10, 'Seo Hizmeti', NULL, 'seo-hizmeti', 2, 'tr', 10, 1, '2023-03-20 08:08:42', '2023-03-20 08:08:42'),
-(11, 'Kurumsal Web Sitesi', NULL, 'kurumsal-web-sitesi', 3, 'tr', 11, 1, '2023-03-20 08:08:54', '2023-03-20 08:09:00'),
-(12, 'E-Ticaret Sitesi', NULL, 'e-ticaret-sitesi', 3, 'tr', 12, 1, '2023-03-20 08:09:10', '2023-03-20 08:09:10'),
-(13, 'Mobil Uygulama ve Geliştirme', NULL, 'mobil-uygulama-ve-gelistirme', 3, 'tr', 13, 1, '2023-03-20 08:09:24', '2023-03-20 08:09:24'),
-(14, 'Alan Adı & Sunucu Yönetimi', NULL, 'alan-adi-sunucu-yonetimi', 3, 'tr', 14, 1, '2023-03-20 08:09:38', '2023-03-20 08:16:04'),
-(15, 'TV Programları', NULL, 'tv-programlari', 4, 'tr', 15, 1, '2023-03-20 08:09:50', '2023-03-20 08:09:50'),
-(16, 'TV Reklam Çalışmaları', NULL, 'tv-reklam-calismalari', 4, 'tr', 16, 1, '2023-03-20 08:09:59', '2023-03-20 08:09:59'),
-(17, 'Radyo Projeleri', NULL, 'radyo-projeleri', 4, 'tr', 17, 1, '2023-03-20 08:10:08', '2023-03-20 08:10:08');
+(10, 'Seo Hizmeti', NULL, 'seo-hizmeti', 2, 'tr', 10, 1, '2023-03-20 08:08:42', '2023-03-20 08:08:42');
 
 -- --------------------------------------------------------
 
@@ -942,10 +933,8 @@ CREATE TABLE `service_categories` (
 --
 
 INSERT INTO `service_categories` (`id`, `title`, `seo_url`, `img_url`, `home_url`, `banner_url`, `lang`, `rank`, `isActive`, `createdAt`, `updatedAt`) VALUES
-(1, 'Kurumsal İmaj Çalışmaları', 'kurumsal-imaj-calismalari', '2308bfec567fdaea97d5064b3e1a4e4c.webp', NULL, NULL, 'tr', 1, 1, '2023-02-23 14:46:08', '2023-03-24 11:43:48'),
-(2, 'Dijital Medya Çalışmaları', 'dijital-medya-calismalari', '033a7154ede5073cd6183605e809f082.webp', NULL, NULL, 'tr', 2, 1, '2023-02-23 14:46:08', '2023-03-24 11:43:55'),
-(3, 'Yazılım Çalışmaları', 'yazilim-calismalari', '0e8cf1e11cfcaac369c4d7e1921c5c51.webp', NULL, NULL, 'tr', 3, 1, '2023-02-23 14:46:08', '2023-03-24 11:44:04'),
-(4, 'İletişim Çalışmaları', 'iletisim-calismalari', '85b7447cbb5b7bc10cef807896ef98d0.webp', NULL, NULL, 'tr', 4, 1, '2023-02-23 14:46:08', '2023-03-24 11:55:01');
+(1, 'Geçmiş Faaliyetlerimiz', 'gecmis-faaliyetlerimiz', '2308bfec567fdaea97d5064b3e1a4e4c.webp', NULL, NULL, 'tr', 1, 1, '2023-02-23 14:46:08', '2023-04-04 08:54:03'),
+(2, 'Planlanan Faaliyetlerimiz', 'planlanan-faaliyetlerimiz', '033a7154ede5073cd6183605e809f082.webp', NULL, NULL, 'tr', 2, 1, '2023-02-23 14:46:08', '2023-04-04 08:54:15');
 
 -- --------------------------------------------------------
 
@@ -999,13 +988,7 @@ INSERT INTO `service_images` (`id`, `service_id`, `url`, `img_url`, `title`, `de
 (55, 7, 'c1386ed617051e41f2c333d44f670b09.webp', NULL, NULL, NULL, 'tr', 25, 1, 1, '2023-03-23 14:26:52', '2023-03-23 14:26:53'),
 (56, 8, '7ec46458af20c7e3217c28a077a44f6d.webp', NULL, NULL, NULL, 'tr', 26, 1, 1, '2023-03-23 14:27:08', '2023-03-23 14:27:15'),
 (57, 9, 'ffed459cbb97553ee0419660b8b81b31.webp', NULL, NULL, NULL, 'tr', 27, 1, 1, '2023-03-23 14:28:07', '2023-03-23 14:28:09'),
-(58, 10, '18a83f17da2c4c2825d7775345c8ea53.webp', NULL, NULL, NULL, 'tr', 28, 1, 1, '2023-03-23 14:28:21', '2023-03-23 14:28:23'),
-(59, 11, '25878d97dc20f76d584c84a43e87f4f2.webp', NULL, NULL, NULL, 'tr', 29, 1, 1, '2023-03-23 14:28:35', '2023-03-23 14:28:37'),
-(60, 12, '1ba877501e9abdef626a5f9fab0b1f5b.webp', NULL, NULL, NULL, 'tr', 30, 1, 1, '2023-03-23 14:28:56', '2023-03-23 14:28:58'),
-(61, 13, '4fed07858eeda101d71b7a840ed21394.webp', NULL, NULL, NULL, 'tr', 31, 1, 1, '2023-03-23 14:29:14', '2023-03-23 14:29:15'),
-(62, 15, 'd5c392ca99cbb69a5a7a30e16cfd8654.webp', NULL, NULL, NULL, 'tr', 32, 1, 1, '2023-03-23 14:29:30', '2023-03-23 14:29:32'),
-(63, 16, '19addb81e1ba8b88168fcfb6f6bf3bad.webp', NULL, NULL, NULL, 'tr', 33, 1, 1, '2023-03-23 14:29:40', '2023-03-23 14:29:43'),
-(64, 17, '962a2325ab68cf6e18b31db7d7696e2b.webp', NULL, NULL, NULL, 'tr', 34, 1, 1, '2023-03-23 14:30:01', '2023-03-23 14:30:03');
+(58, 10, '18a83f17da2c4c2825d7775345c8ea53.webp', NULL, NULL, NULL, 'tr', 28, 1, 1, '2023-03-23 14:28:21', '2023-03-23 14:28:23');
 
 -- --------------------------------------------------------
 
@@ -1471,7 +1454,7 @@ ALTER TABLE `linguo_language_strings`
 -- AUTO_INCREMENT for table `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=342;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `our_works`
