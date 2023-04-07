@@ -17,8 +17,6 @@
 </section>
 <!--Page Header End-->
 
-<?php $this->load->view("includes/testimonial") ?>
-
 <!--contact Page Start-->
 <section class="contact-page">
     <div class="container">
