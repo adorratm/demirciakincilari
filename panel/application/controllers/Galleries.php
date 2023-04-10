@@ -83,7 +83,7 @@ class Galleries extends MY_Controller
                 die();
             endif;
             if (!empty($_FILES["img_url"]["name"])) :
-                $image = upload_picture("img_url", "uploads/$this->viewFolder/$gallery_type/$folder_name", ["width" => 1000, "height" => 1000], "*");
+                $image = upload_picture("img_url", "uploads/$this->viewFolder/$gallery_type/$folder_name", ["width" => $data["width"], "height" => $data["height"]], "*");
                 if ($image["success"]) :
                     $data["img_url"] = $image["file_name"];
                 endif;
@@ -120,7 +120,7 @@ class Galleries extends MY_Controller
             $folder_name = null;
             if (!empty($gallery)) :
                 $data["img_url"] = !empty($gallery->img_url) ? $gallery->img_url : null;
-                $data["url"] = !empty($gallery->url) ? seo($gallery->url) : seo($data["title"]);
+
                 $path         = FCPATH . "uploads/$this->viewFolder/";
                 $oldFolderName = !empty($gallery->folder_name) ? $gallery->folder_name : seo($data["title"]);
                 $folder_name = seo($data["title"]);
@@ -135,8 +135,9 @@ class Galleries extends MY_Controller
                     echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Galeri Güncellemesi Yapılırken Hata Oluştu. Klasör Erişim Yetkinizin Olduğundan Emin Olup Tekrar Deneyin."]);
                     die();
                 endif;
+                $data["url"] = seo($data["title"]);
                 if (!empty($_FILES["img_url"]["name"])) :
-                    $image = upload_picture("img_url", "uploads/$this->viewFolder/$gallery_type/$folder_name", ["width" => 1000, "height" => 1000], "*");
+                    $image = upload_picture("img_url", "uploads/$this->viewFolder/$gallery_type/$folder_name", ["width" => $data["width"], "height" => $data["height"]], "*");
                     if ($image["success"]) :
                         $data["url"] =  seo($data["title"]);
                         $data["img_url"] = $image["file_name"];
@@ -303,7 +304,7 @@ class Galleries extends MY_Controller
             $model = "video_url_model";
         endif;
         if (!empty($_FILES["img_url"]["name"])) :
-            $image = upload_picture("img_url", "uploads/$this->viewFolder/$gallery->gallery_type", ["width" => 1000, "height" => 1000], "*");
+            $image = upload_picture("img_url", "uploads/$this->viewFolder/$gallery->gallery_type", ["width" => $gallery->width, "height" => $gallery->height], "*");
             if ($image["success"]) :
                 $data["img_url"] = $image["file_name"];
             else :
@@ -323,7 +324,7 @@ class Galleries extends MY_Controller
         $gallery = $this->gallery_model->get(["id" => $gallery_id]);
         if ($gallery_type != "video_urls") :
             if ($gallery_type == "images") :
-                $image = upload_picture("file", "uploads/$this->viewFolder/images/{$gallery->folder_name}/", [], "*");
+                $image = upload_picture("file", "uploads/$this->viewFolder/images/{$gallery->folder_name}/", ["width" => $gallery->width, "height" => $gallery->height], "*");
                 if ($image["success"]) :
                     $getRank = $this->image_model->rowCount();
                     $this->image_model->add(

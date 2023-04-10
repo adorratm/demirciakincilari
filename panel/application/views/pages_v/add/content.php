@@ -56,6 +56,19 @@
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <div class="form-group">
+                <label>SAYFA GALERİSİ (ÖNCELİKLE GALERİ OLUŞTURMAYI UNUTMAYIN)</label>
+                <select name="gallery_id" class="form-control form-control-sm rounded-0" required>
+                    <option value="">GALERİ YOK</option>
+                    <?php foreach ($galleries as $key => $value) : ?>
+                        <option value="<?= $value->id ?>"><?= $value->title ?></option>
+                    <?php endforeach ?>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="form-group">
                 <label>Dil</label>
                 <select name="lang" class="form-control form-control-sm rounded-0" required>
                     <?php if (!empty($settings)) : ?>

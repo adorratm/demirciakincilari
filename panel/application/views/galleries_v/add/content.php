@@ -42,6 +42,20 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <div class="form-group">
+                <label for="width">Galeri Görsel Genişliği</label>
+                <input type="number" class="form-control form-control-sm rounded-0" placeholder="Galeri Görsel Genişliği" name="width" required>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+        <div class="form-group">
+                <label for="height">Galeri Görsel Yüksekliği</label>
+                <input type="number" class="form-control form-control-sm rounded-0" placeholder="Galeri Görsel Yüksekliği" name="height" required>
+            </div>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <div class="form-group">
                 <label>Dil</label>

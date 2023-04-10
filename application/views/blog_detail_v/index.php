@@ -1,49 +1,50 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
-
-<!--Page Header Start-->
-<section class="page-header">
-    <div class="page-header__bg" style="background-image: url(<?= get_picture("settings_v", $settings->blog_logo) ?>);"></div>
-    <div class="container">
-        <div class="page-header__inner">
-            <h2><?= $page_title ?></h2>
+<!-- Page Title -->
+<section class="page-title p_relative centred">
+    <div class="bg-layer p_absolute l_0 parallax_none parallax-bg" data-parallax='{"y": 100}' style="background-image: url(<?= get_picture("settings_v", $settings->blog_logo) ?>);"></div>
+    <div class="auto-container">
+        <div class="content-box">
+            <h1 class="d_block fs_60 lh_70 fw_bold mb_10"><?= $page_title ?></h1>
         </div>
     </div>
 </section>
-<!--Page Header End-->
+<!-- End Page Title -->
 
-
-<!--Blog List start-->
-<section class="blog-list">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-10 col-lg-7">
-                <div class="blog-list__left ms-0">
-                    <!--Blog List Single Start-->
-                    <div class="blog-list__single">
-                        <div class="blog-list__img-1">
-                            <img width="1000" height="1000" loading="lazy" data-src="<?= get_picture("blogs_v", $blog->img_url) ?>" title="<?= $blog->title ?>" alt="<?= $blog->title ?>" class="img-fluid w-100 lazyload">
-                        </div>
-                        <div class="blog-list__content">
-                            <ul class="blog-list__meta list-unstyled">
-                                <li>
-                                    <a href="<?= base_url() ?>" rel="dofollow" title="<?= $settings->company_name ?>"><i class="fa fa-user"></i><?= $settings->company_name ?></a>
-                                </li>
-                                <li>
-                                    <?php foreach ($categories as $k => $v) : ?>
-                                        <?php if ($v->id == $blog->category_id) : ?>
-                                            <a rel="dofollow" href="<?= base_url(lang("routes_blog") . "/{$v->seo_url}") ?>" title="<?= $v->title ?>"><?= $v->title ?></a>
-                                        <?php endif ?>
-                                    <?php endforeach ?>
-                                </li>
-                            </ul>
-                            <h3 class="blog-list__title"><a href="<?= base_url() ?>" rel="dofollow" title="<?= $settings->company_name ?>"><?= $blog->title ?></a></h3>
-                            <?= $blog->content ?>
+<section class="sidebar-page-container blog-standard-2 p_relative sec-pad">
+    <div class="auto-container">
+        <div class="row justify-content-center clearfix">
+            <div class="col-lg-8 col-md-12 col-sm-12 content-side">
+                <div class="blog-standard-content p_relative d_block mr_20 centred">
+                    <div class="news-block-one wow fadeInUp animated animated animated" data-wow-delay="00ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                        <div class="inner-box p_relative d_block pb_70 mb_70 b_shadow_6 b_radius_5">
+                            <?php if (!empty($blog->img_url)) : ?>
+                                <div class="image-box p_relative d_block">
+                                    <figure class="image p_relative d_block">
+                                        <a href="<?= base_url(lang("routes_blog") . "/" . lang("routes_blog_detail") . "/{$blog->seo_url}") ?>" title="<?= $blog->title ?>">
+                                            <img data-src="<?= get_picture("blogs_v", $blog->img_url) ?>" title="<?= $blog->title ?>" alt="<?= $blog->title ?>" class="lazyload img-fluid w-100">
+                                        </a>
+                                    </figure>
+                                </div>
+                            <?php endif ?>
+                            <div class="lower-content p_relative d_block pt_35 pl_80 pr_80">
+                                <div class="category p_relative d_block mb_4"><a href="<?= base_url() ?>" rel="dofollow" title="<?= $settings->company_name ?>" class="d_iblock fs_16 font_family_poppins uppercase"><?= $settings->company_name ?></a></div>
+                                <h2 class="d_block fs_30 lh_40 fw_sbold mb_5"><?= $blog->title ?></h2>
+                                <ul class="post-info clearfix p_relative d_block mb_15">
+                                    <li class="p_relative d_iblock mr_30 fs_16"><a href="<?= base_url() ?>" rel="dofollow" title="<?= $settings->company_name ?>"><i class="fa fa-user"></i><?= $settings->company_name ?></a></li>
+                                    <li class="p_relative d_iblock fs_16">
+                                        <?php foreach ($categories as $k => $v) : ?>
+                                            <?php if ($v->id == $blog->category_id) : ?>
+                                                <a rel="dofollow" href="<?= base_url(lang("routes_blog") . "/{$v->seo_url}") ?>" title="<?= $v->title ?>"><?= $v->title ?></a>
+                                            <?php endif ?>
+                                        <?php endforeach ?>
+                                    </li>
+                                </ul>
+                                <?= str_replace("<p>", "<p class='d_block font_family_poppins mb_30'>", $blog->content) ?>
+                            </div>
                         </div>
                     </div>
-                    <!--Blog List Single End-->
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!--Blog List End-->

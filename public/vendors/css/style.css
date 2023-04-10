@@ -3613,7 +3613,7 @@
 }
 
 .accordion-box .block .acc-btn .icon-outer{
-  top: 24px;
+  top: 20px;
   right: 30px;
   color: #141417;
 }
@@ -10830,7 +10830,7 @@ div[class^="bubble-"] {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 250px 0px 135px 0px;
+  padding: 50px 0px 50px 0px;
 }
 
 .page-title:before{

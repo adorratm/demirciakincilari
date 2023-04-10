@@ -1,63 +1,51 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
-<!--Page Header Start-->
-<section class="page-header">
-    <div class="page-header__bg" style="background-image: url(<?= !empty($item->banner_url) ? get_picture("pages_v", $item->banner_url)  : get_picture("settings_v", $settings->about_logo) ?>);"></div>
-    <div class="container">
-        <div class="page-header__inner">
-            <h2><?= $page_title ?></h2>
+<!-- Page Title -->
+<section class="page-title p_relative centred">
+    <div class="bg-layer p_absolute l_0 parallax_none parallax-bg" data-parallax='{"y": 100}' style="background-image: url(<?= !empty($item->banner_url) ? get_picture("pages_v", $item->banner_url)  : get_picture("settings_v", $settings->about_logo) ?>);"></div>
+    <div class="auto-container">
+        <div class="content-box">
+            <h1 class="d_block fs_60 lh_70 fw_bold mb_10"><?= $page_title ?></h1>
         </div>
     </div>
 </section>
-<!--Page Header End-->
+<!-- End Page Title -->
 
-<?php $this->load->view("includes/testimonial") ?>
 
-<!-- BEGIN: About Section -->
-<section class="aboutPageSection01 p-0">
-    <?php if ($item->type === "ABOUT" || $item->type === "CONTENT") : ?>
-        <div class="container-fluid">
-            <div class="row triggerFixed align-items-stretch align-self-stretch align-content-stretch">
-                <div class="col-lg-12 image-column bg-white h-100">
-                    <div class="title-box rounded p-1 p-sm-3">
-                        <div class="sec-title mb-0">
-                            <?php $pages = $this->general_model->get_all("pages", null, "rank ASC", ["isActive" => 1, "type" => $item->type]); ?>
-                            <?php if (!empty($pages)) : ?>
-                                <?php $l = 1 ?>
-                                <ul class="nav pageNav justify-content-center" id="fixingBar">
-                                    <?php foreach ($pages as $key => $value) : ?>
-                                        <li class="nav-item <?= $l != count($pages) ? "border-end" : null ?>"><a class="nav-link p-1 p-lg-2 text-dark <?= $this->uri->segment(3) == $value->url ? "active" : null ?>" rel="dofollow" title="<?= $value->title ?>" style="font-weight: 600;font-size:13px" href="#<?= $value->url ?>"><?= $value->title ?></a></li>
-                                        <?php $l++ ?>
-                                    <?php endforeach ?>
-                                </ul>
-                            <?php endif ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <?php endif ?>
+<!-- ourmission-section -->
+<section class="<?= $item->type == "KVKK" ? "faq-page-section" : "ourmission-section about-page-1" ?> p_relative pt_150 pb_150">
     <?php $pages = $this->general_model->get_all("pages", null, "rank ASC", ["isActive" => 1, "type" => $item->type]); ?>
     <?php if ($item->type === "ABOUT") : ?>
 
         <?php $i = 0 ?>
         <!-- BEGIN: About Section -->
         <?php foreach ($pages as $key => $value) : ?>
-            <div class="container-fluid  <?= $i % 2 == 0 ? "py-4" : null ?>" id="<?= $value->url ?>" <?= $i % 2 == 0 ? "style='background-color:var(--bcorz-black)'" : null ?>>
-                <div class="container">
-                    <div class="row align-items-center align-self-center align-content-center my-4">
-                        <?php if (!empty($value->img_url)) : ?>
-                            <div class="col-lg-6 order-0 order-lg-<?= $i % 2 == 0 ? "1" : "0" ?> h-100">
-                                <div class="image text-center justify-content-center d-flex"><img loading="lazy" class="img-fluid lazyload" data-src="<?= get_picture("pages_v", $value->img_url) ?>" title="<?= $value->title ?>" alt="<?= $value->title ?>"></div>
+            <div class="pattern-layer p_absolute float-bob-y" style="background-image: url(<?= asset_url("public/images/shape/shape-56.webp") ?>);"></div>
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-6 order-lg-<?= $i % 2 == 0 ? "0" : "1" ?> col-md-12 col-sm-12 left-column">
+                        <div class="content_block_22">
+                            <div class="content-box p_relative d_block mr_100">
+                                <div class="shape float-bob-y p_absolute w_95 h_95" style="background-image: url(<?= asset_url("public/images/shape/shape-173.webp") ?>);"></div>
+                                <?php if (!empty($value->img_url)) : ?>
+                                    <figure class="image-box p_relative d_block b_radius_10"><img loading="lazy" class="img-fluid lazyload" data-src="<?= get_picture("pages_v", $value->img_url) ?>" title="<?= $value->title ?>" alt="<?= $value->title ?>"></figure>
+                                <?php endif ?>
                             </div>
-                        <?php endif ?>
-                        <?php if (!empty(clean($value->content))) : ?>
-                            <div class="col-lg-6 order-lg-<?= $i % 2 == 0 ? "0" : "1" ?> h-100">
-                                <h2 class="font-weight-bold mb-4 <?= $i % 2 != 0 ? "text-dark" : "text-white" ?>"><?= $value->title ?></h2>
-                                <div class="text <?= $i % 2 == 0 ? "text-white" : null ?>">
-                                    <?= $value->content ?>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-<?= $i % 2 == 0 ? "1" : "0" ?> col-md-12 col-sm-12 left-column">
+                        <div class="content_block_23">
+                            <div class="content-box p_relative d_block">
+                                <div class="shape">
+                                    <div class="shape-1 p_absolute b_radius_50"></div>
+                                    <div class="shape-2 float-bob-y p_absolute" style="background-image: url(<?= asset_url("public/images/shape/shape-174.webp") ?>);"></div>
+                                </div>
+                                <div class="sec-title-three p_relative d_block mb_150">
+                                    <h6 class="d_block fs_17 lh_26 fw_sbold font_family_inter uppercase mb_12"><?= $settings->company_name ?></h6><br />
+                                    <h2 class="d_block fs_40 fw_bold font_family_inter mb_20"><?= $value->title ?></h2><br />
+                                    <?= str_replace("<p>", "<p class='font_family_poppins mb-3'>", $value->content) ?>
                                 </div>
                             </div>
-                        <?php endif ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -67,22 +55,33 @@
     <?php if ($item->type === "CONTENT") : ?>
         <?php $i = 0 ?>
         <?php foreach ($pages as $key => $value) : ?>
-            <div class="container-fluid" id="<?= $value->url ?>">
-                <div class="auto-container">
-                    <div class="row align-items-center align-self-center align-content-center my-4 <?= $i % 2 != 0 ? "py-4" : null ?>">
-                        <?php if (!empty($value->img_url)) : ?>
-                            <div class="col-lg-6 order-0 order-lg-<?= $i % 2 == 0 ? "1" : "0" ?> h-100">
-                                <div class="image text-center justify-content-center d-flex"><img loading="lazy" class="img-fluid lazyload" data-src="<?= get_picture("pages_v", $value->img_url) ?>" title="<?= $value->title ?>" alt="<?= $value->title ?>"></div>
+            <div class="pattern-layer p_absolute float-bob-y" style="background-image: url(<?= asset_url("public/images/shape/shape-56.webp") ?>);"></div>
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-6 order-lg-<?= $i % 2 == 0 ? "1" : "0" ?> col-md-12 col-sm-12 left-column">
+                        <div class="content_block_22">
+                            <div class="content-box p_relative d_block mr_100">
+                                <div class="shape float-bob-y p_absolute w_95 h_95" style="background-image: url(<?= asset_url("public/images/shape/shape-173.webp") ?>);"></div>
+                                <?php if (!empty($value->img_url)) : ?>
+                                    <figure class="image-box p_relative d_block b_radius_10"><img loading="lazy" class="img-fluid lazyload" data-src="<?= get_picture("pages_v", $value->img_url) ?>" title="<?= $value->title ?>" alt="<?= $value->title ?>"></figure>
+                                <?php endif ?>
                             </div>
-                        <?php endif ?>
-                        <?php if (!empty(clean($value->content))) : ?>
-                            <div class="col-lg-6 order-1 order-lg-<?= $i % 2 == 0 ? "0" : "1" ?> h-100">
-                                <h2 class="font-weight-bold mb-4 text-dark"><?= $value->title ?></h2>
-                                <div class="text">
-                                    <?= $value->content ?>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-<?= $i % 2 == 0 ? "0" : "1" ?> col-md-12 col-sm-12 left-column">
+                        <div class="content_block_23">
+                            <div class="content-box p_relative d_block">
+                                <div class="shape">
+                                    <div class="shape-1 p_absolute b_radius_50"></div>
+                                    <div class="shape-2 float-bob-y p_absolute" style="background-image: url(<?= asset_url("public/images/shape/shape-174.webp") ?>);"></div>
+                                </div>
+                                <div class="sec-title-three p_relative d_block mb_150">
+                                    <h6 class="d_block fs_17 lh_26 fw_sbold font_family_inter uppercase mb_12"><?= $settings->company_name ?></h6><br />
+                                    <h2 class="d_block fs_40 fw_bold font_family_inter mb_20"><?= $value->title ?></h2><br />
+                                    <?= str_replace("<p>", "<p class='font_family_poppins mb-3'>", $value->content) ?>
                                 </div>
                             </div>
-                        <?php endif ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -90,148 +89,158 @@
         <?php endforeach ?>
     <?php endif ?>
     <?php if ($item->type === "KVKK") : ?>
-        <section class="faq-page">
-            <div class="container">
-                <div class="accrodion-grp faq-one-accrodion" data-grp-name="faq-one-accrodion">
-                    <?php $i = 0 ?>
-                    <?php foreach ($pages as $key => $value) : ?>
-                        <div class="accrodion <?= $i == 0 ? "active" : null ?>">
-                            <div class="accrodion-title">
-                                <h4><?= $value->title ?></h4>
-                            </div>
-                            <div class="accrodion-content">
-                                <div class="inner">
-                                    <p><?= $value->content ?></p>
-                                </div><!-- /.inner -->
+        <!-- faq-page-section -->
+        <div class="auto-container">
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 content-side">
+                    <div class="faq-content">
+                        <div class="content-one p_relative d_block mb_30">
+                            <div class="content_block_five">
+                                <div class="content-box p_relative d_block">
+                                    <ul class="accordion-box">
+                                        <?php $i = 0 ?>
+                                        <?php foreach ($pages as $key => $value) : ?>
+                                            <li class="accordion block <?= $this->uri->segment(3) == $value->url ? "active-block" : null ?> p_relative d_block mb_30">
+                                                <div class="acc-btn <?= $this->uri->segment(3) == $value->url ? "active" : null ?> p_relative d_block tran_5 pt_16 pr_80 pb_16 pl_30">
+                                                    <div class="icon-outer p_absolute fs_10 tran_5 z_1"><i class="fa fa-chevron-down fa-2x"></i></div>
+                                                    <h4 class="p_relative d_block fs_20 lh_30 fw_medium"><?= $value->title ?></h4>
+                                                </div>
+                                                <div class="acc-content <?= $this->uri->segment(3) == $value->url ? "current" : null ?> p_relative pt_25 pr_50 pl_30">
+                                                    <div class="text p_relative d_block">
+                                                        <?= str_replace("<p>", "<p class='font_family_poppins mb-3'>", $value->content) ?>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <?php $i++ ?>
+                                        <?php endforeach ?>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <?php $i++ ?>
-                    <?php endforeach ?>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+        <!-- faq-page-section end -->
     <?php endif ?>
     <?php if ($item->type === "SIMPLE") : ?>
-        <!--Why Choose Two Start-->
-        <section class="why-choose-two why-choose-three">
-            <div class="container">
-                <div class="row">
-                    <?php if (!empty($item->img_url)) : ?>
-                        <div class="col-xl-6">
-                            <div class="why-choose-two__left">
-                                <div class="why-choose-two__img-1 wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
-                                    <img loading="lazy" class="img-fluid lazyload" data-src="<?= get_picture("pages_v", $item->img_url) ?>" title="<?= $item->title ?>" alt="<?= $item->title ?>">
-                                </div>
-                            </div>
+        <div class="pattern-layer p_absolute float-bob-y" style="background-image: url(<?= asset_url("public/images/shape/shape-56.webp") ?>);"></div>
+        <div class="auto-container">
+            <div class="row justify-content-center clearfix">
+                <div class="col-lg-6 col-md-12 col-sm-12 left-column">
+                    <div class="content_block_23">
+                        <div class="content-box p_relative d_block">
+                            <?php if (!empty($item->img_url)) : ?>
+                                <figure class="image-box p_relative d_block b_radius_10"><img loading="lazy" class="img-fluid lazyload" data-src="<?= get_picture("pages_v", $item->img_url) ?>" title="<?= $item->title ?>" alt="<?= $item->title ?>"></figure>
+                            <?php endif ?>
                         </div>
-                    <?php endif ?>
-                    <div class="col-xl-6">
-                        <div class="why-choose-two__right">
-                            <div class="section-title text-left">
-                                <span class="section-title__tagline"><?= $settings->company_name ?></span>
-                                <div class="section-title-shape">
-                                    <img class="img-fluid lazyload" loading="lazy" data-src="<?= asset_url("public/images/shapes/section-title-shape-1.webp") ?>" alt="<?= $settings->company_name ?>">
-                                </div>
-                                <h2 class="section-title__title"><?= $item->title ?></h2>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 left-column">
+                    <div class="content_block_23">
+                        <div class="content-box p_relative d_block">
+                            <div class="shape">
+                                <div class="shape-1 p_absolute b_radius_50"></div>
+                                <div class="shape-2 float-bob-y p_absolute" style="background-image: url(<?= asset_url("public/images/shape/shape-174.webp") ?>);"></div>
                             </div>
-                            <p class="why-choose-two__text-1"><?= $item->content ?></p>
+                            <div class="sec-title-three p_relative d_block <?= !empty($item->content) ? "mb_150" : null ?>">
+                                <h6 class="d_block fs_17 lh_26 fw_sbold font_family_inter uppercase mb_12"><?= $settings->company_name ?></h6><br />
+                                <h2 class="d_block fs_40 fw_bold font_family_inter mb_20"><?= $item->title ?></h2><br />
+                                <?= str_replace("<p>", "<p class='font_family_poppins mb-3'>", $item->content) ?>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!--Why Choose Two End-->
+        </div>
+        <?php if (!empty($item->gallery_id)) : ?>
+            <?php $gallery = $this->general_model->get("galleries", null, ["isActive" => 1, "id" => $item->gallery_id]) ?>
+            <?php if (!empty($gallery)) : ?>
+                <?php $gallery_items = !empty($gallery->gallery_type) ? $this->general_model->get_all("{$gallery->gallery_type}", null, "rank ASC", ["gallery_id" => $gallery->id, "isActive" => 1, "lang" => $this->viewData->lang]) : []; ?>
+                <section class="team-one team-page-1 p_relative  <?= !empty($item->content) ? "pt_130" : null ?>">
+                    <div class="auto-container">
+                        <div class="row clearfix <?= ($gallery->gallery_type != "files" ? "lightgallery" : null) ?>">
+                            <?php if (!empty($gallery_items)) : ?>
+                                <?php $j = 0 ?>
+                                <?php foreach ($gallery_items as $key => $value) : ?>
+                                    <?php if ($gallery->gallery_type == "files") : ?>
+                                        <?php $extension = pathinfo(FCPATH . "galleries_v/{$gallery->gallery_type}/{$gallery->folder_name}/" . $value->url)["extension"] ?>
+                                        <div class="<?= strto("lower", $extension) === "pdf" ? "col-lg-6 col-md-12" : "col-lg-3 col-md-6" ?> col-sm-12 team-block">
+                                            <?php if (strto("lower", $extension) === "pdf") : ?>
+                                                <iframe loading="lazy" data-src="<?= get_picture("galleries_v/{$gallery->gallery_type}/{$gallery->folder_name}", $value->url) ?>" frameborder="0" class="w-100 lazyload vh-100"></iframe>
+                                            <?php else : ?>
+                                                <div class="team-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                                                    <div class="inner-box p_relative d_block b_radius_5 b_shadow_6 mb_30">
+                                                        <div class="image-box p_relative d_block">
+                                                            <div class="overlay-pattern-1 p_absolute r_0" style="background-image: url(<?= asset_url("public/images/shape/shape-43.webp") ?>);"></div>
+                                                            <div class="overlay-pattern-2 p_absolute l_0" style="background-image: url(<?= asset_url("public/images/shape/shape-44.webp") ?>);"></div>
+                                                            <figure class="image p_relative d_block"><img width="1920" height="1280" loading="lazy" data-src="<?= get_picture("galleries_v/{$gallery->gallery_type}/{$gallery->folder_name}", $gallery->img_url) ?>" title="<?= $value->title ?>" alt="<?= $value->title ?>" class="lazyload rounded img-fluid"></figure>
+                                                            <ul class="social-links">
+                                                                <li><a rel="dofollow" href="<?= get_picture("galleries_v/{$gallery->gallery_type}/{$gallery->folder_name}", $value->url) ?>" alt="<?= $value->title ?>" <?= (!empty($extension) && $extension != "pdf" ? "download='" . (!empty($value->title) ? $value->title . "." . $extension : null) . "'" : "target='_blank'") ?>><i class="fa fa-download"></i> </a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="lower-content p_relative d_block pt_20 pr_30 pb_25 pl_30">
+                                                            <h4 class="p_relative d_block fs_20 lh_30 fw_sbold pl_30"><a rel="dofollow" href="<?= get_picture("galleries_v/{$gallery->gallery_type}/{$gallery->folder_name}", $value->url) ?>" alt="<?= $value->title ?>" <?= (!empty($extension) && $extension != "pdf" ? "download='" . (!empty($value->title) ? $value->title . "." . $extension : null) . "'" : "target='_blank'") ?>><?= !empty($value->title) && !empty($extension) ? $value->title . "." . $extension : $value->url ?></a></h4>
+                                                            <span class="designation fs_16 p_relative d_block font_family_poppins"><a rel="dofollow" href="<?= get_picture("galleries_v/{$gallery->gallery_type}/{$gallery->folder_name}", $value->url) ?>" alt="<?= $value->title ?>" <?= (!empty($extension) && $extension != "pdf" ? "download='" . (!empty($value->title) ? $value->title . "." . $extension : null) . "'" : "target='_blank'") ?>><i class="fa fa-download"></i> </a></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <?php endif ?>
+                                        </div>
+                                    <?php else : ?>
+                                        <div class="<?= ($gallery->gallery_type == "videos" || $gallery->gallery_type == "video_urls" ? "col-lg-12 col-xl-12" : "col-lg-3 col-md-6") ?> col-sm-12 team-block">
+                                            <?php if ($gallery->gallery_type == "videos") : ?>
+                                                <video id="my-video<?= $key ?>" controls preload="auto" width="100%">
+                                                    <source src="<?= get_picture("galleries_v/{$gallery->gallery_type}/{$gallery->folder_name}", $value->url) ?>" />
+                                                </video>
+                                            <?php elseif ($gallery->gallery_type == "video_urls") : ?>
+                                                <?= htmlspecialchars_decode($value->url) ?>
+                                            <?php else : ?>
+                                                <div class="team-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                                                    <div class="inner-box p_relative d_block b_radius_5 b_shadow_6 mb_30">
+                                                        <div class="image-box p_relative d_block">
+                                                            <div class="overlay-pattern-1 p_absolute r_0" style="background-image: url(<?= asset_url("public/images/shape/shape-43.webp") ?>);"></div>
+                                                            <div class="overlay-pattern-2 p_absolute l_0" style="background-image: url(<?= asset_url("public/images/shape/shape-44.webp") ?>);"></div>
+                                                            <figure class="image p_relative d_block"><img width="1920" height="1280" loading="lazy" data-src="<?= get_picture("galleries_v/{$gallery->gallery_type}/{$gallery->folder_name}", $value->url) ?>" title="<?= $value->title ?>" alt="<?= $value->title ?>" class="lazyload rounded img-fluid"></figure>
+                                                            <ul class="social-links">
+                                                                <li><a class="lightimg lightimg<?= $j ?>" rel="dofollow" data-exthumbimage="<?= get_picture("galleries_v/{$gallery->gallery_type}/{$gallery->folder_name}", $value->url) ?>" href="<?= get_picture("galleries_v/{$gallery->gallery_type}/{$gallery->folder_name}", $value->url) ?>" title="<?= $value->title ?>"><i class="fa fa-link"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <?php if (!empty($value->title) || !empty($value->description)) : ?>
+                                                            <div class="lower-content p_relative d_block pt_20 pr_30 pb_25 pl_30">
+                                                                <h4 class="p_relative d_block fs_20 lh_30 fw_sbold pl_30"><a rel="dofollow" onclick="event.preventDefault();$('.lightimg<?= $j ?>').click()" href="<?= get_picture("galleries_v/{$gallery->gallery_type}/{$gallery->folder_name}", $value->url) ?>" title="<?= $value->title ?>"><?= $value->title ?></a></h4>
+                                                                <span class="designation fs_16 p_relative d_block font_family_poppins"><?= $value->description ?></span>
+                                                            </div>
+                                                        <?php endif ?>
+                                                    </div>
+                                                </div>
+                                            <?php endif ?>
+                                        </div>
+                                    <?php endif ?>
+                                    <?php $j++ ?>
+                                <?php endforeach ?>
+                            <?php endif ?>
+                        </div>
+                    </div>
+                </section>
+            <?php endif ?>
+        <?php endif ?>
     <?php endif ?>
+
 </section>
-<!-- END: About Section -->
-
-<?php if (!empty($homeitems2)) : ?>
-    <!--Team One Start-->
-    <section class="team-one team-two">
-        <div class="container">
-            <div class="row align-items-stretch align-self-stretch align-content-stretch">
-                <?php $i = 100 ?>
-                <?php foreach ($homeitems2 as $key => $value) : ?>
-                    <!--Team One Single Start-->
-                    <div class="col-xl-4 col-lg-4 wow fadeInUp mb-3 mb-lg-0" data-wow-delay="<?= $i ?>ms">
-                        <div class="team-one__single h-100">
-                            <div class="team-one__inner">
-                                <div class="team-one__shape-1 float-bob-y d-none d-xxl-block"></div>
-                                <div class="team-one__img">
-                                    <img loading="lazy" class="img-fluid lazyload" data-src="<?= get_picture("homeitems_v", $value->img_url) ?>" alt="<?= $value->title ?>">
-                                </div>
-                                <div class="team-one__content mt-3">
-                                    <h3 class="team-one__name"><?= $value->title ?></h3>
-                                    <p class="team-one__sub-title"><?= $value->content ?></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Team One Single End-->
-                    <?php $i += 100; ?>
-                    <?php if ($i == 300) : ?>
-                        <?php $i = 100 ?>
-                    <?php endif ?>
-                <?php endforeach ?>
-            </div>
-        </div>
-    </section>
-    <!--Team One End-->
-<?php endif ?>
+<!-- ourmission-section end -->
 
 
-<?php if (!empty($homeitems3)) : ?>
-    <!--How We Works Start-->
-    <section class="how-we-works">
-        <div class="container">
-            <div class="section-title text-center">
-                <span class="section-title__tagline"><?= $settings->company_name ?></span>
-                <div class="section-title-shape">
-                    <img loading="lazy" class="lazyload img-fluid" data-src="<?= asset_url("public/images/shapes/section-title-shape-1.webp") ?>" alt="<?= $settings->company_name ?>">
-                </div>
-                <h2 class="section-title__title"><?= str_replace("{company_name}", $settings->company_name, lang("whyWe")) ?></h2>
-            </div>
 
-            <?php $i = 1 ?>
-            <?php foreach ($homeitems3 as $key => $value) : ?>
-                <?php if ($i == 1) : ?>
-                    <div class="how-we-works__inner mb-5">
-                        <div class="how-we-works__round"></div>
-                        <ul class="list-unstyled how-we-works__list">
-                        <?php endif ?>
-
-                        <li>
-                            <div class="how-we-works__content">
-                                <div class="how-we-works__icon">
-                                    <img loading="lazy" class="lazyload img-fluid" data-src="<?= get_picture("homeitems_v", $value->img_url) ?>" alt="<?= $value->title ?>">
-                                </div>
-                                <h3 class="how-we-works__title"><?= $value->title ?></a>
-                                </h3>
-                                <p class="how-we-works__text"><?= $value->content ?></p>
-                                <?php if ($i == 1) : ?>
-                                    <div class="how-we-works__shape-1">
-                                        <img class="img-fluid lazyload" loading="lazy" data-src="<?= asset_url("public/images/shapes/how-we-works-shape-1.webp") ?>" alt="<?= $settings->company_name ?>">
-                                    </div>
-                                <?php endif ?>
-                                <?php if ($i == 3) : ?>
-                                    <div class="how-we-works__shape-2">
-                                        <img class="img-fluid lazyload" loading="lazy" data-src="<?= asset_url("public/images/shapes/how-we-works-shape-2.webp") ?>" alt="<?= $settings->company_name ?>">
-                                    </div>
-                                    <div class="how-we-works__shape-3">
-                                        <img class="img-fluid lazyload" loading="lazy" data-src="<?= asset_url("public/images/shapes/how-we-works-shape-3.webp") ?>" alt="<?= $settings->company_name ?>">
-                                    </div>
-                                <?php endif ?>
-                            </div>
-                        </li>
-
-                        <?php $i++ ?>
-                        <?php if ($i == 4) : ?>
-                        </ul>
-                    </div>
-                    <?php $i = 1 ?>
-                <?php endif ?>
-            <?php endforeach ?>
-        </div>
-    </section>
-    <!--How We Works End-->
-<?php endif ?>
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        if (($('#lightgallery, .lightgallery').length > 0)) {
+            $('#lightgallery, .lightgallery').lightGallery({
+                selector: '.lightimg',
+                loop: !0,
+                thumbnail: !0,
+                exThumbImage: 'data-exthumbimage'
+            })
+        }
+    });
+</script>

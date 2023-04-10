@@ -72,20 +72,15 @@ class Blogs extends MY_Controller
         else :
             $getRank = $this->blog_model->rowCount();
             if (!empty($_FILES)) :
-                if (empty($_FILES["img_url"]["name"])) :
-                    echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Blog Eklenirken Hata Oluştu. Blog Görseli Seçtiğinizden Emin Olup, Lütfen Tekrar Deneyin."]);
-                    die();
+                if (!empty($_FILES["img_url"]["name"])) :
+                    $image = upload_picture("img_url", "uploads/$this->viewFolder", ["width" => 1000, "height" => 1000], "*");
+                    if ($image["success"]) :
+                        $data["img_url"] = $image["file_name"];
+                    else :
+                        echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Blog Kaydı Yapılırken Hata Oluştu. Blog Görseli Seçtiğinizden Emin Olup Tekrar Deneyin."]);
+                        die();
+                    endif;
                 endif;
-                $image = upload_picture("img_url", "uploads/$this->viewFolder", ["width" => 1000, "height" => 1000], "*");
-                if ($image["success"]) :
-                    $data["img_url"] = $image["file_name"];
-                else :
-                    echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Blog Kaydı Yapılırken Hata Oluştu. Blog Görseli Seçtiğinizden Emin Olup Tekrar Deneyin."]);
-                    die();
-                endif;
-            else :
-                echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Blog Kaydı Yapılırken Hata Oluştu. Blog Görseli Seçtiğinizden Emin Olup Tekrar Deneyin."]);
-                die();
             endif;
             $data["seo_url"] = seo($data["title"]);
             $data["content"] = $_POST["content"];
@@ -118,18 +113,17 @@ class Blogs extends MY_Controller
         else :
             $blog = $this->blog_model->get(["id" => $id]);
             $data["img_url"] = $blog->img_url;
-            if (!empty($_FILES["img_url"]["name"])) :
-                $image = upload_picture("img_url", "uploads/$this->viewFolder", ["width" => 1000, "height" => 1000], "*");
-                if ($image["success"]) :
-                    $data["img_url"] = $image["file_name"];
-                    if (!empty($blog->img_url)) :
-                        if (!is_dir(FCPATH . "uploads/{$this->viewFolder}/{$blog->img_url}") && file_exists(FCPATH . "uploads/{$this->viewFolder}/{$blog->img_url}")) :
-                            unlink(FCPATH . "uploads/{$this->viewFolder}/{$blog->img_url}");
+            if (!empty($_FILES)) :
+                if (!empty($_FILES["img_url"]["name"])) :
+                    $image = upload_picture("img_url", "uploads/$this->viewFolder", ["width" => 1000, "height" => 1000], "*");
+                    if ($image["success"]) :
+                        $data["img_url"] = $image["file_name"];
+                        if (!empty($blog->img_url)) :
+                            if (!is_dir(FCPATH . "uploads/{$this->viewFolder}/{$blog->img_url}") && file_exists(FCPATH . "uploads/{$this->viewFolder}/{$blog->img_url}")) :
+                                unlink(FCPATH . "uploads/{$this->viewFolder}/{$blog->img_url}");
+                            endif;
                         endif;
                     endif;
-                else :
-                    echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Blog Güncelleştirilirken Hata Oluştu. Blog Görseli Seçtiğinizden Emin Olup Tekrar Deneyin."]);
-                    die();
                 endif;
             endif;
             $data["seo_url"] = seo($data["title"]);

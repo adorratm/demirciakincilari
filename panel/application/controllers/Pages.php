@@ -58,12 +58,13 @@ class Pages extends MY_Controller
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "add";
         $viewData->settings = $this->general_model->get_all("settings", null, null, ["isActive" => 1]);
+        $viewData->galleries = $this->general_model->get_all("galleries", null, null, ["isActive" => 1]);
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/content", $viewData);
     }
     public function save()
     {
         $data = rClean($this->input->post());
-        if (checkEmpty($data)["error"] && checkEmpty($data)["key"] != "content") :
+        if (checkEmpty($data)["error"] && checkEmpty($data)["key"] != "content" && checkEmpty($data)["key"] != "gallery_id") :
             $key = checkEmpty($data)["key"];
             echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Sayfa Kaydı Yapılırken Hata Oluştu. \"{$key}\" Bilgisini Doldurduğunuzdan Emin Olup Tekrar Deneyin."]);
         else :
@@ -107,12 +108,13 @@ class Pages extends MY_Controller
         $viewData->subViewFolder = "update";
         $viewData->item = $this->page_model->get(["id" => $id]);
         $viewData->settings = $this->general_model->get_all("settings", null, null, ["isActive" => 1]);
+        $viewData->galleries = $this->general_model->get_all("galleries", null, null, ["isActive" => 1]);
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/content", $viewData);
     }
     public function update($id)
     {
         $data = rClean($this->input->post());
-        if (checkEmpty($data)["error"] && checkEmpty($data)["key"] != "content") :
+        if (checkEmpty($data)["error"] && checkEmpty($data)["key"] != "content" && checkEmpty($data)["key"] != "gallery_id") :
             $key = checkEmpty($data)["key"];
             echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Sayfa Güncelleştirilirken Hata Oluştu. \"{$key}\" Bilgisini Doldurduğunuzdan Emin Olup Tekrar Deneyin."]);
         else :
