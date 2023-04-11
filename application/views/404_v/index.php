@@ -1,31 +1,26 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
-<!--Page Header Start-->
-<section class="page-header">
-    <div class="page-header__bg" style="background-image: url(<?= get_picture("settings_v", $settings->about_logo) ?>);"></div>
-    <div class="container">
-        <div class="page-header__inner">
-            <h2><?= lang("pageNotFound") ?></h2>
+<!-- Page Title -->
+<section class="page-title p_relative centred">
+    <div class="bg-layer p_absolute l_0 parallax_none parallax-bg" data-parallax='{"y": 100}' style="background-image: url(<?= get_picture("settings_v", $settings->about_logo) ?>);"></div>
+    <div class="auto-container">
+        <div class="content-box">
+            <h1 class="d_block fs_60 lh_70 fw_bold mb_10"><?= lang("pageNotFound") ?></h1>
         </div>
     </div>
 </section>
-<!--Page Header End-->
+<!-- End Page Title -->
 
-<!--Error Page Start-->
-<section class="error-page">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="error-page__inner">
-                    <div class="error-page__title-box">
-                        <h2 class="error-page__title">404</h2>
-                        <h2 class="error-page__title-2">404</h2>
-                    </div>
-                    <h3 class="error-page__tagline"><i class="fa-regular fa-face-sad-cry"></i> <?= lang("pageNotFound") ?></h3>
-                    <p class="error-page__text"><?= lang("404Desc") ?></p>
-                    <a rel="dofollow" href="<?= base_url() ?>" title="<?= lang("404Home") ?>" class="thm-btn error-page__btn"><?= lang("404Home") ?></a>
-                </div>
+<!-- error-section -->
+<section class="error-section p_relative d_block centred pt_140 pb_150">
+    <div class="auto-container">
+        <div class="inner-box">
+            <figure class="error-image p_relative d_block mb_70"><img loading="lazy" class="lazyload img-fluid" data-src="<?= asset_url("public/images/404.webp") ?>" alt="<?= lang("pageNotFound") ?>"></figure>
+            <h2 class="d_block fs_50 lh_60 fw_bold mb_12"><i class="fa-regular fa-face-sad-cry"></i> <?= lang("pageNotFound") ?></h2>
+            <h3 class="d_block fs_24 fw_medium mb_55"><?= lang("404Desc") ?></h3>
+            <div class="text-box">
+                <a rel="dofollow" href="<?= base_url() ?>" title="<?= lang("404Home") ?>" class="theme-btn theme-btn-one"><i class="far fa-long-arrow-left"></i> <?= lang("404Home") ?></a>
             </div>
         </div>
     </div>
 </section>
-<!--Error Page End-->
+<!-- error-section end -->

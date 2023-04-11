@@ -1330,7 +1330,7 @@ img {
 
 .main-menu .navigation > li > .megamenu li > a{
   padding: 6px 0px;
-  display: inline-block;
+  display: block;
 }
 
 .main-menu .navigation > li > .megamenu li > a:before{

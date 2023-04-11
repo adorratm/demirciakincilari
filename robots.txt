@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mutfakyapim.mutfakyapim.com/tr/sitemap.xml
-Sitemap: https://mutfakyapim.mutfakyapim.com/tr/sitemapindex.xml
+Sitemap: https://demirciakincilari.com/tr/sitemap.xml
+Sitemap: https://demirciakincilari.com/tr/sitemapindex.xml

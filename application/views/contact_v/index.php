@@ -185,22 +185,6 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12 form-group">
                                     <textarea name="comment" id="comment" cols="30" rows="8" placeholder="<?= lang("message") ?>" required></textarea>
                                 </div>
-                                <?php $securityPolicy = $this->general_model->get("pages", null, ["isActive" => 1, "id" => 3]) ?>
-                                <?php $kvkk = $this->general_model->get("pages", null, ["isActive" => 1, "id" => 6]) ?>
-                                <?php $securityPolicyUrl = '<a href="' . base_url(lang("routes_page") . "/" . $securityPolicy->url) . '" rel="dofollow" title="' . $securityPolicy->title . '">' . $securityPolicy->title . '</a>'; ?>
-                                <?php $kvkkUrl = '<a href="' . base_url(lang("routes_page") . "/" . $kvkk->url) . '" rel="dofollow" title="' . $kvkk->title . '">' . $kvkk->title . '</a>'; ?>
-                                <?php $companyName = '<a href="' . base_url() . '" rel="dofollow" title="' . $settings->company_name . '">' . $settings->company_name . '</a>'; ?>
-                                <?php $kvkkMessage = str_replace("@kvkk@", $kvkkUrl, lang("kvkkMessage")) ?>
-                                <?php $kvkkMessage = str_replace("@companyName@", $companyName, $kvkkMessage) ?>
-                                <?php $kvkkMessage = str_replace("@securityPolicy@", $securityPolicyUrl, $kvkkMessage) ?>
-                                <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                    <div class="form-check d-flex">
-                                        <input class="form-check-input" type="checkbox" name="kvkkMessage" required id="kvkkMessage" style="min-width: 2em;min-height:2em;">
-                                        <label class="form-check-label ms-2" for="flexCheckDefault">
-                                            <?= $kvkkMessage ?>
-                                        </label>
-                                    </div>
-                                </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
                                     <button class="theme-btn theme-btn-eight btnSubmitForm" type="submit" aria-label="<?= $settings->company_name ?>" name="submit-form" data-url="<?= base_url(lang("routes_contact-form")) ?>"><?= lang("submit") ?></button>
                                 </div>

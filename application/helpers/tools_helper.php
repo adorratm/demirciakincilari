@@ -852,7 +852,7 @@ function in_parent($in_parent = null, $position = null, $lang = null, $store_all
     $html = "";
     // build hierarchy  html structure based on ul li (parent-child) nodes
     if (in_array($in_parent, $store_all_id)) :
-        $result = $t->general_model->get_all("menus", "url,title,id,top_id,page_id,target,showCategories", "rank ASC", ["position" => $position, "top_id" => $in_parent, "isActive" => 1, "lang" => $lang]);
+        $result = $t->general_model->get_all("menus", "url,title,id,top_id,page_id,blog_id,blog_category_id,target,showCategories", "rank ASC", ["position" => $position, "top_id" => $in_parent, "isActive" => 1, "lang" => $lang]);
         $html .=  '<ul ' . ($position == "HEADER" && $in_parent == 0 ? "class='navigation clearfix home-menu'" : ($position != "HEADER" ? "class='links-list clearfix'" : null)) . '>';
         foreach ($result as $key => $value) :
             $page = $t->general_model->get("pages", "url,title", ["isActive" => 1, "id" => $value->page_id, "lang" => $lang]);
@@ -861,17 +861,33 @@ function in_parent($in_parent = null, $position = null, $lang = null, $store_all
                     $page->url = (!empty($page->url) ? $page->url : null);
                 endif;
             endif;
+            $blog = $t->general_model->get("blogs", "seo_url,title", ["isActive" => 1, "id" => $value->blog_id, "lang" => $lang]);
+            if ($value->blog_id !== 0) :
+                if (!empty($blog)) :
+                    $blog->seo_url = (!empty($blog->seo_url) ? $blog->seo_url : null);
+                endif;
+            endif;
+            $blog_category = $t->general_model->get("blog_categories", "seo_url,title", ["isActive" => 1, "id" => $value->blog_category_id, "lang" => $lang]);
+            if ($value->blog_category_id !== 0) :
+                if (!empty($blog_category)) :
+                    $blog_category->seo_url = (!empty($blog_category->seo_url) ? $blog_category->seo_url : null);
+                endif;
+            endif;
             $value->title = (!empty($value->title) ? $value->title : null);
             if (!empty($value->url)) :
                 $value->url = (!empty($value->url) ? $value->url : null);
             endif;
             $html .= '<li ' . (($position == "HEADER") && (in_array($value->id, $store_all_id)) ? ((!empty($page->url) && ($t->uri->segment(2) == strto("lower", seo($page->url)) || $t->uri->segment(3) == strto("lower", seo($page->url)))) || $t->uri->segment(2) == strto("lower", seo($value->title)) || $t->uri->segment(3) == strto("lower", seo($value->title)) || ($t->uri->segment(2) === null && $value->url === '/' || $value->showCategories) ? "class='" . ($value->showCategories ? "has-megamenu" : null) . " dropdown current'" : "class='dropdown'") : ((!empty($page->url) && ($t->uri->segment(2) == strto("lower", seo($page->url)) || $t->uri->segment(3) == strto("lower", seo($page->url)))) || ($t->uri->segment(2) === null && $value->url === '/') || $t->uri->segment(2) == strto("lower", seo($value->title)) || $t->uri->segment(3) == strto("lower", seo($value->title)) ? ($value->showCategories ? "class='" . ($value->showCategories ? "has-megamenu" : null) . " dropdown'" : null) : ($value->showCategories ? "class='" . ($value->showCategories ? "has-megamenu" : null) . " dropdown'" : null))) . '>';
             if (empty($value->url)) :
-
                 if (!empty($page->url)) :
-
                     $html .= '<a rel="dofollow" ' . (($position == "MOBILE" || $position == "HEADER") && in_array($value->id, $store_all_id) ? ((!empty($page->url) && ($t->uri->segment(2) == strto("lower", seo($page->url)) || $t->uri->segment(3) == strto("lower", seo($page->url)))) || $t->uri->segment(2) == strto("lower", seo($value->title)) || $t->uri->segment(3) == strto("lower", seo($value->title)) || ($t->uri->segment(2) === null && $value->url === '/') ? "class='current'" : "class=''") : ((!empty($page->url) && ($t->uri->segment(2) == strto("lower", seo($page->url)) || $t->uri->segment(3) == strto("lower", seo($page->url)))) || ($t->uri->segment(2) === null && $value->url === '/') || $t->uri->segment(2) == strto("lower", seo($value->title)) || $t->uri->segment(3) == strto("lower", seo($value->title)) ? "class='current'" : "class=''")) . ' href="' . base_url(lang("routes_page") . "/" . (!empty($page->url) ? $page->url : null)) . '" target="' . $value->target . '" title="' . $value->title . '">' . $value->title . '</a>';
                     array_push($t->viewData->page_urls, base_url(lang("routes_page") . "/" . (!empty($page->url) ? $page->url : null)));
+                elseif (!empty($blog->seo_url)) :
+                    $html .= '<a rel="dofollow" ' . (($position == "MOBILE" || $position == "HEADER") && in_array($value->id, $store_all_id) ? ((!empty($blog->seo_url) && ($t->uri->segment(2) == strto("lower", seo($blog->seo_url)) || $t->uri->segment(3) == strto("lower", seo($blog->seo_url)))) || $t->uri->segment(2) == strto("lower", seo($value->title)) || $t->uri->segment(3) == strto("lower", seo($value->title)) || ($t->uri->segment(2) === null && $value->url === '/') ? "class='current'" : "class=''") : ((!empty($blog->seo_url) && ($t->uri->segment(2) == strto("lower", seo($blog->seo_url)) || $t->uri->segment(3) == strto("lower", seo($blog->seo_url)))) || ($t->uri->segment(2) === null && $value->url === '/') || $t->uri->segment(2) == strto("lower", seo($value->title)) || $t->uri->segment(3) == strto("lower", seo($value->title)) ? "class='current'" : "class=''")) . ' href="' . base_url(lang("routes_blog") . "/" . lang("routes_blog_detail") . "/" . (!empty($blog->seo_url) ? $blog->seo_url : null)) . '" target="' . $value->target . '" title="' . $value->title . '">' . $value->title . '</a>';
+                    array_push($t->viewData->page_urls, base_url(lang("routes_blog") . "/" . lang("routes_blog_detail") . "/"  . (!empty($blog->seo_url) ? $blog->seo_url : null)));
+                elseif (!empty($blog_category->seo_url)) :
+                    $html .= '<a rel="dofollow" ' . (($position == "MOBILE" || $position == "HEADER") && in_array($value->id, $store_all_id) ? ((!empty($blog_category->seo_url) && ($t->uri->segment(2) == strto("lower", seo($blog_category->seo_url)) || $t->uri->segment(3) == strto("lower", seo($blog_category->seo_url)))) || $t->uri->segment(2) == strto("lower", seo($value->title)) || $t->uri->segment(3) == strto("lower", seo($value->title)) || ($t->uri->segment(2) === null && $value->url === '/') ? "class='current'" : "class=''") : ((!empty($blog_category->seo_url) && ($t->uri->segment(2) == strto("lower", seo($blog_category->seo_url)) || $t->uri->segment(3) == strto("lower", seo($blog_category->seo_url)))) || ($t->uri->segment(2) === null && $value->url === '/') || $t->uri->segment(2) == strto("lower", seo($value->title)) || $t->uri->segment(3) == strto("lower", seo($value->title)) ? "class='current'" : "class=''")) . ' href="' . base_url(lang("routes_blog") . "/" . (!empty($blog_category->seo_url) ? $blog_category->seo_url : null)) . '" target="' . $value->target . '" title="' . $value->title . '">' . $value->title . '</a>';
+                    array_push($t->viewData->page_urls, base_url(lang("routes_blog") . "/" . (!empty($blog_category->seo_url) ? $blog_category->seo_url : null)));
                 else :
                     $html .= '<a rel="dofollow" ' . (($position == "MOBILE" || $position == "HEADER") && in_array($value->id, $store_all_id) ? ((!empty($page->url) && ($t->uri->segment(2) == strto("lower", seo($page->url)) || $t->uri->segment(3) == strto("lower", seo($page->url)))) || $t->uri->segment(2) == strto("lower", seo($value->title)) || $t->uri->segment(3) == strto("lower", seo($value->title)) || ($t->uri->segment(2) === null && $value->url === '/') ? "class='current'" : "class=''") : ((!empty($page->url) && ($t->uri->segment(2) == strto("lower", seo($page->url)) || $t->uri->segment(3) == strto("lower", seo($page->url)))) || ($t->uri->segment(2) === null && $value->url === '/') || $t->uri->segment(2) == strto("lower", seo($value->title)) || $t->uri->segment(3) == strto("lower", seo($value->title)) ? "class='current'" : "class=''")) . ' href="' . base_url(seo(strto("lower", $value->title))) . '" target="' . $value->target . '" title="' . $value->title . '">' . $value->title . '</a>';
                     array_push($t->viewData->page_urls, base_url(seo(strto("lower", $value->title))));
@@ -893,13 +909,14 @@ function in_parent($in_parent = null, $position = null, $lang = null, $store_all
                 $service_categories = $t->general_model->get_all("service_categories", "title,seo_url,id", "rank ASC", ["isActive" => 1, "lang" => $lang]);
                 if (!empty($service_categories)) :
                     foreach ($service_categories as $pcKey => $pcValue) :
-                        $html .= "<div class='col column'>";
-                        $services = $t->general_model->get_all("services", "title,seo_url,id", "id DESC", ["isActive" => 1, "lang" => $lang, "category_id" => $pcValue->id],[],[],[6]);
+
+                        $services = $t->general_model->get_all("services", "title,seo_url,id", "id DESC", ["isActive" => 1, "lang" => $lang, "category_id" => $pcValue->id], [], [], [6]);
                         if (!empty($services)) :
+                            $html .= "<div class='col column'>";
                             $html .= "<ul>";
                             $html .= "<li>";
                             $html .= '<a rel="dofollow" ' . (($position == "MOBILE" || $position == "HEADER") && in_array($pcValue->id, $store_all_id) ? ((!empty($pcValue->seo_url) && ($t->uri->segment(2) == strto("lower", seo($pcValue->seo_url)) || $t->uri->segment(3) == strto("lower", seo($pcValue->seo_url)))) || $t->uri->segment(2) == strto("lower", seo($value->title)) || $t->uri->segment(3) == strto("lower", seo($pcValue->title)) || ($t->uri->segment(2) === null && $pcValue->seo_url === '/') ? "class='current'" : "class=''") : ((!empty($pcValue->seo_url) && ($t->uri->segment(2) == strto("lower", seo($pcValue->seo_url)) || $t->uri->segment(3) == strto("lower", seo($pcValue->seo_url)))) || ($t->uri->segment(2) === null && $pcValue->seo_url === '/') || $t->uri->segment(2) == strto("lower", seo($pcValue->title)) || $t->uri->segment(3) == strto("lower", seo($pcValue->title)) ? "class='current'" : "class=''")) . ' href="' . base_url(lang("routes_services") . "/" . $pcValue->seo_url) . '" target="' . $value->target . '" title="' . $pcValue->title . '"><h6><i class="fa fa-chevron-right d-none me-3 d-xl-inline" style="line-height:30px"></i>' . strto("lower|ucwords", $pcValue->title) . '</h6></a>';
-                        
+
                             $html .= "</li>";
 
                             foreach ($services as $sKey => $sValue) :
@@ -908,8 +925,8 @@ function in_parent($in_parent = null, $position = null, $lang = null, $store_all
                                 $html .= '</li>';
                             endforeach;
                             $html .= "</ul>";
+                            $html .= "</div>";
                         endif;
-                        $html .= "</div>";
                     endforeach;
                 endif;
                 $html .= "</div>";

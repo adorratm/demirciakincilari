@@ -255,7 +255,7 @@
 /*************** home-3 ******************/
 
 .handle-preloader.home-3{
-	background: #6a36ff;
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .header-style-three .sticky-header .main-menu .navigation > li.current > a, 
@@ -274,7 +274,7 @@
 }
 
 .header-style-three .main-menu .navigation > li > .megamenu li > a:before{
-	background: #6a36ff;
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .header-style-three .main-menu .navigation > li > ul > li > ul > li > a:hover {
@@ -282,7 +282,7 @@
 }
 
 .theme-btn.btn-five{
-	background: #6a36ff;
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .slider-three .banner-carousel .owl-nav button:hover:before{
@@ -298,7 +298,7 @@
 }
 
 .feature-block-three .inner-box:before{
-	background: #6a36ff;
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .chooseus-three .inner-box .single-item .icon-box .icon{
@@ -310,7 +310,7 @@
 }
 
 .service-block-three .inner-box .image-box{
-	background: #6a36ff;
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .service-block-three .inner-box .icon-box{
@@ -322,7 +322,7 @@
 }
 
 .skills-two .progress-box .bar-inner{
-  background: #6a36ff;
+  background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .project-block-two .inner-box h4 a:hover{
@@ -339,7 +339,7 @@
 }
 
 .sortable-masonry .filter-tabs li:before{
-	background: #6a36ff;
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .testimonial-three .nav-style-one .owl-nav button:hover{
@@ -360,7 +360,7 @@
 }
 
 .contact-one .form-group button{
-	background: #6a36ff;
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 
@@ -2254,7 +2254,7 @@
 /** inner-page **/
 
 .team-five.about-page-1 .team-block-one .inner-box .image-box .social-links-two li a:hover{
-	background: #6a36ff;
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .team-five.about-page-1 .team-block-one .inner-box .lower-content h4 a:hover{
@@ -2262,11 +2262,11 @@
 }
 
 .subscribe-five.about-page-1 .subscribe-form .message-btn .theme-btn{
-  background: #6a36ff;
+  background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .header-style-three .search-panel .search-btn{
-	background: #6a36ff;
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .handle-preloader.about-page-2{
@@ -2438,7 +2438,7 @@
 }
 
 .main-header.testimonial-page .main-menu .navigation > li > .megamenu li > a:before{
-	background: #6a36ff;
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .main-header.testimonial-page .main-menu .navigation > li > ul > li > ul > li > a:hover{
@@ -2454,11 +2454,11 @@
 }
 
 .main-header.testimonial-page .search-panel .search-btn{
-	background: #6a36ff;
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .testimonial-seven.testimonial-page-3 .owl-nav button:hover{
-	background: #6a36ff;
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .main-header.service-page-1 .main-menu .navigation > li.current > a, 
@@ -2515,7 +2515,7 @@
 }
 
 .service-19 .tab-btns li:before{
-	background: #6a36ff;
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .handle-preloader.service-page-3{
@@ -2660,7 +2660,7 @@
 }
 
 .handle-preloader.service-details-2{
-	background: #6a36ff;
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .header-style-three .sticky-header .nav-right .search-box-outer:hover, 
@@ -2670,7 +2670,7 @@
 
 .service-details-2 .service-sidebar .category-widget .category-list li a.current:before, 
 .service-details-2 .service-sidebar .category-widget .category-list li a:hover:before{
-	background: #6a36ff;
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .service-details-2 .service-sidebar .category-widget .category-list li a.current, 
@@ -2679,7 +2679,7 @@
 }
 
 .service-details-2 .service-sidebar .consulting-widget .theme-btn{
-	background: #6a36ff;
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .service-details-2 .service-sidebar .consulting-widget input:focus,
@@ -2688,15 +2688,15 @@
 }
 
 .service-sidebar .support-widget:before{
-	background: #6a36ff;
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .service-details-content .tabs-box .tab-btns li:before{
-	background: #6a36ff;
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .service-details-2 .service-details-content .accordion-box .block .acc-btn.active{
-	background: #6a36ff;
+	background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .handle-preloader.service-details-3{
@@ -2983,7 +2983,7 @@
 
 .team-details-three .image-box .social-links li a:hover{
   border-color: #6a36ff;
-  background: #6a36ff;
+  background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .team-details-three .team-details-content .content-one .info li a:hover{
@@ -2996,7 +2996,7 @@
 }
 
 .check-box input:checked + label:before{
-  background: #6a36ff;
+  background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
   border-color: #6a36ff;
 }
 
@@ -3005,7 +3005,7 @@
 }
 
 .registration-section .default-form .form-group .theme-btn{
-  background: #6a36ff;
+  background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .registration-section .text p a{
@@ -3017,7 +3017,7 @@
 }
 
 .error-section .inner-box .theme-btn{
-  background: #6a36ff;
+  background: -webkit-linear-gradient(0deg, #fc2a1e, #000000 100%);
 }
 
 .comingsoon-section{

@@ -40,6 +40,19 @@
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <div class="form-group">
+                <label>BLOG GALERİSİ (ÖNCELİKLE GALERİ OLUŞTURMAYI UNUTMAYIN)</label>
+                <select name="gallery_id" class="form-control form-control-sm rounded-0" required>
+                    <option value="">GALERİ YOK</option>
+                    <?php foreach ($galleries as $key => $value) : ?>
+                        <option <?= $item->gallery_id == $value->id ? "selected" : null ?> value="<?= $value->id ?>"><?= $value->title ?></option>
+                    <?php endforeach ?>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="form-group">
                 <label>Paylaşım Tarihi</label>
                 <input type="text" name="sharedAt" placeholder="Paylaşım Tarihi" class="form-control form-control-sm datetimepicker" data-flatpickr data-alt-input="true" data-enable-time="true" data-enable-seconds="true" value="<?= (!empty($item->sharedAt) ? $item->sharedAt : date("Y-m-d H:i:s")) ?>" data-default-date="<?= (!empty($item->sharedAt) ? $item->sharedAt : date("Y-m-d H:i:s")) ?>" data-date-format="Y-m-d H:i:S" required>
             </div>

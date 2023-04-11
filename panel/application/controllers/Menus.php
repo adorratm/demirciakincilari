@@ -42,7 +42,7 @@ class Menus extends MY_Controller
                     </div>
                 </div>';
                 $checkbox = '<div class="custom-control custom-switch"><input data-id="' . $item->id . '" data-url="' . base_url("menus/isActiveSetter/{$item->id}") . '" data-status="' . ($item->isActive == 1 ? "checked" : null) . '" id="customSwitch' . $i . '" type="checkbox" ' . ($item->isActive == 1 ? "checked" : null) . ' class="my-check custom-control-input" >  <label class="custom-control-label" for="customSwitch' . $i . '"></label></div>';
-                $data[] = [$item->rank, '<i class="fa fa-arrows" data-id="' . $item->id . '"></i>', $item->id, $item->title, $item->position,$item->lang, $checkbox, turkishDate("d F Y, l H:i:s", $item->createdAt), turkishDate("d F Y, l H:i:s", $item->updatedAt), $proccessing];
+                $data[] = [$item->rank, '<i class="fa fa-arrows" data-id="' . $item->id . '"></i>', $item->id, $item->title, $item->position, $item->lang, $checkbox, turkishDate("d F Y, l H:i:s", $item->createdAt), turkishDate("d F Y, l H:i:s", $item->updatedAt), $proccessing];
             endforeach;
         endif;
         $output = [
@@ -59,6 +59,8 @@ class Menus extends MY_Controller
         $viewData = new stdClass();
         $viewData->top_menus = $this->menu_model->get_all();
         $viewData->pages = $this->page_model->get_all();
+        $viewData->blogs = $this->general_model->get_all("blogs", null, null, ["isActive" => 1]);
+        $viewData->blog_categories = $this->general_model->get_all("blog_categories", null, null, ["isActive" => 1]);
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "add";
         $viewData->settings = $this->general_model->get_all("settings", null, null, ["isActive" => 1]);
@@ -67,23 +69,29 @@ class Menus extends MY_Controller
     public function save()
     {
         $data = rClean($this->input->post());
-        if (checkEmpty($data)["error"] && (checkEmpty($data)["key"] != "url" && checkEmpty($data)["key"] != "page_id" && checkEmpty($data)["key"] != "top_id")) :
+        if (checkEmpty($data)["error"] && (checkEmpty($data)["key"] != "url" && checkEmpty($data)["key"] != "page_id" && checkEmpty($data)["key"] != "blog_id" && checkEmpty($data)["key"] != "blog_category_id" && checkEmpty($data)["key"] != "top_id")) :
             $key = checkEmpty($data)["key"];
             echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Menü Kaydı Yapılırken Hata Oluştu. \"{$key}\" Bilgisini Doldurduğunuzdan Emin Olup Tekrar Deneyin."]);
             die();
         else :
-            if (empty($data["url"]) && empty($data["page_id"])) :
-                echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Menü Eklenirken Hata Oluştu, Sayfa veya URL Bilgilerinden En Azından Bir Tanesi Doldurulmalıdır."]);
+            if (empty($data["url"]) && empty($data["page_id"]) && empty($data["blog_id"]) && empty($data["blog_category_id"])) :
+                echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Menü Eklenirken Hata Oluştu, Sayfa, Blog, Blog Kategorisi veya URL Bilgilerinden En Azından Bir Tanesi Doldurulmalıdır."]);
                 die();
             endif;
             if (empty($data["lang"])) :
                 echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Menü Eklenirken Hata Oluştu, Dil Bilgisini Doldurduğunuzdan Emin Olup Tekrar Deneyin."]);
                 die();
             endif;
-            if(empty($data["page_id"])):
+            if (empty($data["page_id"])) :
                 $data["page_id"] = 0;
             endif;
-            if(empty($data["top_id"])):
+            if (empty($data["blog_id"])) :
+                $data["blog_id"] = 0;
+            endif;
+            if (empty($data["blog_category_id"])) :
+                $data["blog_category_id"] = 0;
+            endif;
+            if (empty($data["top_id"])) :
                 $data["top_id"] = 0;
             endif;
             $getRank = $this->menu_model->rowCount();
@@ -102,6 +110,8 @@ class Menus extends MY_Controller
         $viewData = new stdClass();
         $viewData->top_menus = $this->menu_model->get_all();
         $viewData->pages = $this->page_model->get_all();
+        $viewData->blogs = $this->general_model->get_all("blogs", null, null, ["isActive" => 1]);
+        $viewData->blog_categories = $this->general_model->get_all("blog_categories", null, null, ["isActive" => 1]);
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "update";
         $viewData->item = $this->menu_model->get(["id" => $id]);
@@ -111,13 +121,13 @@ class Menus extends MY_Controller
     public function update($id)
     {
         $data = rClean($this->input->post());
-        if (checkEmpty($data)["error"] && (checkEmpty($data)["key"] != "url" && checkEmpty($data)["key"] != "page_id" && checkEmpty($data)["key"] != "top_id")) :
+        if (checkEmpty($data)["error"] && (checkEmpty($data)["key"] != "url" && checkEmpty($data)["key"] != "page_id" && checkEmpty($data)["key"] != "blog_id" && checkEmpty($data)["key"] != "blog_category_id" && checkEmpty($data)["key"] != "top_id")) :
             $key = checkEmpty($data)["key"];
             echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Menü Güncelleştirilirken Hata Oluştu. \"{$key}\" Bilgisini Doldurduğunuzdan Emin Olup Tekrar Deneyin."]);
             die();
         else :
-            if (empty($data["url"]) && empty($data["page_id"])) :
-                echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Menü Güncelleştirilirken Hata Oluştu, Sayfa veya URL Bilgilerinden En Azından Bir Tanesi Doldurulmalıdır."]);
+            if (empty($data["url"]) && empty($data["page_id"]) && empty($data["blog_id"]) && empty($data["blog_category_id"])) :
+                echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Menü Güncelleştirilirken Hata Oluştu, Sayfa, Blog, Blog Kategorisi veya URL Bilgilerinden En Azından Bir Tanesi Doldurulmalıdır."]);
                 die();
             endif;
             $data["updatedAt"] = date("Y-m-d H:i:s");

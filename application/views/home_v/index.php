@@ -64,10 +64,4 @@
     <!-- banner-section end -->
 <?php endif ?>
 
-<?php if (!$this->agent->is_mobile()) : ?>
-    <?php $this->load->view(@str_replace("/index", "", $this->viewFolder) . "/desktop"); ?>
-<?php endif ?>
-
-<?php if ($this->agent->is_mobile()) : ?>
-    <?php $this->load->view(@str_replace("/index", "", $this->viewFolder) . "/mobile"); ?>
-<?php endif ?>
+<?php $this->load->view(@str_replace("/index", "", $this->viewFolder) . "/desktop"); ?>

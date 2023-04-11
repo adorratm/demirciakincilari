@@ -591,12 +591,12 @@ function get_controller_name($seo)
         'blogs' => "Blog",
         'user_role' => "Kullanıcı Yetkileri",
         'users' => "Kullanıcılar",
-        'services' => "Hizmetlerimiz",
+        'services' => "Faaliyetlerimiz",
         'questions' => "Soru (SSS)",
         'pages' => "Sayfalar",
         'brands' => "Markalar",
         'testimonials' => "Ziyaretçi Notları",
-        'popups' => "Popup Hizmeti",
+        'popups' => "Popup Faaliyeti",
         'ads' => "Reklamlar"
     ];
     if (!empty($tr)) :

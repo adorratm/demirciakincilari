@@ -119,9 +119,9 @@
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-none">
                         <div class="form-group">
-                            <label>Hizmet Linki</label>
+                            <label>Faaliyet Linki</label>
                             <select disabled class="form-control form-control-sm rounded-0 tagsInput" name="service_id" required>
-                                <option value="">Hizmet Seçiniz.</option>
+                                <option value="">Faaliyet Seçiniz.</option>
                                 <?php if (!empty($services)) : ?>
                                     <?php foreach ($services as $service) : ?>
                                         <option <?= ($service->id == $item->service_id ? "selected" : null) ?> value="<?= $service->id; ?>"><?= $service->title; ?></option>

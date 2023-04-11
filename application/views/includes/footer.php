@@ -297,6 +297,7 @@
 <script defer src="<?= asset_url("public/vendors/js/jquery.countTo.js") ?>"></script>
 <script defer src="<?= asset_url("public/vendors/js/jquery.nice-select.min.js") ?>"></script>
 <script defer src="<?= asset_url("public/vendors/js/parallax-scroll.js") ?>"></script>
+<script defer src="<?= asset_url("public/vendors/js/isotope.js") ?>"></script>
 
 <script async defer src="<?= asset_url("public/js/iziModal.min.js") ?>"></script>
 <script defer src="<?= asset_url("public/vendors/js/script.js") ?>"></script>

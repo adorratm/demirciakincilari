@@ -13,11 +13,6 @@ $lang["(:any)/blog/(:any)"] = "blog/index/$2";
 $lang["(:any)/blog/(:any)/(:num)"] = "blog/index/$2/$3";
 $lang["(:any)/blog/detay/(:any)"] = "blog/blog_detail/$2";
 
-$lang["(:any)/markalarimiz"] = "our_works/index";
-$lang["(:any)/markalarimiz/(:num)"] = "our_works/index/$2";
-$lang["(:any)/markalarimiz/(:any)"] = "our_works/index/$2";
-$lang["(:any)/markalarimiz/(:any)/(:num)"] = "our_works/index/$2/$3";
-
 $lang["(:any)/faaliyetlerimiz"] = "service_categories/index";
 $lang["(:any)/faaliyetlerimiz/(:num)"] = "service_categories/index/$2";
 $lang["(:any)/faaliyetlerimiz/(:any)"] = "services/index/$2";

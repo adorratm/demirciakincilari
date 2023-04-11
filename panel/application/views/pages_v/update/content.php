@@ -86,7 +86,7 @@
                 <select name="gallery_id" class="form-control form-control-sm rounded-0" required>
                     <option value="">GALERİ YOK</option>
                     <?php foreach ($galleries as $key => $value) : ?>
-                        <option <?= $value->gallery_id == $value->id ? "selected" : null ?> value="<?= $value->id ?>"><?= $value->title ?></option>
+                        <option <?= $item->gallery_id == $value->id ? "selected" : null ?> value="<?= $value->id ?>"><?= $value->title ?></option>
                     <?php endforeach ?>
                 </select>
             </div>

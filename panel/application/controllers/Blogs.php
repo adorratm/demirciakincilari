@@ -59,6 +59,7 @@ class Blogs extends MY_Controller
         $viewData = new stdClass();
         $viewData->viewFolder = $this->viewFolder;
         $viewData->categories = $this->blog_category_model->get_all();
+        $viewData->galleries = $this->general_model->get_all("galleries", null, null, ["isActive" => 1]);
         $viewData->settings = $this->general_model->get_all("settings", null, null, ["isActive" => 1]);
         $viewData->subViewFolder = "add";
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/content", $viewData);
@@ -66,7 +67,7 @@ class Blogs extends MY_Controller
     public function save()
     {
         $data = rClean($this->input->post());
-        if (checkEmpty($data)["error"]) :
+        if (checkEmpty($data)["error"] && checkEmpty($data)["key"] != "content" && checkEmpty($data)["key"] != "gallery_id") :
             $key = checkEmpty($data)["key"];
             echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Blog Kaydı Yapılırken Hata Oluştu. \"{$key}\" Bilgisini Doldurduğunuzdan Emin Olup Tekrar Deneyin."]);
         else :
@@ -100,6 +101,7 @@ class Blogs extends MY_Controller
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "update";
         $viewData->categories = $this->blog_category_model->get_all();
+        $viewData->galleries = $this->general_model->get_all("galleries", null, null, ["isActive" => 1]);
         $viewData->item = $this->blog_model->get(["id" => $id]);
         $viewData->settings = $this->general_model->get_all("settings", null, null, ["isActive" => 1]);
         $this->load->view("{$this->viewFolder}/{$viewData->subViewFolder}/content", $viewData);
@@ -107,7 +109,7 @@ class Blogs extends MY_Controller
     public function update($id)
     {
         $data = rClean($this->input->post());
-        if (checkEmpty($data)["error"]) :
+        if (checkEmpty($data)["error"] && checkEmpty($data)["key"] != "content" && checkEmpty($data)["key"] != "gallery_id") :
             $key = checkEmpty($data)["key"];
             echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Blog Güncelleştirilirken Hata Oluştu. \"{$key}\" Bilgisini Doldurduğunuzdan Emin Olup Tekrar Deneyin."]);
         else :

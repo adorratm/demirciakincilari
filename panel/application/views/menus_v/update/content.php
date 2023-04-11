@@ -30,6 +30,32 @@
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
             <div class="form-group">
+                <label>Blog Kategorisi Linki (URL Eklemek İstiyorsanız Boş Bırakmanız Gerekir.)</label>
+                <select class="form-control form-control-sm rounded-0" name="blog_category_id" required>
+                    <option value="">Blog Kategorisi Seçiniz.</option>
+                    <?php if (!empty($blog_categories)) : ?>
+                        <?php foreach ($blog_categories as $blog_category) : ?>
+                            <option value="<?= $blog_category->id; ?>" <?= ($item->blog_category_id == $blog_category->id ? "selected" : null) ?>><?= $blog_category->title; ?></option>
+                        <?php endforeach ?>
+                    <?php endif; ?>
+                </select>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <div class="form-group">
+                <label>Blog Linki (URL Eklemek İstiyorsanız Boş Bırakmanız Gerekir.)</label>
+                <select class="form-control form-control-sm rounded-0" name="blog_id" required>
+                    <option value="">Blog Seçiniz.</option>
+                    <?php if (!empty($blogs)) : ?>
+                        <?php foreach ($blogs as $blog) : ?>
+                            <option value="<?= $blog->id; ?>" <?= ($item->blog_id == $blog->id ? "selected" : null) ?>><?= $blog->title; ?></option>
+                        <?php endforeach ?>
+                    <?php endif; ?>
+                </select>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <div class="form-group">
                 <label>Üst Menü </label>
                 <select class="form-control form-control-sm rounded-0" name="top_id" required>
                     <option value="">Ana Menü Olarak Belirle.</option>

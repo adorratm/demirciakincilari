@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 10, 2023 at 04:39 PM
+-- Generation Time: Apr 11, 2023 at 04:25 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -39,18 +39,24 @@ CREATE TABLE `blogs` (
   `seo_url` longtext DEFAULT NULL,
   `createdAt` timestamp NULL DEFAULT current_timestamp(),
   `updatedAt` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `sharedAt` timestamp NULL DEFAULT NULL
+  `sharedAt` timestamp NULL DEFAULT NULL,
+  `gallery_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `blogs`
 --
 
-INSERT INTO `blogs` (`id`, `title`, `img_url`, `content`, `category_id`, `lang`, `rank`, `isActive`, `seo_url`, `createdAt`, `updatedAt`, `sharedAt`) VALUES
-(1, 'İBRAHİM ETHEM AKINCI', NULL, '<p>(1889-1950)</p>\r\n<p>İbrahim Ethem Bey Selanik’te doğmuştur. Alasonya’da başlayan tahsil hayatını 1912’de Selanik Hukuk Mektebi’nde tamamladı. Balkan Harbi sonucunda ailesiyle birlikte Balıkesir’e göçüp buraya yerleşmişlerdir.</p>\r\n<p>Sındırgı’nın Düvertepe ve Balıkesir’in Şamlı nahiyelerinde nahiye müdürü olarak görev yapmış, ardından istifa ederek kısa bir süre Balıkesir’de avukatlık yapmıştır. İzmir’in işgali üzerine Balıkesir Kuva-yı Milliye’sinde hizmet etmeye başlamıştır. Daha sonra Ankara’ya gelerek İçişleri Bakanlığı özel kalem şifre memurluğu görevinde bulunur.</p>\r\n<p>TBMM hükümeti tarafından Demirci ve yöresinin askeri ve stratejik konumun öneminden dolayı, özellikle Demirci ve bölgeyi iyi tanımasından Demirci Kaymakamlığı’na tayin edilmiştir. 25 Aralık 1920’de Demirci’de görevine başlamıştır. Parti Pehlivan ve Usturumcalı Halil Efe’yi de dahil ederek Akıncı Müfrezelerini oluşturup komutanlığını üstlenmiştir.</p>\r\n<p>İstiklal Harbinde Akıncılar Bölgesi olarak adlandırılan ve merkezinin Demirci olduğu Gördes, Sındırgı, Selendi, Bigadiç ve Kula’nın dağlık kısmını içine alan ve toplamda 7 il ve 29 ilçeyi kapsayan bölgede pek bilinmeyen bir destan yazılmıştır. Bu destanı yazanlar Demirci Kaymakamı İbrahim Ethem liderliğinde Demirci Akıncıları’dır. 12 bin kişilik Yunan tümenini dağlarda yaptıkları mücadeleler ile aylarca oyalamışlar. Sakarya ve Büyük Taarruz Savaşları’nda asıl Yunan ordusuna destek vermelerini engelleyerek Türk ordusunun bu savaşları kazanmasına büyük bir katkı sağlamışlardır. Düşmanla 60 defa çarpışmışlar, düşmana 787 ölü, 151 yaralı, 190 esir bıraktırmışlardır. Bu mücadelede Demirci Akıncıları 21 şehit vermiştir.</p>\r\n<p>İbrahim Ethem Bey daha sonra Ayvalık ve Kula’da kaymakamlık; Yozgat, Siirt, Ağrı, Samsun, Balıkesir, Malatya ve Muğla’da valilik görevinde bulunmuştur. 1949 yılında emekli olup 11 Mayıs 1950’de Sındırgı’da vefat etmiştir. Kırmızı şeritli İstiklal Madalyası sahibi olup mezarı Sındırgı’dadır.</p>\r\n<p>İbrahim Ethem Bey’in Milli Mücadele hatıraları ”Demirci Akıncıları” adıyla Türk Tarih Kurumu’nca basılmıştır.</p>', 1, 'tr', 1, 1, 'ibrahim-ethem-akinci', '2022-11-21 12:42:55', '2023-04-10 14:05:38', '2022-11-21 12:42:38'),
-(2, 'PARTİ PEHLİVAN', NULL, '<p>(1872-1941)</p>\r\n<p>1872’te Selanik’te doğmuştur. Parti Pehlivan lakabıyla anılır. Asıl adı Mehmet Baskak’tır. Parti Pehlivan Serer ve Usturumca şehirlerinde yaptığı güreşlerde sırtı yere gelmeyen bir pehlivan olarak bilinir. Makedonya yöresinde yenen pehlivanın aldığı ödüle “Parti” denilirmiş. Mehmet Pehlivan da bütün partileri aldığı için Mehmet ismi zamanla unutulmuş ve zaman içerisinde “Parti Pehlivan“ olarak anılmaya başlamıştır. Balkan savaşlarında ve birinci dünya savaşında büyük yararlılıklar gösterir. Balkan Savaşları’ndan sonra 1913’de Manisa’ya yerleşir. Manisa’da cezaevi başgardiyanı iken Yunan işgallerinin başlaması üzerine Akhisar’da Kuva-yı Milliye Teşkilatı’na katılır. Bir süre sonra Salihli cephesinde Çerkez Ethem tarafından kurulan Kuva-yı Seyyare’de yer alır. Kuva-yı Seyyare ile Anzavur ve Yozgat ayaklanmalarının bastırılmasında önemli hizmetleri görülür.</p>\r\n<p>Kuva-yı Seyyare ile Yunan ordusu arasında yapılan ve Batı Cephesi’nde Yunanlılara karşı Milli Mücadele’nin ilk askeri zaferi olan Demirci Savaşlarında (30 Temmuz - 22 Ağustos 1920) Çerkez Ethem’den sonra ikinci adamdır. Çerkez Ethem’in düzenli orduya katılmayı kabul etmeyerek TBMM ye karşı isyanı sırasında, Çerkez Ethem kuvvetleri ile birlikte Yunanlılara teslim olmayı reddeder. Parti Pehlivan ve Halil Efe, Çerkez Ethem’e silah çekerek onların ellerindeki topların bir kısmını alır ve düzenli orduya gönderir. Demirci Kaymakamı İbrahim Ethem tarafından kurulan Demirci Akıncıları’na katılır. 11. Akıncı müfreze komutanı olarak Demirci ve Simav’ın sorumluluğunu üstlenir. Parti Pehlivan Demirci Akıncıları’nda İbrahim Ethem Bey’den sonra ikinci adam rolündedir.</p>\r\n<p>Parti Pehlivan 11. Akıncı Müfrezesi’nde Alaşehir Killik Köprüsü yakınlarında cephane yüklü bir Yunan trenini imha etmeyi başarır. Alacaatlı’da Yunanlılarla girdikleri çatışmada sağ gözünden yaralanır. Millî Mücadele’nin önemli kahramanlarındandır. TBMM tarafından kırmızı şeritli İstiklal Madalyası ile onurlandırılır. 8 Ağustos 1941’de vefat eder. Mezarı Manisa Çatalbir Mezarlığı’ndadır.</p>', 1, 'tr', 2, 1, 'parti-pehlivan', '2023-04-10 14:26:39', '2023-04-10 14:26:39', '2023-04-10 14:24:16'),
-(3, 'HALİL EFE', NULL, '<p>(?-1922)</p>\r\n<p>Makedonya’nın Usturumca şehrinde doğmuştur. Balkan Savaşları’yla gelen bir Balkan göçmeni olup, I. Dünya Savaşı’nda yer almış ve Milli Mücadele’den önce Çerkez Ethem’in Kuva-yı Seyyare’sinde yer alarak pek çok isyanın bastırılmasında rol oynamıştır. Gördes ve Salihli cephelerinde, Gediz muharebelerinde yer almış Demirci muharebesinde yaralanmıştır. Gediz harbinde kardeşi Necip şehit olmuştur. Sert mizaçlı, çok cesur ve mert biri olarak tanınır.</p>\r\n<p>Halil Efe, Çerkez Ethem’in isyan ederek yunanlarla anlaşmasından sonra Parti Pehlivan ile birlikte Demirci Akıncıları içinde yer alarak 12. Müfreze komutanı olup Gördes ve Salihli’nin sorumluluğunu üstlenmiştir. Gördes’te nişanlandığı Makbule ile Demirci’de evlenmiştir. Eşi Makbule ile birlikte dağlarda büyük bir mücadele vermiştir. Makbule’nin 17 Mart 1922 tarihinde Kocayayla’da şehit olmasından 2 ay sonra, 17 Mayıs 1922’de Selendi - Kınık muharebelerinde şehit olmuştur. Cenazesi düşman eline geçip teşhir edilmemesi için 8 saat hayvan sırtında taşınarak Selendi Yağcı Dağı’na defnedilmiştir.</p>', 1, 'tr', 3, 1, 'halil-efe', '2023-04-10 14:28:23', '2023-04-10 14:28:23', '2023-04-10 14:27:46'),
-(4, 'GÖRDESLİ MAKBULE', NULL, '<p>(1902-1922)</p>\r\n<p>Millî mücadelenin kadın kahramanı olup, Demirci Akıncılarındandır. Gördes’te dünyaya gelmiştir. Ali Ustalar ailesindendir. Küçük yaşlarda ata binmeyi ve silah kullanmayı öğrenmiştir. 12 yaşında babası Abdullah Efendi’yi kaybetmiştir. Abilerinin himayesi altında büyüdüğü Gördes’te nişanlandığı Usturumcalı Halil Efe ile Gördes’in işgal edilmesi üzerine ailesiyle birlikte geldiği Demirci’de evlenmiştir. Evlendikten iki ay sonra kocası Halil Efe’nin yanına katılarak akıncı olmuş ve dağlara çıkmıştır. Demirci, Gördes, Sındırgı, Bigadiç ve Simav dağlarında müfrezelerle birlikte sürekli dolaşarak çok sayıda çatışmaya katılmıştır. Çevikliği ve cesaretiyle herkesin saygısını toplayan Makbule, en ümitsiz anlarda bile haykırışlarıyla müfrezeleri cesaretlendirmiştir. Katıldığı her çatışmada kahramanca savaşmış Halil Efe ile iki kez pusuya düşmüş fakat bunlardan ustaca sıyrılmasını bilmiştir. Ata iyi binen, silahı iyi kullanan Makbule, dağ hayatının sıkıntı, zorluk, tehlikeleri ve bütün ısrarlara rağmen asla müfrezelerden ve kocasından ayrılmamıştır. Kocayayla’da düşman ile yapılan çatışmada uzaktan gelen bir merminin başına isabet etmesi sonucu 8 ay süren dağ hayatı 17 Mart 1922’de şehit olarak sona ermiştir. Sındırgı, Gördes, Demirci üçgeninde yer alan Kocayayla’da çizmeleri ve kanlı elbiseleriyle defnedilmiştir. Halil Efe, eşi Makbule Hanım’ın aziz naaşını, Yunanların eline geçip teşhir edilmemesi amacıyla gizlice defnetmiş ve mezar yeri bir sır gibi saklanmıştır. Şehit Makbule’nin mezar yerinin neresi olduğu konusu 78 yıl sır olarak kaldıktan sonra Haziran 2000’de Burhan Cahit AKINCI ve duyarlı kişilerin gayret, teşvik ve çalışmaları ile bulunmuştur. Mezar yapılarak etrafında çevre düzeni gerçekleşmiştir.</p>', 1, 'tr', 4, 1, 'gordesli-makbule', '2023-04-10 14:28:55', '2023-04-10 14:28:55', '2023-04-10 14:28:25');
+INSERT INTO `blogs` (`id`, `title`, `img_url`, `content`, `category_id`, `lang`, `rank`, `isActive`, `seo_url`, `createdAt`, `updatedAt`, `sharedAt`, `gallery_id`) VALUES
+(1, 'İBRAHİM ETHEM AKINCI', NULL, '<p>(1889-1950)</p>\r\n<p>İbrahim Ethem Bey Selanik’te doğmuştur. Alasonya’da başlayan tahsil hayatını 1912’de Selanik Hukuk Mektebi’nde tamamladı. Balkan Harbi sonucunda ailesiyle birlikte Balıkesir’e göçüp buraya yerleşmişlerdir.</p>\r\n<p>Sındırgı’nın Düvertepe ve Balıkesir’in Şamlı nahiyelerinde nahiye müdürü olarak görev yapmış, ardından istifa ederek kısa bir süre Balıkesir’de avukatlık yapmıştır. İzmir’in işgali üzerine Balıkesir Kuva-yı Milliye’sinde hizmet etmeye başlamıştır. Daha sonra Ankara’ya gelerek İçişleri Bakanlığı özel kalem şifre memurluğu görevinde bulunur.</p>\r\n<p>TBMM hükümeti tarafından Demirci ve yöresinin askeri ve stratejik konumun öneminden dolayı, özellikle Demirci ve bölgeyi iyi tanımasından Demirci Kaymakamlığı’na tayin edilmiştir. 25 Aralık 1920’de Demirci’de görevine başlamıştır. Parti Pehlivan ve Usturumcalı Halil Efe’yi de dahil ederek Akıncı Müfrezelerini oluşturup komutanlığını üstlenmiştir.</p>\r\n<p>İstiklal Harbinde Akıncılar Bölgesi olarak adlandırılan ve merkezinin Demirci olduğu Gördes, Sındırgı, Selendi, Bigadiç ve Kula’nın dağlık kısmını içine alan ve toplamda 7 il ve 29 ilçeyi kapsayan bölgede pek bilinmeyen bir destan yazılmıştır. Bu destanı yazanlar Demirci Kaymakamı İbrahim Ethem liderliğinde Demirci Akıncıları’dır. 12 bin kişilik Yunan tümenini dağlarda yaptıkları mücadeleler ile aylarca oyalamışlar. Sakarya ve Büyük Taarruz Savaşları’nda asıl Yunan ordusuna destek vermelerini engelleyerek Türk ordusunun bu savaşları kazanmasına büyük bir katkı sağlamışlardır. Düşmanla 60 defa çarpışmışlar, düşmana 787 ölü, 151 yaralı, 190 esir bıraktırmışlardır. Bu mücadelede Demirci Akıncıları 21 şehit vermiştir.</p>\r\n<p>İbrahim Ethem Bey daha sonra Ayvalık ve Kula’da kaymakamlık; Yozgat, Siirt, Ağrı, Samsun, Balıkesir, Malatya ve Muğla’da valilik görevinde bulunmuştur. 1949 yılında emekli olup 11 Mayıs 1950’de Sındırgı’da vefat etmiştir. Kırmızı şeritli İstiklal Madalyası sahibi olup mezarı Sındırgı’dadır.</p>\r\n<p>İbrahim Ethem Bey’in Milli Mücadele hatıraları ”Demirci Akıncıları” adıyla Türk Tarih Kurumu’nca basılmıştır.</p>', 1, 'tr', 1, 1, 'ibrahim-ethem-akinci', '2022-11-21 12:42:55', '2023-04-10 14:05:38', '2022-11-21 12:42:38', NULL),
+(2, 'PARTİ PEHLİVAN', NULL, '<p>(1872-1941)</p>\r\n<p>1872’te Selanik’te doğmuştur. Parti Pehlivan lakabıyla anılır. Asıl adı Mehmet Baskak’tır. Parti Pehlivan Serer ve Usturumca şehirlerinde yaptığı güreşlerde sırtı yere gelmeyen bir pehlivan olarak bilinir. Makedonya yöresinde yenen pehlivanın aldığı ödüle “Parti” denilirmiş. Mehmet Pehlivan da bütün partileri aldığı için Mehmet ismi zamanla unutulmuş ve zaman içerisinde “Parti Pehlivan“ olarak anılmaya başlamıştır. Balkan savaşlarında ve birinci dünya savaşında büyük yararlılıklar gösterir. Balkan Savaşları’ndan sonra 1913’de Manisa’ya yerleşir. Manisa’da cezaevi başgardiyanı iken Yunan işgallerinin başlaması üzerine Akhisar’da Kuva-yı Milliye Teşkilatı’na katılır. Bir süre sonra Salihli cephesinde Çerkez Ethem tarafından kurulan Kuva-yı Seyyare’de yer alır. Kuva-yı Seyyare ile Anzavur ve Yozgat ayaklanmalarının bastırılmasında önemli hizmetleri görülür.</p>\r\n<p>Kuva-yı Seyyare ile Yunan ordusu arasında yapılan ve Batı Cephesi’nde Yunanlılara karşı Milli Mücadele’nin ilk askeri zaferi olan Demirci Savaşlarında (30 Temmuz - 22 Ağustos 1920) Çerkez Ethem’den sonra ikinci adamdır. Çerkez Ethem’in düzenli orduya katılmayı kabul etmeyerek TBMM ye karşı isyanı sırasında, Çerkez Ethem kuvvetleri ile birlikte Yunanlılara teslim olmayı reddeder. Parti Pehlivan ve Halil Efe, Çerkez Ethem’e silah çekerek onların ellerindeki topların bir kısmını alır ve düzenli orduya gönderir. Demirci Kaymakamı İbrahim Ethem tarafından kurulan Demirci Akıncıları’na katılır. 11. Akıncı müfreze komutanı olarak Demirci ve Simav’ın sorumluluğunu üstlenir. Parti Pehlivan Demirci Akıncıları’nda İbrahim Ethem Bey’den sonra ikinci adam rolündedir.</p>\r\n<p>Parti Pehlivan 11. Akıncı Müfrezesi’nde Alaşehir Killik Köprüsü yakınlarında cephane yüklü bir Yunan trenini imha etmeyi başarır. Alacaatlı’da Yunanlılarla girdikleri çatışmada sağ gözünden yaralanır. Millî Mücadele’nin önemli kahramanlarındandır. TBMM tarafından kırmızı şeritli İstiklal Madalyası ile onurlandırılır. 8 Ağustos 1941’de vefat eder. Mezarı Manisa Çatalbir Mezarlığı’ndadır.</p>', 1, 'tr', 2, 1, 'parti-pehlivan', '2023-04-10 14:26:39', '2023-04-10 14:26:39', '2023-04-10 14:24:16', NULL),
+(3, 'HALİL EFE', NULL, '<p>(?-1922)</p>\r\n<p>Makedonya’nın Usturumca şehrinde doğmuştur. Balkan Savaşları’yla gelen bir Balkan göçmeni olup, I. Dünya Savaşı’nda yer almış ve Milli Mücadele’den önce Çerkez Ethem’in Kuva-yı Seyyare’sinde yer alarak pek çok isyanın bastırılmasında rol oynamıştır. Gördes ve Salihli cephelerinde, Gediz muharebelerinde yer almış Demirci muharebesinde yaralanmıştır. Gediz harbinde kardeşi Necip şehit olmuştur. Sert mizaçlı, çok cesur ve mert biri olarak tanınır.</p>\r\n<p>Halil Efe, Çerkez Ethem’in isyan ederek yunanlarla anlaşmasından sonra Parti Pehlivan ile birlikte Demirci Akıncıları içinde yer alarak 12. Müfreze komutanı olup Gördes ve Salihli’nin sorumluluğunu üstlenmiştir. Gördes’te nişanlandığı Makbule ile Demirci’de evlenmiştir. Eşi Makbule ile birlikte dağlarda büyük bir mücadele vermiştir. Makbule’nin 17 Mart 1922 tarihinde Kocayayla’da şehit olmasından 2 ay sonra, 17 Mayıs 1922’de Selendi - Kınık muharebelerinde şehit olmuştur. Cenazesi düşman eline geçip teşhir edilmemesi için 8 saat hayvan sırtında taşınarak Selendi Yağcı Dağı’na defnedilmiştir.</p>', 1, 'tr', 3, 1, 'halil-efe', '2023-04-10 14:28:23', '2023-04-10 14:28:23', '2023-04-10 14:27:46', NULL),
+(4, 'GÖRDESLİ MAKBULE', NULL, '<p>(1902-1922)</p>\r\n<p>Millî mücadelenin kadın kahramanı olup, Demirci Akıncılarındandır. Gördes’te dünyaya gelmiştir. Ali Ustalar ailesindendir. Küçük yaşlarda ata binmeyi ve silah kullanmayı öğrenmiştir. 12 yaşında babası Abdullah Efendi’yi kaybetmiştir. Abilerinin himayesi altında büyüdüğü Gördes’te nişanlandığı Usturumcalı Halil Efe ile Gördes’in işgal edilmesi üzerine ailesiyle birlikte geldiği Demirci’de evlenmiştir. Evlendikten iki ay sonra kocası Halil Efe’nin yanına katılarak akıncı olmuş ve dağlara çıkmıştır. Demirci, Gördes, Sındırgı, Bigadiç ve Simav dağlarında müfrezelerle birlikte sürekli dolaşarak çok sayıda çatışmaya katılmıştır. Çevikliği ve cesaretiyle herkesin saygısını toplayan Makbule, en ümitsiz anlarda bile haykırışlarıyla müfrezeleri cesaretlendirmiştir. Katıldığı her çatışmada kahramanca savaşmış Halil Efe ile iki kez pusuya düşmüş fakat bunlardan ustaca sıyrılmasını bilmiştir. Ata iyi binen, silahı iyi kullanan Makbule, dağ hayatının sıkıntı, zorluk, tehlikeleri ve bütün ısrarlara rağmen asla müfrezelerden ve kocasından ayrılmamıştır. Kocayayla’da düşman ile yapılan çatışmada uzaktan gelen bir merminin başına isabet etmesi sonucu 8 ay süren dağ hayatı 17 Mart 1922’de şehit olarak sona ermiştir. Sındırgı, Gördes, Demirci üçgeninde yer alan Kocayayla’da çizmeleri ve kanlı elbiseleriyle defnedilmiştir. Halil Efe, eşi Makbule Hanım’ın aziz naaşını, Yunanların eline geçip teşhir edilmemesi amacıyla gizlice defnetmiş ve mezar yeri bir sır gibi saklanmıştır. Şehit Makbule’nin mezar yerinin neresi olduğu konusu 78 yıl sır olarak kaldıktan sonra Haziran 2000’de Burhan Cahit AKINCI ve duyarlı kişilerin gayret, teşvik ve çalışmaları ile bulunmuştur. Mezar yapılarak etrafında çevre düzeni gerçekleşmiştir.</p>', 1, 'tr', 4, 1, 'gordesli-makbule', '2023-04-10 14:28:55', '2023-04-10 14:28:55', '2023-04-10 14:28:25', NULL),
+(5, 'Demirci Merkez', NULL, '', 8, 'tr', 5, 1, 'demirci-merkez', '2023-04-11 11:40:59', '2023-04-11 11:40:59', '2023-04-11 11:39:53', NULL),
+(6, 'Akıncılar Yolu', NULL, '', 8, 'tr', 6, 1, 'akincilar-yolu', '2023-04-11 11:41:12', '2023-04-11 11:41:12', '2023-04-11 11:41:02', NULL),
+(7, 'Sarı Çayır', NULL, '', 8, 'tr', 7, 1, 'sari-cayir', '2023-04-11 11:41:22', '2023-04-11 11:41:22', '2023-04-11 11:41:13', NULL),
+(8, 'Sındırgı', NULL, '', 8, 'tr', 8, 1, 'sindirgi', '2023-04-11 11:41:37', '2023-04-11 11:41:37', '2023-04-11 11:41:25', NULL),
+(9, 'Selendi', NULL, '', 8, 'tr', 9, 1, 'selendi', '2023-04-11 11:41:46', '2023-04-11 11:41:46', '2023-04-11 11:41:39', NULL);
 
 -- --------------------------------------------------------
 
@@ -77,7 +83,12 @@ CREATE TABLE `blog_categories` (
 INSERT INTO `blog_categories` (`id`, `title`, `seo_url`, `img_url`, `lang`, `rank`, `isActive`, `createdAt`, `updatedAt`) VALUES
 (1, 'Tarihi Şahsiyetlerimiz', 'tarihi-sahsiyetlerimiz', NULL, 'tr', 1, 1, '2022-11-21 12:42:35', '2023-04-10 14:03:35'),
 (2, 'Şiirlerle Demirci Akıncıları', 'siirlerle-demirci-akincilari', NULL, 'tr', 2, 1, '2023-04-10 14:36:47', '2023-04-10 14:36:47'),
-(3, 'Türkülerle Demirci Akıncıları', 'turkulerle-demirci-akincilari', NULL, 'tr', 3, 1, '2023-04-10 14:36:58', '2023-04-10 14:36:58');
+(3, 'Türkülerle Demirci Akıncıları', 'turkulerle-demirci-akincilari', NULL, 'tr', 3, 1, '2023-04-10 14:36:58', '2023-04-10 14:36:58'),
+(4, 'Makaleler', 'makaleler', NULL, 'tr', 4, 1, '2023-04-11 11:37:50', '2023-04-11 11:37:50'),
+(5, 'Tarihi Yerler', 'tarihi-yerler', NULL, 'tr', 5, 1, '2023-04-11 11:38:00', '2023-04-11 11:38:00'),
+(6, 'Önemli Kişiler', 'onemli-kisiler', NULL, 'tr', 6, 1, '2023-04-11 11:38:10', '2023-04-11 11:38:10'),
+(7, 'Kitap Özetleri', 'kitap-ozetleri', NULL, 'tr', 7, 1, '2023-04-11 11:39:03', '2023-04-11 11:39:03'),
+(8, 'Tarihi Gezi Rotaları', 'tarihi-gezi-rotalari', NULL, 'tr', 8, 1, '2023-04-11 11:39:14', '2023-04-11 11:39:14');
 
 -- --------------------------------------------------------
 
@@ -350,33 +361,6 @@ INSERT INTO `countries` (`ID`, `code`, `name`, `dial_code`, `currency_name`, `cu
 -- --------------------------------------------------------
 
 --
--- Table structure for table `departments`
---
-
-CREATE TABLE `departments` (
-  `id` int(11) NOT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `isActive` int(11) DEFAULT 0,
-  `rank` int(11) DEFAULT 1,
-  `createdAt` timestamp NULL DEFAULT current_timestamp(),
-  `updatedAt` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `departments`
---
-
-INSERT INTO `departments` (`id`, `title`, `isActive`, `rank`, `createdAt`, `updatedAt`) VALUES
-(1, 'Sosyal Medya', 1, 1, '2023-03-21 07:16:43', '2023-03-21 07:16:43'),
-(2, 'Dijital Pazarlama', 1, 2, '2023-03-21 07:16:51', '2023-03-21 07:16:51'),
-(3, 'Video Kurgu', 1, 3, '2023-03-21 07:16:58', '2023-03-21 07:16:58'),
-(4, 'Grafik Tasarım', 1, 4, '2023-03-21 07:17:05', '2023-03-21 07:17:05'),
-(5, 'Yazılım', 1, 5, '2023-03-21 07:17:11', '2023-03-21 07:17:11'),
-(6, 'Metin Yazarı', 1, 6, '2023-03-21 07:17:16', '2023-03-21 07:17:16');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `email_settings`
 --
 
@@ -462,7 +446,9 @@ INSERT INTO `galleries` (`id`, `url`, `img_url`, `title`, `gallery_type`, `folde
 (5, 'i-dunya-savasi-canakkale-ve-digerleri', '9a54a6319de244ff24a404831f6ab2db.webp', 'I. Dünya Savaşı (Çanakkale ve Diğerleri)', 'images', 'i-dunya-savasi-canakkale-ve-digerleri', NULL, 'tr', 1, 0, 5, '2023-04-10 14:30:44', '2023-04-10 14:30:44', '2023-04-10 14:30:21', 1000, 1000),
 (6, 'milli-mucadele', 'bac0d08602f679cd5dfd61569881a03d.webp', 'Milli Mücadele', 'images', 'milli-mucadele', NULL, 'tr', 1, 0, 6, '2023-04-10 14:31:05', '2023-04-10 14:31:05', '2023-04-10 14:30:48', 1000, 1000),
 (7, 'son-donem', '6a721343f02d12e0784a6a7885dcb636.webp', 'Son Dönem', 'images', 'son-donem', NULL, 'tr', 1, 0, 7, '2023-04-10 14:31:24', '2023-04-10 14:31:24', '2023-04-10 14:31:07', 1000, 1000),
-(8, 'istiklal-madalyasi-sahipleri', '6ed119d0cbf6dd8a3d3b3cff64721c01.webp', 'İstiklal Madalyası Sahipleri', 'images', 'istiklal-madalyasi-sahipleri', NULL, 'tr', 1, 0, 8, '2023-04-10 14:31:42', '2023-04-10 14:31:42', '2023-04-10 14:31:29', 1000, 1000);
+(8, 'istiklal-madalyasi-sahipleri', '6ed119d0cbf6dd8a3d3b3cff64721c01.webp', 'İstiklal Madalyası Sahipleri', 'images', 'istiklal-madalyasi-sahipleri', NULL, 'tr', 1, 0, 8, '2023-04-10 14:31:42', '2023-04-10 14:31:42', '2023-04-10 14:31:29', 1000, 1000),
+(9, 'makaleler', NULL, 'Makaleler', 'images', 'makaleler', NULL, 'tr', 1, 0, 9, '2023-04-11 11:54:18', '2023-04-11 11:54:18', '2023-04-11 11:53:59', 1000, 1000),
+(10, 'demirciden-fotograflar', NULL, 'Demirciden Fotoğraflar', 'images', 'demirciden-fotograflar', NULL, 'tr', 1, 0, 10, '2023-04-11 12:07:29', '2023-04-11 12:07:29', '2023-04-11 12:07:11', 1920, 1280);
 
 -- --------------------------------------------------------
 
@@ -546,7 +532,19 @@ INSERT INTO `images` (`id`, `gallery_id`, `url`, `img_url`, `title`, `descriptio
 (16, 3, 'c49debcaa5ebd1f5f33c2365a99061a7.webp', NULL, 'Selami Erfidan', '<p>Üye</p>', 'tr', 16, 1, '2023-04-10 13:12:56', '2023-04-10 13:30:50', '2023-04-10 13:30:36'),
 (17, 4, '00deea2278bf83f179bdf1c9b962ffc2.webp', NULL, 'Sezai Eren', '<p>Denetleme Kurulu Başkanı</p>', 'tr', 17, 1, '2023-04-10 13:32:37', '2023-04-10 13:33:00', '2023-04-10 13:32:45'),
 (18, 4, '38a81df075428b5e689939af936998d8.webp', NULL, 'Ayşe Çakır', '<p>Denetleme Kurulu Üyesi</p>', 'tr', 18, 1, '2023-04-10 13:32:40', '2023-04-10 13:40:33', '2023-04-10 13:33:02'),
-(19, 4, '619b4647c6e776645e9ccf952ca1bae8.webp', NULL, 'Ersan Özsürücü', '<p>Denetleme Kurulu Üyesi</p>', 'tr', 19, 1, '2023-04-10 13:32:43', '2023-04-10 13:33:36', '2023-04-10 13:33:15');
+(19, 4, '619b4647c6e776645e9ccf952ca1bae8.webp', NULL, 'Ersan Özsürücü', '<p>Denetleme Kurulu Üyesi</p>', 'tr', 19, 1, '2023-04-10 13:32:43', '2023-04-10 13:33:36', '2023-04-10 13:33:15'),
+(20, 10, '879725edaed5d427e13d57db1df9024f.webp', NULL, NULL, NULL, 'tr', 20, 1, '2023-04-11 12:07:37', '2023-04-11 12:07:37', NULL),
+(21, 10, '4af1808ab29ce3fac332c8bd39983e27.webp', NULL, NULL, NULL, 'tr', 21, 1, '2023-04-11 12:07:40', '2023-04-11 12:07:40', NULL),
+(22, 10, '10c9ef8b20e2c5abea3b84fb0b2f37d8.webp', NULL, NULL, NULL, 'tr', 22, 1, '2023-04-11 12:07:43', '2023-04-11 12:07:43', NULL),
+(23, 10, 'a2a1434e6813666edb5a99fd433ac55a.webp', NULL, NULL, NULL, 'tr', 23, 1, '2023-04-11 12:07:45', '2023-04-11 12:07:45', NULL),
+(24, 10, '189c64a22ef799101f17de2e7ad2ebc9.webp', NULL, NULL, NULL, 'tr', 24, 1, '2023-04-11 12:07:46', '2023-04-11 12:07:46', NULL),
+(25, 10, '4cc497eb332babec0272360fd447712f.webp', NULL, NULL, NULL, 'tr', 25, 1, '2023-04-11 12:07:48', '2023-04-11 12:07:48', NULL),
+(26, 10, 'fde6121616ee68fdb3272863d1971d05.webp', NULL, NULL, NULL, 'tr', 26, 1, '2023-04-11 12:07:50', '2023-04-11 12:07:50', NULL),
+(27, 10, '3cab72644acc08ed7e7f230f5bdbdefe.webp', NULL, NULL, NULL, 'tr', 27, 1, '2023-04-11 12:07:52', '2023-04-11 12:07:52', NULL),
+(28, 10, '57599abbec5fdc8cd1e42aa0e14a09ef.webp', NULL, NULL, NULL, 'tr', 28, 1, '2023-04-11 12:07:55', '2023-04-11 12:07:55', NULL),
+(29, 10, 'b54a9633acf743f625045b488618d1d6.webp', NULL, NULL, NULL, 'tr', 29, 1, '2023-04-11 12:08:00', '2023-04-11 12:08:00', NULL),
+(30, 10, 'eb72b3eb0d73192b2032bb75f436b2d1.webp', NULL, NULL, NULL, 'tr', 30, 1, '2023-04-11 12:08:03', '2023-04-11 12:08:03', NULL),
+(31, 10, 'e3c9f215aefcfcad8a9e8b6cc66eb573.webp', NULL, NULL, NULL, 'tr', 31, 1, '2023-04-11 12:08:05', '2023-04-11 12:08:05', NULL);
 
 -- --------------------------------------------------------
 
@@ -565,18 +563,18 @@ CREATE TABLE `instagram_posts` (
 --
 
 INSERT INTO `instagram_posts` (`id`, `img_url`, `link`) VALUES
-(1, 'v-t51.2885-15-335999605_766634034820128_585109624218227738_n.jpg', 'https://www.instagram.com/p/Cp5mpBWqH72/'),
-(2, 'v-t51.2885-15-302365117_124708610311765_8108434737953359234_n.jpg', 'https://www.instagram.com/p/Ch9r0rtq5AN/'),
-(3, 'v-t51.2885-15-315302598_856021512091289_1481614104374750673_n.jpg', 'https://www.instagram.com/p/Ck76IPaJLoZ/'),
-(4, 'v-t51.2885-15-337170057_747364426798178_4009561300199603586_n.jpg', 'https://www.instagram.com/p/CqKacHnt6oN/'),
-(5, 'v-t39.30808-6-329043810_519490523646420_1078196891191828114_n.jpg', 'https://www.instagram.com/p/CoesDI5KAke/'),
-(6, 'v-t51.2885-15-326107895_988559265459876_9022493964213889174_n.jpg', 'https://www.instagram.com/p/CnljN1mqE4Y/'),
-(7, 'v-t51.2885-15-324889692_477538571207165_644469838641325026_n.jpg', 'https://www.instagram.com/p/CnZGYZ6qkqG/'),
-(8, 'v-t51.2885-15-307992940_804474117342354_3552997603266295610_n.webp', 'https://www.instagram.com/p/Ci2TVQHKuLq/'),
-(9, 'v-t51.2885-15-297391981_620087146110268_4434001131186599895_n.jpg', 'https://www.instagram.com/p/Cg3oQXWKsv2/'),
-(10, 'v-t51.2885-15-290358597_347369410809395_5702714673730373797_n.jpg', 'https://www.instagram.com/p/CfV_EI6okvr/'),
-(11, 'v-t51.2885-15-288978295_758736868489991_7707620466232393504_n.jpg', 'https://www.instagram.com/p/CfDu1Czqa5E/'),
-(12, 'v-t51.2885-15-287746554_893537131602389_5735126127072297297_n.jpg', 'https://www.instagram.com/p/Ce1Aci0qDvC/');
+(1, 'v-t51.2885-15-336282367_1202887573692395_1967177780154195138_n.jpg', 'https://www.instagram.com/p/Cp5A8LlPtzo/'),
+(2, 'v-t51.2885-15-324714156_153250644163250_7936944740102479221_n.webp', 'https://www.instagram.com/p/CnaDtJosrcY/'),
+(3, 'v-t51.2885-15-324873141_894144338281588_8623988408190920702_n.webp', 'https://www.instagram.com/p/CnXgpItMntp/'),
+(4, 'v-t51.2885-15-320282481_482491414062551_5362088730606822148_n.webp', 'https://www.instagram.com/p/CmRt758tVb-/'),
+(5, 'v-t51.2885-15-317653815_1280854135815825_103536346147282981_n.webp', 'https://www.instagram.com/p/CljRkGOMV0Z/'),
+(6, 'v-t51.2885-15-310708405_179805174568517_8852806212184791644_n.webp', 'https://www.instagram.com/p/CjddS2iMLkg/'),
+(7, 'v-t51.2885-15-307986840_1040340709976590_2014875746537762668_n.webp', 'https://www.instagram.com/p/Cizx9ubjhct/'),
+(8, 'v-t51.2885-15-307430752_680141912954207_7499495243705503879_n.jpg', 'https://www.instagram.com/p/CivVNfgoGga/'),
+(9, 'v-t51.2885-15-308011743_645500817148559_564867400049027698_n.jpg', 'https://www.instagram.com/p/CivSbh4IT2y/'),
+(10, 'v-t51.2885-15-307424115_397496402548655_1462664170373201243_n.webp', 'https://www.instagram.com/p/CisVmcUsqr4/'),
+(11, 'v-t51.2885-15-307563540_1181009489129907_4015127285991996589_n.webp', 'https://www.instagram.com/p/CisVeFKMgt3/'),
+(12, 'v-t51.2885-15-307623380_5268383313273466_1676252326678082331_n.webp', 'https://www.instagram.com/p/CisVY3YM6kD/');
 
 -- --------------------------------------------------------
 
@@ -782,6 +780,8 @@ CREATE TABLE `linguo_language_strings` (
 CREATE TABLE `menus` (
   `id` int(11) NOT NULL,
   `page_id` int(11) NOT NULL DEFAULT 0,
+  `blog_category_id` int(11) NOT NULL DEFAULT 0,
+  `blog_id` int(11) NOT NULL DEFAULT 0,
   `top_id` int(11) NOT NULL DEFAULT 0,
   `position` enum('HEADER','HEADER_RIGHT','MOBILE','FOOTER','FOOTER2','FOOTER3') DEFAULT 'HEADER',
   `target` enum('_blank','_self','_parent','_top') DEFAULT '_self',
@@ -800,74 +800,52 @@ CREATE TABLE `menus` (
 -- Dumping data for table `menus`
 --
 
-INSERT INTO `menus` (`id`, `page_id`, `top_id`, `position`, `target`, `title`, `url`, `lang`, `rank`, `isActive`, `createdAt`, `updatedAt`, `showCategories`, `showSectors`) VALUES
-(1, 0, 0, 'HEADER', '_self', 'Anasayfa', '/', 'tr', 1, 1, '2021-12-28 14:17:07', '2021-12-28 14:51:47', 0, 0),
-(2, 1, 0, 'HEADER', '_self', 'Kurumsal', NULL, 'tr', 2, 1, '2022-01-14 12:40:58', '2023-04-03 08:17:56', 0, 0),
-(3, 1, 2, 'HEADER', '_self', 'Derneğimiz Hakkında', NULL, 'tr', 3, 1, '2023-04-03 08:18:20', '2023-04-03 08:22:22', 0, 0),
-(4, 1, 2, 'HEADER', '_self', 'Kuruluş Amacımız', NULL, 'tr', 4, 1, '2023-04-03 08:18:37', '2023-04-03 08:22:23', 0, 0),
-(5, 3, 2, 'HEADER', '_self', 'Tüzüğümüz', NULL, 'tr', 5, 1, '2023-04-03 08:18:52', '2023-04-10 11:32:13', 0, 0),
-(6, 4, 2, 'HEADER', '_self', 'Yönetim Kurulumuz', NULL, 'tr', 6, 1, '2023-04-03 08:19:08', '2023-04-10 11:32:17', 0, 0),
-(7, 5, 2, 'HEADER', '_self', 'Denetleme Kurulumuz', NULL, 'tr', 7, 1, '2023-04-03 08:19:28', '2023-04-10 11:32:21', 0, 0),
-(8, 6, 2, 'HEADER', '_self', 'Destekçilerimiz', NULL, 'tr', 8, 1, '2023-04-03 08:19:45', '2023-04-10 13:43:19', 0, 0),
-(9, 7, 0, 'HEADER', '_self', 'Demirci Akıncıları', NULL, 'tr', 9, 1, '2023-04-03 08:47:17', '2023-04-10 13:50:05', 0, 0),
-(10, 7, 9, 'HEADER', '_self', 'Demirci Akıncıları Hakkında', NULL, 'tr', 10, 1, '2023-04-03 08:48:08', '2023-04-10 13:50:03', 0, 0),
-(11, 0, 9, 'HEADER', '_self', 'Tarihi Şahsiyetlerimiz', '/blog/tarihi-sahsiyetlerimiz', 'tr', 11, 1, '2023-04-03 08:48:27', '2023-04-10 14:35:08', 0, 0),
-(12, 0, 9, 'HEADER', '_self', 'Şiirlerle Demirci Akıncıları', '/blog/siirlerle-demirci-akincilari', 'tr', 12, 1, '2023-04-03 08:48:41', '2023-04-10 14:37:21', 0, 0),
-(13, 0, 9, 'HEADER', '_self', 'Türkülerle Demirci Akıncıları', '/blog/turkulerle-demirci-akincilari', 'tr', 13, 1, '2023-04-03 08:51:27', '2023-04-10 14:37:35', 0, 0),
-(14, 8, 0, 'HEADER', '_self', 'Şehitlerimiz ve Gazilerimiz', NULL, 'tr', 14, 1, '2023-04-03 08:52:30', '2023-04-10 14:35:28', 0, 0),
-(15, 8, 14, 'HEADER', '_self', 'I. Dünya Savaşı (Çanakkale ve Diğerleri)', NULL, 'tr', 15, 1, '2023-04-03 08:53:17', '2023-04-10 14:35:29', 0, 0),
-(16, 9, 14, 'HEADER', '_self', 'Milli Mücadele', NULL, 'tr', 16, 1, '2023-04-03 08:53:32', '2023-04-10 14:35:31', 0, 0),
-(17, 10, 14, 'HEADER', '_self', 'Son Dönem', NULL, 'tr', 17, 1, '2023-04-03 08:53:45', '2023-04-10 14:35:33', 0, 0),
-(18, 11, 14, 'HEADER', '_self', 'İstiklal Madalyası Sahipleri', NULL, 'tr', 18, 1, '2023-04-03 08:54:03', '2023-04-10 14:35:35', 0, 0),
-(19, 0, 0, 'HEADER', '_self', 'Faaliyetlerimiz', '/faaliyetlerimiz', 'tr', 19, 1, '2023-04-03 09:42:51', '2023-04-10 14:37:54', 1, 0),
-(20, 1, 0, 'HEADER', '_self', 'Medya Arşivi', NULL, 'tr', 20, 1, '2023-04-03 09:49:20', '2023-04-04 09:10:48', 0, 0),
-(21, 1, 20, 'HEADER', '_self', 'Makaleler', NULL, 'tr', 21, 1, '2023-04-03 10:29:37', '2023-04-04 09:30:45', 0, 0),
-(22, 1, 20, 'HEADER', '_self', 'Tarihi Yerler', NULL, 'tr', 22, 1, '2023-04-03 10:29:57', '2023-04-04 09:30:50', 0, 0),
-(23, 1, 20, 'HEADER', '_self', 'Önemli Kişiler', NULL, 'tr', 23, 1, '2023-04-03 10:30:13', '2023-04-04 09:30:52', 0, 0),
-(24, 1, 20, 'HEADER', '_self', 'Videolar', '/galeriler/galeri/videolar', 'tr', 24, 1, '2023-04-03 10:30:23', '2023-04-10 11:23:02', 0, 0),
-(25, 1, 20, 'HEADER', '_self', 'Fotoğraflar', '/galeriler/galeri/fotograflar', 'tr', 25, 1, '2023-04-03 10:30:36', '2023-04-10 10:49:59', 0, 0),
-(26, 1, 20, 'HEADER', '_self', 'Kitap Özetleri', NULL, 'tr', 26, 1, '2023-04-03 10:30:48', '2023-04-04 09:31:06', 0, 0),
-(27, 1, 0, 'HEADER', '_self', 'Tarihi Gezi Rotaları', NULL, 'tr', 27, 1, '2023-04-03 10:32:40', '2023-04-04 09:13:20', 0, 0),
-(28, 1, 27, 'HEADER', '_self', 'Demirci Merkez', NULL, 'tr', 28, 1, '2023-04-03 11:26:51', '2023-04-04 09:31:09', 0, 0),
-(29, 1, 27, 'HEADER', '_self', 'Akıncılar Yolu', NULL, 'tr', 29, 1, '2023-04-03 11:27:08', '2023-04-04 09:31:12', 0, 0),
-(30, 1, 27, 'HEADER', '_self', 'Sarıçayır', NULL, 'tr', 30, 1, '2023-04-03 11:27:19', '2023-04-04 09:31:15', 0, 0),
-(31, 1, 27, 'HEADER', '_self', 'Sındırgı', NULL, 'tr', 31, 1, '2023-04-03 11:27:30', '2023-04-04 09:31:17', 0, 0),
-(32, 1, 27, 'HEADER', '_self', 'Selendi', NULL, 'tr', 32, 1, '2023-04-03 11:27:43', '2023-04-04 09:31:20', 0, 0),
-(33, 1, 0, 'HEADER', '_self', 'Demirci Hakkında', NULL, 'tr', 33, 1, '2023-04-03 11:29:23', '2023-04-04 09:13:36', 0, 0),
-(34, 1, 33, 'HEADER', '_self', 'Demirci Tarihi', NULL, 'tr', 34, 1, '2023-04-03 11:29:49', '2023-04-04 09:31:22', 0, 0),
-(35, 1, 33, 'HEADER', '_self', 'Turistik ve Tarihi Yerler', NULL, 'tr', 35, 1, '2023-04-03 11:30:06', '2023-04-04 09:31:27', 0, 0),
-(36, 1, 33, 'HEADER', '_self', 'Mesire Alanları', NULL, 'tr', 36, 1, '2023-04-03 11:30:17', '2023-04-04 09:31:28', 0, 0),
-(37, 1, 33, 'HEADER', '_self', 'İlçemizden Yetişenler', NULL, 'tr', 37, 1, '2023-04-03 11:30:29', '2023-04-04 09:31:29', 0, 0),
-(38, 1, 33, 'HEADER', '_self', 'Demirciden Fotoğraflar', NULL, 'tr', 38, 1, '2023-04-03 11:30:46', '2023-04-04 09:31:31', 0, 0),
-(39, 0, 0, 'HEADER', '_self', 'İletişim', '/iletisim', 'tr', 39, 1, '2022-01-03 07:52:56', '2023-04-04 09:11:56', 0, 0),
-(40, 1, 0, 'FOOTER', '_self', 'Biz Kimiz?', NULL, 'tr', 40, 1, '2022-03-05 11:46:13', '2023-04-04 09:11:53', 0, 0),
-(41, 0, 0, 'FOOTER', '_self', 'İletişim', '/iletisim', 'tr', 41, 1, '2022-03-05 14:31:32', '2023-04-04 09:11:51', 0, 0),
-(42, 3, 0, 'FOOTER', '_self', 'KVKK', NULL, 'tr', 42, 1, '2022-03-05 22:02:08', '2023-04-04 09:11:48', 0, 0);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `our_works`
---
-
-CREATE TABLE `our_works` (
-  `id` int(11) NOT NULL,
-  `title` longtext DEFAULT NULL,
-  `content` longtext DEFAULT NULL,
-  `img_url` longtext DEFAULT NULL,
-  `lang` char(2) DEFAULT 'tr',
-  `rank` bigint(1) DEFAULT 1,
-  `isActive` tinyint(1) DEFAULT NULL,
-  `createdAt` timestamp NULL DEFAULT current_timestamp(),
-  `updatedAt` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `our_works`
---
-
-INSERT INTO `our_works` (`id`, `title`, `content`, `img_url`, `lang`, `rank`, `isActive`, `createdAt`, `updatedAt`) VALUES
-(1, 'test', '', NULL, 'tr', 1, 1, '2023-03-20 11:15:55', '2023-03-20 11:15:55');
+INSERT INTO `menus` (`id`, `page_id`, `blog_category_id`, `blog_id`, `top_id`, `position`, `target`, `title`, `url`, `lang`, `rank`, `isActive`, `createdAt`, `updatedAt`, `showCategories`, `showSectors`) VALUES
+(1, 0, 0, 0, 0, 'HEADER', '_self', 'Anasayfa', '/', 'tr', 1, 1, '2021-12-28 14:17:07', '2021-12-28 14:51:47', 0, 0),
+(2, 1, 0, 0, 0, 'HEADER', '_self', 'Kurumsal', NULL, 'tr', 2, 1, '2022-01-14 12:40:58', '2023-04-03 08:17:56', 0, 0),
+(3, 1, 0, 0, 2, 'HEADER', '_self', 'Derneğimiz Hakkında', NULL, 'tr', 3, 1, '2023-04-03 08:18:20', '2023-04-03 08:22:22', 0, 0),
+(4, 1, 0, 0, 2, 'HEADER', '_self', 'Kuruluş Amacımız', NULL, 'tr', 4, 1, '2023-04-03 08:18:37', '2023-04-03 08:22:23', 0, 0),
+(5, 3, 0, 0, 2, 'HEADER', '_self', 'Tüzüğümüz', NULL, 'tr', 5, 1, '2023-04-03 08:18:52', '2023-04-10 11:32:13', 0, 0),
+(6, 4, 0, 0, 2, 'HEADER', '_self', 'Yönetim Kurulumuz', NULL, 'tr', 6, 1, '2023-04-03 08:19:08', '2023-04-10 11:32:17', 0, 0),
+(7, 5, 0, 0, 2, 'HEADER', '_self', 'Denetleme Kurulumuz', NULL, 'tr', 7, 1, '2023-04-03 08:19:28', '2023-04-10 11:32:21', 0, 0),
+(8, 6, 0, 0, 2, 'HEADER', '_self', 'Destekçilerimiz', NULL, 'tr', 8, 1, '2023-04-03 08:19:45', '2023-04-10 13:43:19', 0, 0),
+(9, 7, 0, 0, 0, 'HEADER', '_self', 'Demirci Akıncıları', NULL, 'tr', 9, 1, '2023-04-03 08:47:17', '2023-04-10 13:50:05', 0, 0),
+(10, 7, 0, 0, 9, 'HEADER', '_self', 'Demirci Akıncıları Hakkında', NULL, 'tr', 10, 1, '2023-04-03 08:48:08', '2023-04-10 13:50:03', 0, 0),
+(11, 0, 1, 0, 9, 'HEADER', '_self', 'Tarihi Şahsiyetlerimiz', NULL, 'tr', 11, 1, '2023-04-03 08:48:27', '2023-04-11 12:34:05', 0, 0),
+(12, 0, 2, 0, 9, 'HEADER', '_self', 'Şiirlerle Demirci Akıncıları', NULL, 'tr', 12, 1, '2023-04-03 08:48:41', '2023-04-11 12:34:02', 0, 0),
+(13, 0, 3, 0, 9, 'HEADER', '_self', 'Türkülerle Demirci Akıncıları', NULL, 'tr', 13, 1, '2023-04-03 08:51:27', '2023-04-11 12:34:00', 0, 0),
+(14, 8, 0, 0, 0, 'HEADER', '_self', 'Şehitlerimiz ve Gazilerimiz', NULL, 'tr', 14, 1, '2023-04-03 08:52:30', '2023-04-10 14:35:28', 0, 0),
+(15, 8, 0, 0, 14, 'HEADER', '_self', 'I. Dünya Savaşı (Çanakkale ve Diğerleri)', NULL, 'tr', 15, 1, '2023-04-03 08:53:17', '2023-04-10 14:35:29', 0, 0),
+(16, 9, 0, 0, 14, 'HEADER', '_self', 'Milli Mücadele', NULL, 'tr', 16, 1, '2023-04-03 08:53:32', '2023-04-10 14:35:31', 0, 0),
+(17, 10, 0, 0, 14, 'HEADER', '_self', 'Son Dönem', NULL, 'tr', 17, 1, '2023-04-03 08:53:45', '2023-04-10 14:35:33', 0, 0),
+(18, 11, 0, 0, 14, 'HEADER', '_self', 'İstiklal Madalyası Sahipleri', NULL, 'tr', 18, 1, '2023-04-03 08:54:03', '2023-04-10 14:35:35', 0, 0),
+(19, 0, 0, 0, 0, 'HEADER', '_self', 'Faaliyetlerimiz', '/faaliyetlerimiz', 'tr', 19, 1, '2023-04-03 09:42:51', '2023-04-10 14:37:54', 1, 0),
+(20, 0, 4, 0, 0, 'HEADER', '_self', 'Medya Arşivi', NULL, 'tr', 20, 1, '2023-04-03 09:49:20', '2023-04-11 12:35:48', 0, 0),
+(21, 1, 4, 0, 20, 'HEADER', '_self', 'Makaleler', NULL, 'tr', 21, 1, '2023-04-03 10:29:37', '2023-04-11 12:33:36', 0, 0),
+(22, 0, 5, 0, 20, 'HEADER', '_self', 'Tarihi Yerler', NULL, 'tr', 22, 1, '2023-04-03 10:29:57', '2023-04-11 12:33:46', 0, 0),
+(23, 0, 6, 0, 20, 'HEADER', '_self', 'Önemli Kişiler', NULL, 'tr', 23, 1, '2023-04-03 10:30:13', '2023-04-11 12:33:48', 0, 0),
+(24, 1, 0, 0, 20, 'HEADER', '_self', 'Videolar', '/galeriler/galeri/videolar', 'tr', 24, 1, '2023-04-03 10:30:23', '2023-04-10 11:23:02', 0, 0),
+(25, 1, 0, 0, 20, 'HEADER', '_self', 'Fotoğraflar', '/galeriler/galeri/fotograflar', 'tr', 25, 1, '2023-04-03 10:30:36', '2023-04-10 10:49:59', 0, 0),
+(26, 0, 7, 0, 20, 'HEADER', '_self', 'Kitap Özetleri', NULL, 'tr', 26, 1, '2023-04-03 10:30:48', '2023-04-11 12:33:52', 0, 0),
+(27, 0, 8, 0, 0, 'HEADER', '_self', 'Tarihi Gezi Rotaları', NULL, 'tr', 27, 1, '2023-04-03 10:32:40', '2023-04-11 12:34:18', 0, 0),
+(28, 0, 0, 5, 27, 'HEADER', '_self', 'Demirci Merkez', NULL, 'tr', 28, 1, '2023-04-03 11:26:51', '2023-04-11 12:34:52', 0, 0),
+(29, 0, 0, 6, 27, 'HEADER', '_self', 'Akıncılar Yolu', NULL, 'tr', 29, 1, '2023-04-03 11:27:08', '2023-04-11 12:34:50', 0, 0),
+(30, 0, 0, 7, 27, 'HEADER', '_self', 'Sarıçayır', NULL, 'tr', 30, 1, '2023-04-03 11:27:19', '2023-04-11 12:34:48', 0, 0),
+(31, 0, 0, 8, 27, 'HEADER', '_self', 'Sındırgı', NULL, 'tr', 31, 1, '2023-04-03 11:27:30', '2023-04-11 12:34:46', 0, 0),
+(32, 0, 0, 9, 27, 'HEADER', '_self', 'Selendi', NULL, 'tr', 32, 1, '2023-04-03 11:27:43', '2023-04-11 12:34:44', 0, 0),
+(33, 12, 0, 0, 0, 'HEADER', '_self', 'Demirci Hakkında', NULL, 'tr', 33, 1, '2023-04-03 11:29:23', '2023-04-11 11:51:17', 0, 0),
+(34, 12, 0, 0, 33, 'HEADER', '_self', 'Demirci Tarihi', NULL, 'tr', 34, 1, '2023-04-03 11:29:49', '2023-04-11 11:51:22', 0, 0),
+(35, 13, 0, 0, 33, 'HEADER', '_self', 'Turistik ve Tarihi Yerler', NULL, 'tr', 35, 1, '2023-04-03 11:30:06', '2023-04-11 11:51:27', 0, 0),
+(36, 14, 0, 0, 33, 'HEADER', '_self', 'Mesire Alanları', NULL, 'tr', 36, 1, '2023-04-03 11:30:17', '2023-04-11 11:51:33', 0, 0),
+(37, 15, 0, 0, 33, 'HEADER', '_self', 'İlçemizden Yetişenler', NULL, 'tr', 37, 1, '2023-04-03 11:30:29', '2023-04-11 11:51:43', 0, 0),
+(38, 16, 0, 0, 33, 'HEADER', '_self', 'Demirciden Fotoğraflar', NULL, 'tr', 38, 1, '2023-04-03 11:30:46', '2023-04-11 11:51:49', 0, 0),
+(39, 0, 0, 0, 0, 'HEADER', '_self', 'İletişim', '/iletisim', 'tr', 39, 1, '2022-01-03 07:52:56', '2023-04-04 09:11:56', 0, 0),
+(40, 1, 0, 0, 0, 'FOOTER', '_self', 'Derneğimiz Hakkında', NULL, 'tr', 40, 1, '2023-04-03 08:18:20', '2023-04-11 12:45:17', 0, 0),
+(41, 1, 0, 0, 0, 'FOOTER', '_self', 'Kuruluş Amacımız', NULL, 'tr', 41, 1, '2023-04-03 08:18:37', '2023-04-11 12:45:19', 0, 0),
+(42, 3, 0, 0, 0, 'FOOTER', '_self', 'Tüzüğümüz', NULL, 'tr', 42, 1, '2023-04-03 08:18:52', '2023-04-11 12:45:20', 0, 0),
+(43, 4, 0, 0, 0, 'FOOTER', '_self', 'Yönetim Kurulumuz', NULL, 'tr', 43, 1, '2023-04-03 08:19:08', '2023-04-11 12:45:21', 0, 0),
+(44, 5, 0, 0, 0, 'FOOTER', '_self', 'Denetleme Kurulumuz', NULL, 'tr', 44, 1, '2023-04-03 08:19:28', '2023-04-11 12:45:23', 0, 0),
+(45, 6, 0, 0, 0, 'FOOTER', '_self', 'Destekçilerimiz', NULL, 'tr', 45, 1, '2023-04-03 08:19:45', '2023-04-11 12:45:25', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -908,10 +886,11 @@ INSERT INTO `pages` (`id`, `url`, `title`, `content`, `img_url`, `banner_url`, `
 (9, 'milli-mucadele', 'Milli Mücadele', '', NULL, NULL, 'tr', 9, 1, '2023-04-10 14:33:32', '2023-04-10 14:34:33', '2023-04-10 14:33:21', 'SIMPLE', 6),
 (10, 'son-donem', 'Son Dönem', '', NULL, NULL, 'tr', 10, 1, '2023-04-10 14:33:45', '2023-04-10 14:34:31', '2023-04-10 14:33:35', 'SIMPLE', 7),
 (11, 'istiklal-madalyasi-sahipleri', 'İstiklal Madalyası Sahipleri', '', NULL, NULL, 'tr', 11, 1, '2023-04-10 14:34:01', '2023-04-10 14:34:28', '2023-04-10 14:33:50', 'SIMPLE', 8),
-(99, 'sirket-gizlilik-politikasi', 'Şirket Gizlilik Politikası', '<p>AKIN HADDECİLİK LTD.ŞTİ., paydaşlarından <strong>Kişisel Verilerle İlgili Genel Aydınlatma Metni</strong>’nde ve <strong>Personel İçin Aydınlatma Metni</strong>’nde açıklanan yollarla toplanan kişisel verilerin, gizliliğinin korunması için azami özen ilkesi çerçevesinde, gereken tüm idari ve teknik önlemleri almakta ve bu verileri, önlemlere uygun şekilde fiziksel ve/veya elektronik ortamda saklamaktadır.</p>\r\n<p>AKIN HADDECİLİK LTD.ŞTİ., topladığı tüm kişisel verileri, ilgili mevzuata ve şirket politikalarına uygun olarak ve yukarıda adı geçen aydınlatma metinlerinde belirtilen şartlarda işler, saklar veya paylaşır. AKIN HADDECİLİK LTD.ŞTİ., iş birliği içinde olduğu kurum veya kuruluşlarla bilgi paylaşması halinde, bu şirketlerin AKIN HADDECİLİK LTD.ŞTİ.’nın gizlilik standartlarına ve şartlarına uymalarını sağlamak için gerekli önlemleri alır.</p>\r\n<p>AKIN HADDECİLİK LTD.ŞTİ., tüm çalışanlarının da gizlilik politikasına uygun davranmaları ve bu konuda gereken hassasiyeti göstermesini sağlamak için gerekli önlemleri almaktadır. Çalışanlarımız eğitimler yoluyla hem kendi kişisel verileri hem de paydaşlara ait kişisel verilerin korunması hakkında bilgilendirilmektedir.</p>\r\n<p>Bu politikada yer verilen taahhütler AKIN HADDECİLİK LTD.ŞTİ.’nin web sitesi ve diğer kanalları aracılığıyla paylaşılan bilgiler için geçerlidir. Bu sitede veya diğer kanallarda, başka web sitelerine link verilmesi halinde, link verilen web sitelerinin gizlilik ilkeleri ve kullanım şartları geçerli olup ilgili web sitelerinin ziyaret edilmesi nedeniyle uğranabilecek zarardan AKIN HADDECİLİK LTD.ŞTİ. sorumlu değildir.</p>\r\n<p>AKIN HADDECİLİK LTD.ŞTİ., gizlilik politikasına yönelik prensiplerin, güncel tutulması ve başta ilgili mevzuata ve şirket politikalarına uygun hale getirilmesi için bu politikada düzenlenen hususları önceden haber vermeksizin değiştirme hakkını saklı tutar.<br /><br /></p>\r\n<ol>\r\n<li><strong> </strong><strong>Çerez Nedir:</strong> Çerez veya bilinen ismiyle “cookie”, mobil ve masaüstü cihazlar kullanarak sitelerimizi (<a href=\"http://www.akinhadde.com.tr\">akinhadde.com.tr</a> ) ziyaret ettiğinizde bilgisayarınız veya mobil cihazınıza (akıllı telefon, tablet gibi) kaydedilen küçük metin dosyası veya bilgilerdir. Çerezler genellikle geldikleri internet site isimlerini, kullanım ömürlerini (cihazınızda ne kadar süre ile kalacağını) ve rastgele verilen sayılardan oluşan değerler içerir.</li>\r\n<li><strong> </strong><strong>Ne için Kullanıyoruz</strong>: Çerezleri, sitelerimizin daha kolay kullanılması, sizin ilgi ve ihtiyaçlarınıza göre ayarlanması ve kullanıcılarımıza akıllı reklam gösterimi için kişiselleştirme amacıyla kullanıyoruz. İnternet siteleri bu çerez dosyaları okuyup yazabiliyorlar ve bu sayede tanınmanız ve size daha uygun bir internet sitesi sunulması amacıyla sizinle ilgili önemli bilgilerin hatırlanması sağlanıyor (tercih ayarlarınızın hatırlanması gibi). Çerezler ayrıca, sitelerimiz üzerinde gelecekteki hareketlerinizin hızlanmasına da yardımcı olur. Bunlara ek olarak, ziyaretçilerin sitelerimizi nasıl kullandığını anlamak ve sitelerimizin tasarımı ile kullanışlılığını geliştirmek amacıyla çerezleri sitelerimizin kullanımı hakkında istatistiksel bilgiler toplamak için de kullanabiliriz.</li>\r\n<li><strong> </strong><strong>Hangi Türlerini Kullanıyoruz</strong>: Oturum çerezleri (session cookies) ve kalıcı çerezler (persistent cookies) olmak üzere sitelerimiz genelinde iki tür çerez kullanmaktayız. Oturum çerezleri geçici çerezler olup sadece tarayıcınızı kapatıncaya kadar geçerlidirler. Kalıcı çerezler siz silinceye veya süreleri doluncaya (bu şekilde çerezlerin cihazında ne kadar kalacağı, çerezlerin “kullanım ömürlerine” bağlı olacaktır) kadar sabit diskinizde kalırlar.</li>\r\n</ol>\r\n<p><strong><u>Üçüncü Parti Çerezleri (3th Party Cookies)</u></strong></p>\r\n<p>İş ortaklarımız, reklam platformları, sosyal medya platformları ile analitik bilgileri toplama hizmeti veren, sitemiz genelinde kullanılan bu servis sağlayıcılar hizmetlerini sunabilmeleri için sitelerimizi ziyaret ettiğinizde, bizim yerimize cihazlarınıza çerez kaydetmelerine izin verebiliriz. Bu çerezler hakkında daha fazla bilgi edinmek ve bu çerezlerin nasıl kontrol edileceğine ilişkin ayrıntılı bilgi için, lütfen bu üçüncü parti kurum ve kuruluşların gizlilik politikalarını veya çerez politikalarını inceleyiniz.<br /><br /></p>\r\n<table style=\"border-collapse: collapse; width: 100%;\" border=\"1\" width=\"100%\">\r\n<tbody>\r\n<tr>\r\n<td width=\"121\">\r\n<p><strong>Kullanılan Çerez</strong></p>\r\n</td>\r\n<td width=\"246\">\r\n<p><strong>Ne İşe Yarar</strong></p>\r\n</td>\r\n<td width=\"170\">\r\n<p><strong>Kullanım Ömrü</strong></p>\r\n</td>\r\n<td width=\"132\">\r\n<p><strong>Ayrıntılar</strong></p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"121\">\r\n<p>İzleme/Analiz</p>\r\n</td>\r\n<td width=\"246\">\r\n<p><a href=\"http://www.elteksmak.com.tr\">www.akinhadde.com.tr</a>   sitesi içerisinde nerelerde gezindiğiniz ve neler yaptığınız hakkında isimsiz (anonim) toplu veriler sağlar</p>\r\n</td>\r\n<td width=\"170\">\r\n<p>Kalıcı, oturum ve 3. parti</p>\r\n</td>\r\n<td width=\"132\">\r\n<p>Google Analytics<br />YouTube İzlenmesi<br />Gemius<br />Comscore</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"121\">\r\n<p>Sosyal Medya / Paylaşım</p>\r\n</td>\r\n<td width=\"246\">\r\n<p>Yorumları, sayfaları, yer imlerini paylaşmanızı sağlar ve sosyal ağlar ile sosyal araçlara daha kolay erişim sunmaya yardımcı olur.</p>\r\n</td>\r\n<td width=\"170\">\r\n<p>3. parti</p>\r\n</td>\r\n<td width=\"132\">\r\n<p>Facebook<br />Twitter<br />YouTube</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"121\">\r\n<p>Siteler arası izleme</p>\r\n</td>\r\n<td width=\"246\">\r\n<p>Kullanıcının IP adresi sayesinde yaklaşık adresinin (şehir, ilçe, posta kodu) belirlenmesini ve kullanıcının içerik ve reklam tercihlerine göre en uygun olanlarını kullanıcıya sunulmasını sağlar.</p>\r\n</td>\r\n<td width=\"170\">\r\n<p>Oturum, 3.parti</p>\r\n</td>\r\n<td width=\"132\">\r\n<p>Mobil Reklam platformları</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"121\">\r\n<p>Google Analitikleri</p>\r\n</td>\r\n<td width=\"246\">\r\n<p>Bu tür çerezler tüm istatistiksel verilerin toplanmasını bu şekilde Sitenin sunumunun ve kullanımının geliştirilmesini sağlar. Google, bu istatistiklere toplumsal istatistikler ve ilgilere ilişkin veriler eklemek suretiyle, kullanıcıları daha iyi anlamamızı sağlar.</p>\r\n</td>\r\n<td width=\"170\">\r\n<p>Kalıcı, oturum ve 3.part</p>\r\n</td>\r\n<td width=\"132\">\r\n<p>Google Analytics</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p> </p>\r\n<ol>\r\n<li><strong> </strong><strong>Çerezleri nasıl kontrol edebilir veya silebilirsiniz: </strong>Birçok internet tarayıcısı, varsayılan olarak çerezleri otomatik olarak kabul etmeye ayarlıdır. Bu ayarları, çerezleri engelleyecek veya cihazınıza çerez gönderildiğinde uyarı verecek şekilde değiştirebilirsiniz. Çerezleri yönetmenin birkaç yolu bulunmaktadır. Tarayıcı ayarlarınızı nasıl düzenleyeceğiniz hakkında ayrıntılı bilgi almak için lütfen tarayıcınızın talimat veya yardım ekranına başvurun. Eğer kullandığımız çerezleri devre dışı bırakırsanız, bu eylem şirketimizin web sitesindeki kullanıcı deneyiminizi etkileyebilir; örneğin sitenin belirli bölümlerini görüntüleyemeyebilir veya tekrar ziyaret ettiğinizde sizin için özelleştirilmiş olan bilgilere ulaşamayabilirsiniz. Siteyi görüntülemek için farklı cihazlar kullanıyorsanız (ör. bilgisayar, akıllı telefon, tablet vb.), bu cihazların her birindeki her tarayıcının çerez tercihlerinize uygun şekilde ayarlanmış olduğundan emin olmanız gerekir.</li>\r\n</ol>', NULL, '1bf7af771f49dfa5b0ec95e56ca9c6e3.webp', 'tr', 99, 1, '2022-03-05 22:01:49', '2023-04-10 11:30:55', '2022-03-05 21:58:23', 'KVKK', NULL),
-(100, 'sosyal-medya-kullanimi-politikasi', 'Sosyal Medya Kullanımı Politikası', '<p>AKIN HADDECİLİK LTD.ŞTİ., politikanın yayınlandığı tarihte kullanmakta olduğu bir sosyal medya platformu bulunmamaktadır. Olması halinde, ilgili sosyal medya platformunun adı (Facebook, Instagram vb), politikaya eklenecek ve ilan edilecektir.  </p>\r\n<p>Sayfaların açılması ve yönetim yetkisi, Genel Müdür’ün sorumluluğundadır. Bunun dışında açılan hesaplar ve sayfalar şirketimizle ilgili değildir. Tespiti halinde, AKIN HADDECİLİK LTD.ŞTİ. yasal yollara başvurabilir. Sayfalarda, şirket faaliyetleri (Fabrika geneli, üretim faaliyeti, fuar vb etkinlikler, sosyal faaliyetler vb) sırasında çekilen fotoğraf ve videolar paylaşılmaktadır. Bunun dışında milli ve dini bayramlara ait kutlama / anma mesajları yayınlanabilmektedir.</p>\r\n<p>Sosyal medya sayfalarında, gerekli parametre ve gizlilik ayarları Genel Müdür tarafından yapılır.</p>\r\n<p>Fotoğraf ve videolarda yer alan çalışanlarımızın görüntüleri ancak açık rızaları alınmışsa yayınlanabilir, bunun dışında müşterilerimizin, tedarikçilerimizin, ziyaretçilerimizin görüntülerine, izinleri alınmadığı takdirde yer verilmez. Paylaşımlarda, çalışanlarımızın adları etiketlenmez, hiçbir kişisel verisi izni olmaksızın paylaşılmaz.</p>\r\n<p>Bunun dışında, çalışanlarımızın, sosyal medya kullanımında dikkat etmesi kurallar aşağıda açıklanmıştır:</p>\r\n<ol>\r\n<li>Sosyal ağlarda, AKIN HADDECİLİK LTD.ŞTİ. veya sektörle ilgili bir konuda fikir beyan ediliyorsa, kişisel düşünceniz olduğu belirtmek zorundadır.</li>\r\n<li>Şirket, çalışma arkadaşları ve kendi itibarını korumak zorundadır. İtibar zedeleyici herhangi bir yorum yapılmaktan kaçınılacaktır.</li>\r\n<li>Müşteriler, rakipler, tedarikçiler, kamu veya özel kurum ve kuruluşlar hakkında itibar zedeleyici herhangi bir yorum yapılmayacaktır.</li>\r\n<li>AKIN HADDECİLİK LTD.ŞTİ. çalışanlarına, müşterilerine, tedarikçilerine ve diğer paydaşlara ait hiçbir bilgi paylaşılmayacaktır.</li>\r\n<li>Sosyal ağlarda, onay alınmadıkça diğer kişilerin fotoğraflarını paylaşmamalı ve adlarını etiketlememelidir.</li>\r\n<li>Ayrımcı, tacizci, ırkçı, dini veya cinsel içerikli, saldırgan ve rahatsız edici tarzda yorumlar yazılmayacaktır.</li>\r\n<li>Şirketin sosyal medya sayfalarında, hiçbir ticari ürünün reklamı, hiçbir siyasi partinin propagandası yapılmayacaktır.</li>\r\n<li>Şirket bünyesindeki kişi, ofis, toplantı, çalışma içeriğine ait detaylar, mekanlar vb sosyal medyada etiketlenmeyecektir. Şirket içerisinde çekilen fotoğraflar, şirket adı etiketlenerek paylaşılmayacaktır.</li>\r\n<li>Paylaşılması düşünülen bir içerik hakkında şüpheye düşülmüşse, İnsan Kaynakları Sorumlusu’na danışılacaktır.</li>\r\n<li>Sosyal medya platformlarına herhangi bir içerik (metin, resim, video vb.) yüklemesi yaparken dikkatli olmak gerekir. Farkında olmadan marka ya da telif hakları ihlal edilebilir.</li>\r\n<li>Çalışanlar sosyal medyada paylaştıkları ve yayınladıkları içeriklerden kişisel olarak sorumludur.</li>\r\n<li>Sosyal medyada yazılı mesajların yanlış anlaşılma ihtimaline karşı, yazım kurallarına uygun davranılacaktır.</li>\r\n<li>Yetki verilmemiş kişiler asla kendini firmanın resmi sözcüsü olarak tanıtmamalıdır.</li>\r\n<li>Şirketle ilgili başkaları tarafından yazılmış olumsuz mesajlara karşı olumsuz mesaj yazılmayacak, sağduyulu ve nazik yaklaşılacaktır.</li>\r\n<li>İnternette paylaşılanların, kaldırılsa veya silinse bile tamamen kaldırılamayacağının farkında olunacak.</li>\r\n</ol>\r\n<p>Çalışanlarımız, kişisel sosyal medya sayfalarındaki parametre ve gizlilik ayarları konusunda, İnsan Kaynakları Sorumlusu’na danışabilirler.</p>', NULL, '76bd5d10a82e5517795fe63a88a2c40f.webp', 'tr', 100, 1, '2022-12-26 08:36:58', '2023-04-10 11:30:45', '2022-12-26 08:34:59', 'KVKK', NULL),
-(101, 'kisisel-veri-saklama-ve-imha-politikasi', 'Kişisel Veri Saklama ve İmha Politikası', '<p><strong>POLİTİKA AMACI:</strong></p>\r\n<p>Bu politika, şirketimizin aldığı ve işlediği kişisel verilerin saklanması ve imha işlemlerinin yönetilmesine dair yaklaşımını tanımlamak amacıyla, Kişisel Verilerin Silinmesi, Yok Edilmesi Veya Anonim Hale Getirilmesi Hakkında Yönetmelik baz alınarak hazırlanmıştır.</p>\r\n<p><strong>TANIMLAR:</strong></p>\r\n<p><strong>İmha</strong>: Kişisel verilerin silinmesi, yok edilmesi veya anonim hale getirilmesini</p>\r\n<p><strong>Kayıt ortamı</strong>: Tamamen veya kısmen otomatik olan ya da herhangi bir veri kayıt sisteminin parçası olmak kaydıyla otomatik olmayan yollarla işlenen kişisel verilerin bulunduğu her türlü ortamı</p>\r\n<p><strong>Periyodik imha:</strong> Kanunda yer alan kişisel verilerin işlenme şartlarının tamamının ortadan kalkması durumunda kişisel verileri saklama ve imha politikasında belirtilen ve tekrar eden aralıklarla resen gerçekleştirilecek silme, yok etme veya anonim hale getirme işlemini</p>\r\n<p><strong>Veri kayıt sistemi</strong>: Kişisel verilerin belirli kriterlere göre yapılandırılarak işlendiği kayıt sistemini ifade eder.</p>\r\n<p><strong>SAKLAMA ve İMHA GEREKÇELERİ, SAKLAMA ve İMHA SÜRELERİ:</strong></p>\r\n<p>Şirketimiz, işlediği kişisel verileri, yasal zorunlu faaliyetlerini ve ticari faaliyetlerini yerine getirebilmek amacıyla, <strong>Kişisel Veri Envanteri</strong> ile belirlenen ve VERBİS (Veri Sorumluları Sicili)’de kamuya açık şekilde ilan edilen saklama süreleri zarfında, fiziksel ve/veya elektronik ortamlarda güvenli bir şekilde saklamaktadır. Kişisel Veri Envanteri’nde, her bir kişisel verinin, hangi ortamlarda işlendiği, saklandığı ve hangi yöntemlerle imha edildiği tanımlanmıştır. Kişisel veriler, başta 6698 Sayılı Kişisel Verileri Koruma Kanunu, 4857 Sayılı İş Kanunu, 6331 Sayılı İş Sağlığı ve Güvenliği Kanunu ve şirket faaliyetlerimizi ilgilendiren tüm mevzuat şartlarına uygun şekilde muhafaza edilmektedir.</p>\r\n<p>Kişisel veri saklama sürelerinin belirlenmesinde, kişisel verinin işlenmesindeki hukuki gerekçe veya işleme amacı dikkate alınır. Kişisel veri, yasal şartlar gereği olarak  toplanan ve işlenen bir veri ise, saklama süresi, ilgili mevzuatta yer alan süre olarak <strong>Kişisel Veri Envanteri</strong>’nde tanımlanır. Diğer veriler için ise, işleme amacına uygun şekilde, ilgili faaliyetlerin yerine getirebilmesini sağlayacak süreler belirlenir ve <strong>Kişisel Veri Envanteri</strong>’nde tanımlanır. Saklama süreleri bazen “ay”, “yıl” gibi tanımlanırken, bazı kişisel veriler için “…. Bitiminde”, “…………yapılana kadar” şeklinde tanımlanabilmektedir. Bu sebeple her bir kişisel veri için, ilgili mevzuatta öngörülen veya işlendikleri amaç için gerekli olan süreye ilişkin farklı bir muhafaza süresi geçerli olabilmektedir.</p>\r\n<p>Kişisel veriler, VERBİS’de kamuya açık şekilde ilan edilen “Veri Güvenliği Tedbirleri” alınarak saklanmaktadır. Çalışanlar için yetki matrisi hazırlanması, eğitimler yapılması, çalışanlarla ve veri işleyenlerle gizlilik sözleşmeleri yapılması gibi idari tedbirlerin yanı sıra, güncel antivirüs sistemleri kullanımı, güvenlik duvarı kullanımı, yedekleme, şifreleme vb teknik veri güvenliği tedbirleri alınmaktadır.</p>\r\n<p>Kişisel verilerin imhasında, seçilen yönteme göre, silme, yok etme, anonim hale getirme işlemi, kişisel verinin tekrar erişilmesi, geri getirilmesi, kullanılması veya veri sahibi ile ilişkilendirilmesini mümkün kılmayacak şekilde hareket edilir.</p>\r\n<p>Saklama süresi dolan kişisel veriler, belirlenmiş olan imha yöntemlerine göre imha edilir ve Veri İmha Tutanağı kullanılarak işlem kayıt altına alınır. Bu kayıtlar en az 3 yıl saklanır.</p>\r\n<p>Kişisel verilerin saklama ve imhasında, “Kişisel Veri Envanteri” ve “Kişisel Veriler İçin Yetki Matrisi ve Yetkilerin Yönetimi Tablosu”yla belirlenen sorumlular görev alır. İmha işlemlerinde görev alanlar, Veri İmha Tutanağı’nda kayıt altına alınır.</p>\r\n<p>Şirketimiz, her 3 ayda bir (Mart, Haziran, Eylül ve Aralık ayları) kişisel verileri gözden geçirerek, saklama süresi dolan verileri tespit eder ve kişisel verileri silme, yok etme veya anonim hale getirme yükümlülüğünün ortaya çıktığı tarihi takip eden ilk periyodik imha işleminde, kişisel verileri siler, yok eder veya anonim hale getirir. Bu süre, altı ayı geçmez.</p>\r\n<p><strong>İLGİLİ KİŞİNİN (VERİ SAHİBİNİN) TALEBİ HALİNDE KİŞİSEL VERİLERİN İMHASI</strong></p>\r\n<p>Kişisel veri sahipleri, Kişisel Verilerle İlgili Genel Aydınlatma Metni’mizde yer alan iletişim yöntemlerini kullanarak verileri hakkında bilgi talep edebilir. Bu talebin, kişisel verisinin silinmesi olması halinde:</p>\r\n<ol>\r\n<li>Kişisel veri işleme şartlarının tamamı ortadan kalkmışsa, talebe konu olan kişisel veriler imha edilir. İlgili kişinin talebi en geç 30 gün içinde sonuçlandırılır ve yazılı olarak / elektronik ortamda bilgilendirilir.</li>\r\n<li>Kişisel veri işleme şartlarının tamamı ortadan kalkmışsa ve talebe konu veriler, veri işleyen taraflara aktarılmışsa, şirketimiz durumu Veri İşleyen’e bildirir ve imha işlemlerinin yapılmasını sağlar.</li>\r\n<li>Kişisel veri işleme şartlarının tamamı ortadan kalkmamışsa, şirketimiz tarafından gerekçesi açıklanarak reddedilir ve en geç 30 gün içinde ret cevabı yazılı olarak / elektronik ortamda bildirilir.</li>\r\n</ol>\r\n<p> </p>\r\n<p> </p>\r\n<p>YÜRÜRLÜK TARİHİ: 11.02/2020 tarihinde yürürlüğe girmiştir. Revizyon no:00</p>\r\n<p>DEĞİŞİKLİKLER:</p>\r\n<table>\r\n<tbody>\r\n<tr>\r\n<td width=\"121\">\r\n<p>Değişiklik No</p>\r\n</td>\r\n<td width=\"142\">\r\n<p>Değişiklik Tarihi</p>\r\n</td>\r\n<td width=\"390\">\r\n<p>Değişikliğe Dair Açıklama</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"121\">\r\n<p> </p>\r\n</td>\r\n<td width=\"142\">\r\n<p> </p>\r\n</td>\r\n<td width=\"390\">\r\n<p> </p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"121\">\r\n<p> </p>\r\n</td>\r\n<td width=\"142\">\r\n<p> </p>\r\n</td>\r\n<td width=\"390\">\r\n<p> </p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"121\">\r\n<p> </p>\r\n</td>\r\n<td width=\"142\">\r\n<p> </p>\r\n</td>\r\n<td width=\"390\">\r\n<p> </p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>', NULL, '92ead8694214ce2b5a0032e6d686ba99.webp', 'tr', 101, 1, '2022-12-26 08:46:27', '2023-04-10 11:30:42', '2022-12-26 08:45:02', 'KVKK', NULL),
-(102, 'kisisel-verilerle-ilgili-genel-aydinlatma-metni', 'Kişisel Verilerle İlgili Genel Aydınlatma Metni', '<ol>\r\n<li><strong> </strong><strong>Kişisel Verilerin Korunması Kanunu Hakkında:</strong></li>\r\n</ol>\r\n<p>İşbu “Genel Aydınlatma Metni”, AKIN HADDECİLİK Ltd.Şti. (“AKIN HADDECİLİK”) olarak, 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) uyarınca, Veri Sorumlusu sıfatıyla, KVKK’da yer alan “Veri Sorumlusunun Aydınlatma Yükümlülüğü” başlıklı 10. ve “İlgili Kişinin Hakları” başlıklı 11. maddesi çerçevesinde; hangi amaçla kişisel verilerinizin işleneceği, işlenen kişisel verilerinizin kimlere ve hangi amaçla aktarılabileceği, kişisel verilerinizin toplanmasının yöntemi ve hukuki sebebi ve KVKK’nın 11. maddesinde sayılan diğer haklarınızla ilgili olarak size bilgi vermek ve aşağıdaki hususlarda onayınızı almak amacıyla sunulmaktadır.</p>\r\n<p>Bize sağladığınız kişisel verilerin gizliliğini ve güvenliğini korumaya önem veriyoruz. Bu doğrultuda, kişisel verilerinizi yetkisiz erişim, zarar, kayıp veya ifşaya karşı korumak için gerekli teknik ve idari güvenlik önlemlerini almaktayız.</p>\r\n<p>Çalışanlarımızın kişisel verileriyle ilgili bilgilendirme <strong>Personel İçin Aydınlatma Metni</strong> ile sağlanmaktadır.</p>\r\n<ol start=\"2\">\r\n<li><strong> </strong><strong>Aldığımız Kişisel Verileriniz ve İşleme Amaçlarımız:</strong></li>\r\n</ol>\r\n<p>AKIN HADDECİLİK, web sitesi (<a href=\"http://www.akinhadde.com.tr\">www.akinhadde.com.tr</a>  )ve bu aydınlatma metninde yer verilen diğer kanallar vasıtasıyla paylaşmış olduğunuz kişisel verilerinizi, yine bu aydınlatma metninde belirtilen amaçlar ile sınırlı olarak işlemektedir. AKIN HADDECİLİK,  açık adresi Akçeşme Mah.2600 Sokak No:5. Merkezefendi / DENİZLİ/ TÜRKİYE ve vergi numarası Gökpınar  Vergi Dairesi - Vergi No: 027 001 0302’dir. KVKK açısından Şirketimiz “Veri Sorumlusu” sıfatıyla faaliyet göstermektedir.</p>\r\n<p>AKIN HADDECİLİK’e ait web sitesini ziyaret ettiğinizde ve/veya AKIN HADDECİLİK ile kişisel verilerinizi bu aydınlatma metninde belirtilen işleme amaçları kapsamında kullanılmak üzere paylaştığınızda, bu aydınlatma metninde ve web sitemizde yer alan gizlilik politikasında yer alan hükümler konusunda bilgilendirilmiş kabul edilirsiniz.</p>\r\n<p>AKIN HADDECİLİK olarak, Veri Sorumlusu sıfatıyla, 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”), 5237 sayılı Türk Ceza Kanunu, 5651 sayılı İnternet Ortamında Yapılan Yayınların Düzenlenmesi ve Bu Yayınlar Yoluyla İşlenen Suçlarla Mücadele Edilmesi Hakkında Kanun ve ilgili ikincil mevzuat ve bunlarla sınırlı olmaksızın ilgili tüm mevzuattan kaynaklanan yasal yükümlülüklerimiz çerçevesinde ve şirket faaliyetlerimizi sürdürebilmek adına yaptığımız işlemlerde kişisel verileri topluyoruz.</p>\r\n<ol>\r\n<li><strong> </strong><strong>Müşterilerimizden Toplanan Kişisel Veriler</strong>: Adı-soyadı, e-posta adresi, adresi, telefon no, şirketimizi ziyareti halinde güvenlik kamerası görüntüleri, çekilmesi halinde fotoğraf vb veriler.</li>\r\n<li><strong> </strong><strong>Tedarikçilerimizden Topladığımız Kişisel Veriler</strong>: Ürün veya hizmet satın alma sürecinde, tedarikçi yetkilisi ve çalışanlarının adı-soyadı, iletişim bilgileri (Telefon, e-posta), hizmetin niteliğine göre hizmeti sunan tedarikçi personelinin diğer kişisel verileri, şirketimizi ziyareti halinde güvenlik kamerası görüntüleri vb</li>\r\n<li><strong> </strong><strong>İş Başvurusu Yapan Çalışan Adaylarından Topladığımız Kişisel Veriler</strong>: Kimlik, iletişim, mesleki deneyim (Öğrenim, eğitim ve çalışma geçmişi), adli sicil kaydı, referansların kimlik ve iletişim verileri, uyruk, doğum yeri ve tarihi, cinsiyet, medeni durum, askerlik durumu, sağlık / engellilik durumu vb. Aday, kendi ilettiği özgeçmişinde, AKIN HADDECİLİK tarafından talep edilmemiş başka kişisel verilerini de iletmiş olabilir. Bu veriler, AKIN HADDECİLİK tarafından dikkate alınmaz, işlenmez, bir başka kişi, kurum ya da kuruluşa iletilmez.</li>\r\n<li><strong> </strong><strong>Diğer</strong>: İş faaliyetlerinin yürütümü sırasında temas edilen diğer taraflardan alınan adı-soyadı, iletişim bilgileri vb.</li>\r\n</ol>\r\n<p><strong>İşleme Amaçlarımız</strong>: (VERBİS kaydımızda kategorik bazda tümü mevcuttur)</p>\r\n<p>      Aşağıdakilerle sınırlı olmamak kaydıyla, işleme amaçlarımız</p>\r\n<ol>\r\n<li>Mevzuatta düzenlenen hukuki yükümlülüklerimizi yerine getirmek</li>\r\n<li>Müşterilerimizin ihtiyaçlarını anlamak ve doğru teklifi sunabilmek</li>\r\n<li>Müşterilerle iletişimi geliştirmek ve daha etkin ve kaliteli hizmet sunabilmek</li>\r\n<li>Pazarlama ve satış süreçlerini yürütülebilmek</li>\r\n<li>Yetkili kişi, kurum ve kuruluşlara bilgi vermek</li>\r\n<li>Faturalandırma ve tahsilatı yapmak</li>\r\n<li>İşe başvuru süreçlerini yönetmek ve adayı değerlendirmek (İş başvurusu yapan adaylar için)</li>\r\n<li>Satın alma süreçlerini yürütmek (Tedarikçiler için)</li>\r\n<li>İş süreçlerimizi yürütebilmek (Diğer taraflar)</li>\r\n</ol>\r\n<p>Bu kişisel veriler; AKIN HADDECİLİK olarak sunduğumuz hizmetlerden yararlanabilmeniz adına, açık rızanıza istinaden veya tabi olduğumuz yasal mevzuat başta olmak üzere KVKK 5. maddesinin 2. fıkrasında öngörülen diğer hallerde, işbu Kişisel Verilerin Korunması Hakkında Bilgilendirme ile belirlenen amaçlar ve kapsam dışında kullanılmamak kaydı ile gerekli tüm bilgi güvenliği tedbirleri de alınarak işlenecek ve yasal saklama süresince veya işleme amacının gerekli kıldığı süre boyunca saklanacak ve işleme amacının gerekli kıldığı sürenin sonunda imha edilecek veya anonimleştirilerek kullanılacaktır.</p>\r\n<ol start=\"3\">\r\n<li><strong> </strong><strong>Kişisel Verilerinizi Hangi Yollarla Topluyoruz: </strong></li>\r\n</ol>\r\n<p>Kişisel verileriniz, sözlü, yazılı ya da elektronik ortamda, yukarıda yer verilen amaçlar kapsamında ve kanuni yükümlülüklerin ve hizmet şartlarının yerine getirebilmesi amacıyla toplanır.</p>\r\n<p><u>AKIN HADDECİLİK’e doğrudan sizin tarafınızdan sağlanan kişisel veriler</u>: İletmiş olduğunuz tüm bilgi ve belgeler, teklif talepleri, sözleşmeler, siparişler, iş başvuru formu veya özgeçmişler vb.</p>\r\n<p><u>İş süreçlerinin yürütümü sırasında toplanan kişisel veriler</u>:  Yazışmalar, e-posta yazışmaları, telefonla veya yüz yüze görüşmeler vb</p>\r\n<p><u>Fuarlarda toplanan kişisel veriler</u>: Sektörel fuar organizasyonlarındaki görüşmelerde toplanan bilgi ve belgeler</p>\r\n<p><u>(Kullanılması halinde )Çerezler ve benzeri teknolojiler vasıtasıyla topladığımız kişisel veriler</u>: Kişisel verileriniz, Kanun’a uygun olmak kaydıyla <a href=\"http://www.akinhadde.com.tr\">www.akinhadde.com.tr</a>    aracılığı ile otomatik yollarla elektronik ortamda toplanabilmektedir.</p>\r\n<p><u>AKIN HADDECİLİK’e yaptığınız ziyaretlerde toplanan kişisel veriler</u>: Güvenlik girişinden itibaren, güvenlik kamerası işareti bulunan alanlarda, güvenlik kamerası ile çekilen görüntüler kaydedilmektedir.</p>\r\n<ol start=\"4\">\r\n<li><strong> </strong><strong>Kişisel Verilerinizi Kimlerle Paylaşıyoruz:</strong></li>\r\n</ol>\r\n<p>AKIN HADDECİLİK, söz konusu kişisel verilerinizi, açık rızanıza istinaden veya tabi olduğumuz mevzuat başta olmak üzere KVKK md. 5/f.2’de öngörülen diğer hallerde KVKK’da belirtilen güvenlik ve gizlilik esasları çerçevesinde yeterli önlemler alınmak kaydıyla ilgili taraflarla paylaşabilir ve aktarabilir. Bizimle paylaşmış olduğunuz kişisel verileriniz, KVKK’da öngörülen işlenme ve paylaşım amaçları haricinde veya açık rızanız olmadan üçüncü kişilerle paylaşılmaz.</p>\r\n<p>Elektronik ortamda tutulan kişisel verileriniz, şirketimizin sunucu ve veri depolama ünitelerine (yurtiçi) aktarılır.</p>\r\n<p>Çalışan adaylarının iş başvuru formları, web sitemiz aracılığı ile ilettikleri bilgileri veya elden / e-posta ile gönderdikleri özgeçmişleri, açık rızası olmaksızın başka kişi ve kuruluşlara aktarılmaz..</p>\r\n<p>Diğer taraflardan toplanan kişisel veriler, işleme amacı doğrultusunda aktarımı gerekiyorsa, açık rızayı gerektiren hallerde veri sahibinin açık rızasını alarak veya kanuni gereklilik ya da açık rıza dışı işleme şartı gereği olarak yetkili kişi, kurum veya kuruluşlara aktarılabilir.</p>\r\n<ol start=\"5\">\r\n<li><strong> </strong><strong>Veri Sahibinin (İlgili Kişinin) Hakları</strong></li>\r\n</ol>\r\n<p>KVKK gereğince, veri sahibi olarak, kişisel verilerinizin:</p>\r\n<ul>\r\n<li>İşlenip işlenmediğini öğrenme</li>\r\n<li>İşlendiyse bilgi talep etme</li>\r\n<li>İşlenme amacını ve amaca uygun kullanılıp kullanılmadığını öğrenme</li>\r\n<li>Yurtiçi veya dışında aktarıldığı üçüncü tarafları bilme</li>\r\n<li>Eksik ya da yanlış işlenmişse veya değişmişse, düzeltilmesini talep etme</li>\r\n<li>KVKK Madde 7 çerçevesinde, silinmesini veya yok edilmesini isteme</li>\r\n<li>Aktarıldığı üçüncü kişilerden de yapılan işlemlerin bildirilmesini isteme</li>\r\n<li>Münhasıran otomatik sistemlerle analiz edilmesi nedeniyle aleyhte bir sonucun ortaya çıkmasına itiraz etme ve</li>\r\n<li>KVKK’ya aykırı işlenmesi sebebiyle zarara uğraması halinde zararın giderilmesini isteme hakkına sahipsiniz.</li>\r\n</ul>\r\n<p>Bu kapsamda yapacağınız talepler 6698 Kişisel Verileri Koruma Kanunu kapsamında yazılı olmalıdır. Bunun için, kimliğinizi tespit edici belgeler ile birlikte, kullanmak istediğiniz hakkınıza yönelik açıklamalarınızı yazılı olarak, şirketimizin <a href=\"mailto:info@akinhadde.com.tr\">info@akinhadde.com.tr</a> adresine gönderebilir veya başvurunuzu noter kanalıyla göndererek yapabilirsiniz.</p>\r\n<p>Bu amaçlarla yaptığınız başvurunun ek bir maliyet gerektirmesi durumunda, Kişisel Verileri Koruma Kurulu tarafından belirlenecek tarifedeki ücret tutarını ödemeniz gerekebilir. Başvurunuzda yer alan talepleriniz, talebin niteliğine göre en kısa sürede ve en geç 30 (otuz) gün içinde sonuçlandırılacaktır.</p>\r\n<p>Kullanıcı / Kullanıcılar, Şirketimiz web sitesinde işlem yapmadan önce sitede yer alan Şirket Gizlilik Politikası, Kişisel Veri Saklama ve  İmha Politikası ve yukarıda belirtilen Kişisel Verilerle İlgili Genel Aydınlatma Metni’ni okuduklarını, bu metinlerde belirtilen tüm hususlara uyacaklarını, web sitesinde yer alan içeriklerin ve AKIN HADDECİLİK’ye ait tüm elektronik ortam ve bilgisayar kayıtlarının Hukuk Muhakemeleri Kanunu madde 193 uyarınca kesin delil sayılacağını gayrıkabili rücu olarak kabul, beyan ve taahhüt etmişlerdir.</p>\r\n<p><u>Bizimle İletişime Geçin</u>: Genel Aydınlatma Metni veya diğer veri koruma uygulamalarımıza ilişkin herhangi bir soru veya endişenizin bulunması halinde veya bir erişim talebinizin bulunması halinde, bize Akçeşme  Mahallesi 2600 Sokak No:5 Merkezefendi / DENİZLİ adresinden veya 0258 371 31 85 nolu telefondan ulaşabilirsiniz.</p>\r\n<ol start=\"6\">\r\n<li><strong> </strong><strong>Yürürlük ve Değişiklikler</strong></li>\r\n</ol>\r\n<p>Bu aydınlatma metni, 11/02/2020 tarihinden itibaren yürürlüğe girmiştir.</p>\r\n<p>Kanunda veya Kişisel Veri Envanteri’nde değişiklikler olması halinde, revizyon numarası ve tarihi değiştirilerek, paydaşlara yeniden bilgilendirme yapılacaktır.</p>', NULL, 'e911a77b11879293e34362d508e36835.webp', 'tr', 102, 1, '2022-12-26 08:51:41', '2023-04-10 11:31:00', '2022-12-26 08:51:14', 'KVKK', NULL);
+(12, 'demirci-tarihi', 'Demirci Tarihi', '', NULL, NULL, 'tr', 12, 1, '2023-04-11 11:46:49', '2023-04-11 11:48:09', '2023-04-11 11:46:12', 'SIMPLE', NULL),
+(13, 'turistik-ve-tarihi-yerler', 'Turistik ve Tarihi Yerler', '', NULL, NULL, 'tr', 13, 1, '2023-04-11 11:47:00', '2023-04-11 11:48:07', '2023-04-11 11:46:52', 'SIMPLE', NULL),
+(14, 'mesire-alanlari', 'Mesire Alanları', '', NULL, NULL, 'tr', 14, 1, '2023-04-11 11:47:11', '2023-04-11 11:48:06', '2023-04-11 11:47:04', 'SIMPLE', NULL),
+(15, 'ilcemizden-yetisenler', 'İlçemizden Yetişenler', '', NULL, NULL, 'tr', 15, 1, '2023-04-11 11:47:22', '2023-04-11 11:48:05', '2023-04-11 11:47:14', 'SIMPLE', NULL),
+(16, 'demirciden-fotograflar', 'Demirciden Fotoğraflar', '', NULL, NULL, 'tr', 16, 1, '2023-04-11 11:47:33', '2023-04-11 12:09:30', '2023-04-11 11:47:27', 'SIMPLE', 10);
 
 -- --------------------------------------------------------
 
@@ -937,16 +916,12 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`id`, `title`, `description`, `seo_url`, `category_id`, `lang`, `rank`, `isActive`, `createdAt`, `updatedAt`) VALUES
-(1, 'Kurumsal Kimlik Çalışmaları', NULL, 'kurumsal-kimlik-calismalari', 1, 'tr', 1, 1, '2023-03-19 21:47:07', '2023-03-20 08:06:52'),
-(2, 'Grafik Tasarım Çalışmaları', NULL, 'grafik-tasarim-calismalari', 1, 'tr', 1, 1, '2023-03-19 21:47:07', '2023-03-20 08:07:03'),
-(3, 'Tanıtım Filmleri', NULL, 'tanitim-filmleri', 1, 'tr', 3, 1, '2023-03-20 08:07:15', '2023-03-20 08:07:15'),
-(4, 'Post Prodüksiyon Hizmeti', NULL, 'post-produksiyon-hizmeti', 1, 'tr', 4, 1, '2023-03-20 08:07:26', '2023-03-20 08:07:26'),
-(5, 'Marka Danışmanlığı', NULL, 'marka-danismanligi', 1, 'tr', 5, 1, '2023-03-20 08:07:34', '2023-03-20 08:07:34'),
-(6, 'Sosyal Medya Hesap Yönetimi', NULL, 'sosyal-medya-hesap-yonetimi', 2, 'tr', 6, 1, '2023-03-20 08:07:50', '2023-03-20 08:13:15'),
-(7, 'Sosyal Medya Reklam Yönetimi', NULL, 'sosyal-medya-reklam-yonetimi', 2, 'tr', 7, 1, '2023-03-20 08:08:00', '2023-03-20 08:13:28'),
-(8, 'Google Ads Reklam Yönetimi', NULL, 'google-ads-reklam-yonetimi', 2, 'tr', 8, 1, '2023-03-20 08:08:21', '2023-03-20 08:08:21'),
-(9, 'Haritalara Kayıt Hizmeti', NULL, 'haritalara-kayit-hizmeti', 2, 'tr', 9, 1, '2023-03-20 08:08:34', '2023-03-20 08:08:34'),
-(10, 'Seo Hizmeti', NULL, 'seo-hizmeti', 2, 'tr', 10, 1, '2023-03-20 08:08:42', '2023-03-20 08:08:42');
+(1, '17 MAYIS’TA SELENDİ’DE AKINCI RUHU ŞAHLANDI', '<p>Demirci Akıncılarının 12. müfreze komutanı ve Gördesli Makbule’nin kocası Halil Efe’nin şehit oluşunun 100. yıldönümü dolayısıyla Selendi merkezde ve Yağcı Dağında Halil Efe’nin mezarının başında yapılan anlamlı ve yoğun katılımlı anma etkinlikleri ile Akıncı ruhu şahlandı. ”Gördesli Makbule ve Demirci Akıncıları” romanının yazarı Dr. Serra MENEKAY’ın konferansları, Sındırgı’da görev yapan öğretmen ,senarist, müzisyen Mustafa ERTEK’in türküleri, mehteran eşliğinde yürüyüş, semazen gösterisi, lokma hayrı,Gördes Belediyesi tiyatro ekibinin Gördesli Makbule tiyatrosu Demirci, Gördes, Kula ve Selendi ilçelerinin yöneticileri, Demirci Akıncıları Derneği yönetici ve üyeleri, vatandaşların katılımı ile unutulmaz bir gün yaşandı.</p>', '17-mayis-ta-selendi-de-akinci-ruhu-sahlandi', 1, 'tr', 1, 1, '2023-03-19 21:47:07', '2023-04-11 07:16:21'),
+(2, 'YAZAR DR. SERRA MENEKAY SINDIRGI’DA ', '<p>Sındırgı’da Kaymakam İbrahim Ethem’in, Kocayayla’da son nefesini vererek şehit olan Gördesli Makbule’nin mezarlarını ve çarpıştıkları toprakları ziyaret ettik. Bu ziyaretlerimizde bize her türlü yardımı, misafirperverliği, rehberlik konusunda imkân sağlayan kıymetli Sındırgı Belediye Başkanı Ekrem YAVAŞ’a, Başkan yardımcısı Salih DURAK’a kıymetli personelleri Berna GÜNGÖREN’e, Mustafa ÖZCAN ve Musa YILMAZ’a çok teşekkür ederiz.</p>', 'yazar-dr-serra-menekay-sindirgi-da', 1, 'tr', 1, 1, '2023-03-19 21:47:07', '2023-04-11 10:02:45'),
+(3, 'KONFRERANS VE TÜRKÜ DİNLETİSİ', '<p>Demirci\'mizin kurtuluşunun 100. yılı etkinlikleri kapsamında \" Gördesli Makbule ve Demirci Akıncıları\" konuşuldu. 17 Mart Perşembe akşamı saat: 21.00\'da Gençlik Merkezi Konferans salonunda Demirci Belediyesinin destekleri ile Demirci Akıncıları Derneği tarafından düzenlenen programa Kaymakam Adem Kaya, Belediye Başkanı Selami Selçuk, AK Parti İlçe Başkanı Mehmet Acar, MHP İlçe Başkanı Ümit Kanyılmaz, İlçe Milli Eğitim Müdürü Yüksel Kocabaş, Yazar Serra Menekay, Tohumluk Vakfı Başkanı Sanatçı Pınar Ayhan, Demirci Akıncıları Derneği Başkanı Hüseyin Kıncı, öğrenciler, öğretmenler ve vatandaşlar katıldı.</p>\r\n<p>Programda saygı duruşu ve İstiklal Marşının okunmasının ardından Dernek Başkanı Hüseyin Kıncı selamlama konuşması yaptı ve yazar Serra Menekay sahneye davet edildi. Gördesli Makbule ve Demirci Akıncıları kitabının yazarı Serra Menekay, Kurtuluş Savaşı dönemlerini anlatırken, kaleme aldığı kitabından kesitleri katılımcılarla paylaştı. Katılımcıların yoğun ilgisi ile karşılaşan Yazar Menekay, Demirci Akıncılarının Demirci ve bölgesinde verdiği mücadeleleri de anlatırken, Kaymakam İbrahim Ethem Akıncı, Gördesli Makbule, Usturumcalı Halil Efe, Parti Pehlivan başta olmak üzere Milli Mücadele Kahramanlarını anlattı.</p>\r\n<p>Tohumluk Vakfı Başkanı Sanatçı Pınar Ayhan\'da programda Aysim Dolgun Yıldız tarafından bestelenen \" Kınalı Efem \" türküsünü MCBÜ Demirci Eğitim Fakültesi Öğretim Görevlisi Hayati Cezayirlioğlu eşliğinde seslendirdi. Programda Demirci Akıncıları yemini okunurken, temsili Gördesli Makbule ve Usturumcalı Halil Efe tarafından Yazar Serra Menekay\'a Türk Bayrağı hediye edildi.</p>\r\n<p>Gördesli Makbule ve Demirci Akıncıları programının sonunda Kaymakam Adem Kaya, Belediye Başkanı Selami Selçuk, Demirci Akıncıları Derneği Başkanı Hüseyin Kıncı, Kültür ve Turizm Bakanlığı Geleneksel El Sanatları Sanatçısı Ahşap Oyma Ustası Selami Erfidan tarafından Yazar Serra Menekay\'a, Sanatçı Pınar Ayhan\'a ve Kınalı Efem bestekarı Aysim Dolgun Yıldız\'a hediyeleri takdim edildi.</p>\r\n<p>Program hatıra fotoğrafının çekilmesinin ardından sona erdi.</p>', 'konfrerans-ve-turku-dinletisi', 1, 'tr', 3, 1, '2023-03-20 08:07:15', '2023-04-11 10:09:36'),
+(4, '100. YILDA AKINCILAR ANKARA\'DA', '<p>Akıncı şehrimizin kurtuluşunun 100. Yılında Ankara Kitap Fuarında \"Gördesli Makbule ve Demirci Akıncıları \"konferansımıza katılarak bizleri yalnız bırakmayan Ankara\'daki Demirci Akıncılarımıza çok teşekkür ediyoruz.</p>', '100-yilda-akincilar-ankara-da', 1, 'tr', 4, 1, '2023-03-20 08:07:26', '2023-04-11 10:11:57'),
+(5, 'TOHUMLUK VAKFI DÜNYAYI KURTARACAĞIZ KÖY TİYATROSU', '<p>Demirci Belediyesi, Demirci Akıncıları Derneği ve Tohumluk Vakfı işbirliği ile Tohumluk Vakfı Vişneli Köy Tiyatrosu tarafından sahnelenen yoğun katılımın gerçekleştiği “Dünyayı Kurtaracağız” oyunu Demirci’mizde izleyicilerden tam not aldı. Bu oyunun Demirci’de sahnelenmesi sağlayan Tohumluk Vakfının Başkanı Pınar AYHAN, vakıf yöneticilerine ve onur konuğu olarak katılan “Gördesli Makbule ve Demirci Akıncıları” romanı yazarı ve tiyatronun senaristlerinden Dr. Serra MENEKAY’a sonsuz teşekkürler.</p>', 'tohumluk-vakfi-dunyayi-kurtaracagiz-koy-tiyatrosu', 1, 'tr', 5, 1, '2023-03-20 08:07:34', '2023-04-11 10:13:26'),
+(6, 'TÜRKÜLERLE DEMİRCİ AKINCILARI', '<p>Mezuniyet etkinlikleri kapsamında Demirci Akıncıları Derneği olarak stand açtık, BKKM’de Sındırgı’dan gelen kıymetli dostlarımız Grup 3. Müfreze ile ”Türkülerle Demirci Akıncıları” programını yaptık, Atatürk İlkokulunun minik Akıncılarının da katıldığı, mezun öğrencilerimiz ile Demirci Akıncıları anısına kına yakma merasimi düzenleyerek Demirci Akıncılarının tanıtımına katkı vermeye çalıştık.</p>\r\n<p>Desteklerinden dolayı Demirci Kaymakamı Adem KAYA, Demirci Belediye Başkanı Selami SELÇUK ve Eğitim Fakültesi Dekanı Prof. Dr. Ahmet ÇETİN’e çok teşekkür ederiz.</p>', 'turkulerle-demirci-akincilari', 1, 'tr', 6, 1, '2023-03-20 08:07:50', '2023-04-11 10:15:18');
 
 -- --------------------------------------------------------
 
@@ -973,8 +948,8 @@ CREATE TABLE `service_categories` (
 --
 
 INSERT INTO `service_categories` (`id`, `title`, `seo_url`, `img_url`, `home_url`, `banner_url`, `lang`, `rank`, `isActive`, `createdAt`, `updatedAt`) VALUES
-(1, 'Geçmiş Faaliyetlerimiz', 'gecmis-faaliyetlerimiz', '2308bfec567fdaea97d5064b3e1a4e4c.webp', NULL, NULL, 'tr', 1, 1, '2023-02-23 14:46:08', '2023-04-04 08:54:03'),
-(2, 'Planlanan Faaliyetlerimiz', 'planlanan-faaliyetlerimiz', '033a7154ede5073cd6183605e809f082.webp', NULL, NULL, 'tr', 2, 1, '2023-02-23 14:46:08', '2023-04-04 08:54:15');
+(1, 'Geçmiş Faaliyetlerimiz', 'gecmis-faaliyetlerimiz', 'a660c112e5b666bd395b171e798238a3.webp', NULL, NULL, 'tr', 1, 1, '2023-02-23 14:46:08', '2023-04-11 11:26:21'),
+(2, 'Planlanan Faaliyetlerimiz', 'planlanan-faaliyetlerimiz', 'bfca52d6663ed0feeeb471f1da6d74b5.webp', NULL, NULL, 'tr', 2, 1, '2023-02-23 14:46:08', '2023-04-11 11:26:26');
 
 -- --------------------------------------------------------
 
@@ -1002,33 +977,25 @@ CREATE TABLE `service_images` (
 --
 
 INSERT INTO `service_images` (`id`, `service_id`, `url`, `img_url`, `title`, `description`, `lang`, `rank`, `isActive`, `isCover`, `createdAt`, `updatedAt`) VALUES
-(5, 34963, '957d5f3e530f37cb7a9ba4607da25d2c.webp', NULL, NULL, NULL, 'tr', 5, 1, 1, '2023-02-03 14:03:28', '2023-02-03 14:03:29'),
-(6, 34964, 'b65249c675f18d6a92e9fa108fe28f4c.webp', NULL, NULL, NULL, 'tr', 6, 1, 1, '2023-02-03 14:03:37', '2023-02-03 14:03:38'),
-(7, 34965, '2f5a4909a1abbd855db20a5a624ff255.webp', NULL, NULL, NULL, 'tr', 7, 1, 1, '2023-02-03 14:03:47', '2023-02-03 14:03:48'),
-(8, 35835, 'acaba134c32b402eaf34354f3cd76f73.webp', NULL, NULL, NULL, 'tr', 8, 1, 1, '2023-02-03 14:08:07', '2023-02-03 14:08:08'),
-(9, 39022, 'a0bb2554e06fdacb8501c6ccc02e3b9f.webp', NULL, NULL, NULL, 'tr', 9, 1, 1, '2023-02-03 14:08:24', '2023-02-03 14:08:26'),
-(13, 34952, '3d4ea69143dff6755dc86be1c9270e95.webp', NULL, NULL, NULL, 'tr', 11, 1, 1, '2023-02-09 08:41:26', '2023-02-09 08:41:28'),
-(15, 35829, '71e1a0e344e4f77d1defd82d320eb272.webp', NULL, NULL, NULL, 'tr', 11, 1, 1, '2023-02-09 08:41:41', '2023-02-09 08:41:42'),
-(16, 34953, '91b62aed010bc7bef7ee11dc99dc2fbf.webp', NULL, NULL, NULL, 'tr', 11, 1, 1, '2023-02-09 08:42:33', '2023-02-09 08:42:34'),
-(17, 34952, '1080bbae45735d7c4a7a76bd2e090b9b.webp', NULL, NULL, NULL, 'tr', 11, 1, 0, '2023-02-10 12:31:50', '2023-02-10 12:31:50'),
-(18, 35829, '67e4b45828258105d82e71143d3b62de.webp', NULL, NULL, NULL, 'tr', 12, 1, 0, '2023-02-10 12:32:19', '2023-02-10 12:32:19'),
-(19, 35829, '4c7a3121605216204114cef79e7def21.webp', NULL, NULL, NULL, 'tr', 13, 1, 0, '2023-02-10 13:10:34', '2023-02-10 13:10:34'),
-(20, 35829, '1ef234a090b9338c348877e44927c7e9.webp', NULL, NULL, NULL, 'tr', 14, 1, 0, '2023-02-10 13:10:36', '2023-02-10 13:10:36'),
-(21, 35829, 'f7589caae042e7cbdf7dae568bcc0c79.webp', NULL, NULL, NULL, 'tr', 15, 1, 0, '2023-02-10 13:10:38', '2023-02-10 13:10:38'),
-(22, 35829, '7e6f12855d681c5ceed6801d1ff92b60.webp', NULL, NULL, NULL, 'tr', 16, 1, 0, '2023-02-10 13:10:40', '2023-02-10 13:10:40'),
-(23, 35829, 'b813f66c97237a732dc593da64f91c95.webp', NULL, NULL, NULL, 'tr', 17, 1, 0, '2023-02-10 13:10:42', '2023-02-10 13:10:42'),
-(24, 35829, '224bb932bedf91197fac9de18a6be413.webp', NULL, NULL, NULL, 'tr', 18, 1, 0, '2023-02-10 13:10:44', '2023-02-10 13:10:44'),
-(25, 35829, '61b9a700d1d3abfea76d8d931a7e5dc1.webp', NULL, NULL, NULL, 'tr', 19, 1, 0, '2023-02-10 13:10:47', '2023-02-10 13:10:47'),
-(49, 1, 'c70864220fb21ec547ca50170d4e18f2.webp', NULL, NULL, NULL, 'tr', 19, 1, 1, '2023-03-23 14:24:39', '2023-03-23 14:24:42'),
-(50, 2, 'b387069935f75aadeedfb3bc00a9c8f1.webp', NULL, NULL, NULL, 'tr', 20, 1, 1, '2023-03-23 14:25:15', '2023-03-23 14:25:21'),
-(51, 3, '8a03d0aedcf10f38473cc91a5dddd00c.webp', NULL, NULL, NULL, 'tr', 21, 1, 1, '2023-03-23 14:25:52', '2023-03-23 14:26:00'),
-(52, 4, 'b0144ee26699175dca8b9726b6c42864.webp', NULL, NULL, NULL, 'tr', 22, 1, 1, '2023-03-23 14:26:12', '2023-03-23 14:26:14'),
-(53, 5, '1494bc38dce9724b6747692aba5714bb.webp', NULL, NULL, NULL, 'tr', 23, 1, 1, '2023-03-23 14:26:22', '2023-03-23 14:26:24'),
-(54, 6, 'ad95a1df0aef61874573d2cff0a12c62.webp', NULL, NULL, NULL, 'tr', 24, 1, 1, '2023-03-23 14:26:39', '2023-03-23 14:26:41'),
-(55, 7, 'c1386ed617051e41f2c333d44f670b09.webp', NULL, NULL, NULL, 'tr', 25, 1, 1, '2023-03-23 14:26:52', '2023-03-23 14:26:53'),
-(56, 8, '7ec46458af20c7e3217c28a077a44f6d.webp', NULL, NULL, NULL, 'tr', 26, 1, 1, '2023-03-23 14:27:08', '2023-03-23 14:27:15'),
-(57, 9, 'ffed459cbb97553ee0419660b8b81b31.webp', NULL, NULL, NULL, 'tr', 27, 1, 1, '2023-03-23 14:28:07', '2023-03-23 14:28:09'),
-(58, 10, '18a83f17da2c4c2825d7775345c8ea53.webp', NULL, NULL, NULL, 'tr', 28, 1, 1, '2023-03-23 14:28:21', '2023-03-23 14:28:23');
+(1, 1, '9d9e68576cacce297ea70b2e484c7ef4.webp', NULL, NULL, NULL, 'tr', 1, 1, 1, '2023-04-11 09:29:30', '2023-04-11 10:28:25'),
+(2, 1, 'e38327368052cd7b77a164c996f58a57.webp', NULL, NULL, NULL, 'tr', 2, 1, 0, '2023-04-11 09:29:35', '2023-04-11 10:28:24'),
+(3, 1, '64c830f5dcce164e148adc60a900df8c.webp', NULL, NULL, NULL, 'tr', 3, 1, 0, '2023-04-11 09:29:38', '2023-04-11 10:28:22'),
+(4, 2, '01102ab0829cb000600ec508481a8a71.webp', NULL, NULL, NULL, 'tr', 4, 1, 1, '2023-04-11 10:03:11', '2023-04-11 10:28:20'),
+(5, 2, '61719d4013211fb9536d2fcb21f26dd4.webp', NULL, NULL, NULL, 'tr', 5, 1, 0, '2023-04-11 10:03:14', '2023-04-11 10:28:16'),
+(6, 2, 'ed719e96e0c467294d401e284e7bc95e.webp', NULL, NULL, NULL, 'tr', 6, 1, 0, '2023-04-11 10:03:19', '2023-04-11 10:28:12'),
+(7, 2, 'b4ac4059861617770a832778a1fe776b.webp', NULL, NULL, NULL, 'tr', 7, 1, 0, '2023-04-11 10:03:22', '2023-04-11 10:28:10'),
+(8, 3, '6368a8fa1fc8450bd6f6f9596814a6b5.webp', NULL, NULL, NULL, 'tr', 8, 1, 1, '2023-04-11 10:10:29', '2023-04-11 10:28:08'),
+(9, 3, 'cdd36030e8b0b90ee4a95ecb7e379704.webp', NULL, NULL, NULL, 'tr', 9, 1, 0, '2023-04-11 10:10:32', '2023-04-11 10:28:07'),
+(10, 3, 'c8a431d7bfbe6c38f801be9e687a8884.webp', NULL, NULL, NULL, 'tr', 10, 1, 0, '2023-04-11 10:10:37', '2023-04-11 10:28:05'),
+(11, 4, '6f1ddcfc688f54122757a79630c1d09e.webp', NULL, NULL, NULL, 'tr', 11, 1, 1, '2023-04-11 10:12:21', '2023-04-11 10:28:03'),
+(12, 5, '42c2968a8472a72e1cbb0fb0618ee84c.webp', NULL, NULL, NULL, 'tr', 12, 1, 1, '2023-04-11 10:13:49', '2023-04-11 10:28:01'),
+(13, 5, '732aa4b24bacabcddd4ac20327e0a9ae.webp', NULL, NULL, NULL, 'tr', 13, 1, 0, '2023-04-11 10:13:51', '2023-04-11 10:28:00'),
+(14, 5, '98be77afb0dea16ac66243031192ddcf.webp', NULL, NULL, NULL, 'tr', 14, 1, 0, '2023-04-11 10:13:53', '2023-04-11 10:27:58'),
+(15, 5, '122c01d162593160a8a82c35f5b487ac.webp', NULL, NULL, NULL, 'tr', 15, 1, 0, '2023-04-11 10:13:56', '2023-04-11 10:27:57'),
+(16, 6, '4b11f6188c876ec159eb2efbfdd481cf.webp', NULL, NULL, NULL, 'tr', 16, 1, 1, '2023-04-11 10:29:07', '2023-04-11 10:29:11'),
+(17, 6, '35817ff473b14db7c78422712992255f.webp', NULL, NULL, NULL, 'tr', 17, 1, 0, '2023-04-11 10:29:09', '2023-04-11 10:29:09'),
+(18, 6, '5df4a1464fc747904c74da58a46a34a9.webp', NULL, NULL, NULL, 'tr', 18, 1, 0, '2023-04-11 10:29:13', '2023-04-11 10:29:13'),
+(19, 6, '82cb2070f1fba2188eda6df312d4a88d.webp', NULL, NULL, NULL, 'tr', 19, 1, 0, '2023-04-11 10:29:15', '2023-04-11 10:29:15');
 
 -- --------------------------------------------------------
 
@@ -1084,7 +1051,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `company_name`, `slogan`, `address`, `address_title`, `map`, `logo`, `mobile_logo`, `favicon`, `mobile_logo_2`, `blog_logo`, `about_logo`, `gallery_logo`, `contact_logo`, `service_logo`, `service_detail_logo`, `category_logo`, `catalog`, `sector_logo`, `phone`, `fax`, `whatsapp`, `email`, `facebook`, `twitter`, `instagram`, `linkedin`, `youtube`, `medium`, `pinterest`, `meta_description`, `analytics`, `metrica`, `rank`, `createdAt`, `updatedAt`, `isActive`, `lang`, `crawler_email`, `crawler_password`) VALUES
-(1, 'Demirci Akıncıları', 'Demirci Akıncıları Derneği', '[\"Alsancak, Alsancak Mh. 1440 sk. No: 13 D:1, 35220 Konak\\/\\u0130zmir\"]', '[\"\\u0130zmir Ofis\"]', '[\"&lt;iframe src=&quot;https:\\/\\/www.google.com\\/maps\\/embed?pb=!1m14!1m8!1m3!1d25001.90443331817!2d27.143839!3d38.43597!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd8f738f4b3ef%3A0xc16c75aa798b6e48!2sMutfak%20Yap%C4%B1m%20Dijital%20Reklam%20Ajans%C4%B1!5e0!3m2!1sen!2str!4v1679317487693!5m2!1sen!2str&quot; width=&quot;100%&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot; referrerpolicy=&quot;no-referrer-when-downgrade&quot;&gt;&lt;\\/iframe&gt;\"]', 'bc415349255ade3201c39f988dde26cd.webp', 'e67f974be2fe6d90c839494d95870c36.webp', '6d512acd69095da5ebb938e64839fed7.webp', '5d7cf734d038f79e6f7d835349e3fe28.webp', '07958960eef1c54dd4777b2d4e1822e1.webp', '5fc1ca1e13184c9d6f425d870c7f5ac6.webp', 'f7cbb30f4761c7cced93773078cfebb6.webp', '5f8bcdaf48551f8ce3f62e2d15b72087.webp', 'dd01418ac19014223a21ec84c81f68f9.webp', '5afbe8fa7c777fa932fb0ae17a082089.webp', '2214fcfd37e99728cf792119da726d5d.webp', '2ba528197b3ca10368b015fcd8e572c2.pdf', 'd6537ec6ad9c7260952e4f69c288769c.webp', '[\"+90 232 403 20 02\"]', '[\"\"]', '[\"+90 232 403 20 02\"]', 'iletisim@mutfakyapim.com', 'https://www.facebook.com/mutfakyapim', NULL, 'https://www.instagram.com/mutfak.yapim', 'https://www.linkedin.com/company/mutfakyapim', NULL, NULL, NULL, 'Mutfak Yapım olarak sosyal medya, dijital pazarlama, web tasarım ve prodüksiyon alanlarında faaliyet gösteren İzmir merkezli bir reklam şirketiyiz.', '', '', 1, '2020-07-22 20:57:22', '2023-03-30 12:59:29', 1, 'tr', 'emrekilic@mutfakyapim.com', 'MutfakYapim35?');
+(1, 'Demirci Akıncıları', 'Demirci Akıncıları Derneği', '[\"Alsancak, Alsancak Mh. 1440 sk. No: 13 D:1, 35220 Konak\\/\\u0130zmir\"]', '[\"\\u0130zmir Ofis\"]', '[\"&lt;iframe src=&quot;https:\\/\\/www.google.com\\/maps\\/embed?pb=!1m14!1m8!1m3!1d25001.90443331817!2d27.143839!3d38.43597!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbd8f738f4b3ef%3A0xc16c75aa798b6e48!2sMutfak%20Yap%C4%B1m%20Dijital%20Reklam%20Ajans%C4%B1!5e0!3m2!1sen!2str!4v1679317487693!5m2!1sen!2str&quot; width=&quot;100%&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot; referrerpolicy=&quot;no-referrer-when-downgrade&quot;&gt;&lt;\\/iframe&gt;\"]', 'bc415349255ade3201c39f988dde26cd.webp', 'e67f974be2fe6d90c839494d95870c36.webp', '6d512acd69095da5ebb938e64839fed7.webp', '5d7cf734d038f79e6f7d835349e3fe28.webp', '07958960eef1c54dd4777b2d4e1822e1.webp', '5fc1ca1e13184c9d6f425d870c7f5ac6.webp', 'f7cbb30f4761c7cced93773078cfebb6.webp', '5f8bcdaf48551f8ce3f62e2d15b72087.webp', 'dd01418ac19014223a21ec84c81f68f9.webp', '5afbe8fa7c777fa932fb0ae17a082089.webp', '2214fcfd37e99728cf792119da726d5d.webp', '2ba528197b3ca10368b015fcd8e572c2.pdf', 'd6537ec6ad9c7260952e4f69c288769c.webp', '[\"+90 232 403 20 02\"]', '[\"\"]', '[\"+90 232 403 20 02\"]', 'iletisim@mutfakyapim.com', 'https://www.facebook.com/mutfakyapim', NULL, 'https://instagram.com/demirciakincilari.dernegi/', 'https://www.linkedin.com/company/mutfakyapim', NULL, NULL, NULL, 'Mutfak Yapım olarak sosyal medya, dijital pazarlama, web tasarım ve prodüksiyon alanlarında faaliyet gösteren İzmir merkezli bir reklam şirketiyiz.', '', '', 1, '2020-07-22 20:57:22', '2023-04-11 13:19:37', 1, 'tr', 'emrekilic@mutfakyapim.com', 'MutfakYapim35?');
 
 -- --------------------------------------------------------
 
@@ -1184,7 +1151,7 @@ CREATE TABLE `user_role` (
 --
 
 INSERT INTO `user_role` (`id`, `title`, `permissions`, `isActive`, `isCover`, `rank`, `createdAt`, `updatedAt`) VALUES
-(1, 'Admin', '{\"blogs\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"blog_categories\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"dashboard\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"departments\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"emailsettings\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"galleries\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"homeitems\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"menus\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"our_works\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"pages\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"services\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"service_categories\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"settings\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"slides\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"userop\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"users\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"user_role\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"}}', 1, 1, 1, '2020-07-22 20:58:34', '2023-04-10 10:47:01');
+(1, 'Admin', '{\"blogs\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"blog_categories\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"dashboard\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"emailsettings\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"galleries\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"menus\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"pages\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"services\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"service_categories\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"settings\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"slides\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"userop\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"users\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"user_role\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"}}', 1, 1, 1, '2020-07-22 20:58:34', '2023-04-11 13:16:15');
 
 -- --------------------------------------------------------
 
@@ -1260,12 +1227,6 @@ ALTER TABLE `countries`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `departments`
---
-ALTER TABLE `departments`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `email_settings`
 --
 ALTER TABLE `email_settings`
@@ -1331,12 +1292,6 @@ ALTER TABLE `linguo_language_strings`
 -- Indexes for table `menus`
 --
 ALTER TABLE `menus`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `our_works`
---
-ALTER TABLE `our_works`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1412,25 +1367,19 @@ ALTER TABLE `video_urls`
 -- AUTO_INCREMENT for table `blogs`
 --
 ALTER TABLE `blogs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `blog_categories`
 --
 ALTER TABLE `blog_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `countries`
 --
 ALTER TABLE `countries`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
-
---
--- AUTO_INCREMENT for table `departments`
---
-ALTER TABLE `departments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `email_settings`
@@ -1448,7 +1397,7 @@ ALTER TABLE `files`
 -- AUTO_INCREMENT for table `galleries`
 --
 ALTER TABLE `galleries`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `home_items`
@@ -1460,7 +1409,7 @@ ALTER TABLE `home_items`
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `instagram_posts`
@@ -1496,19 +1445,13 @@ ALTER TABLE `linguo_language_strings`
 -- AUTO_INCREMENT for table `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
-
---
--- AUTO_INCREMENT for table `our_works`
---
-ALTER TABLE `our_works`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `services`
@@ -1520,13 +1463,13 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `service_categories`
 --
 ALTER TABLE `service_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `service_images`
 --
 ALTER TABLE `service_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `settings`

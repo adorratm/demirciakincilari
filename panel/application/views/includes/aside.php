@@ -94,16 +94,16 @@
                     <li class="nav-item <?= ($this->uri->segment(1) == "services") || ($this->uri->segment(1) == "service_categories") ? "active" : "" ?>">
                         <a class="nav-link <?= ($this->uri->segment(1) == "services") || ($this->uri->segment(1) == "service_categories") ? "active" : "" ?>" href="javascript:void(0);" data-toggle="collapse" data-target="#services_nav">
                             <i class="fa fa-dropbox"></i>
-                            <span class="nav-link-text">Hizmet İşlemleri</span>
+                            <span class="nav-link-text">Faaliyet İşlemleri</span>
                         </a>
                         <ul id="services_nav" class="nav flex-column collapse  <?= ($this->uri->segment(1) == "services") || ($this->uri->segment(1) == "service_categories") ? "show" : "" ?> collapse-level-1">
                             <li class="nav-item <?= ($this->uri->segment(1) == "services") || ($this->uri->segment(1) == "service_categories") ? "active" : "" ?>">
                                 <ul class="nav flex-column">
                                     <li class="nav-item  <?= ($this->uri->segment(1) == "service_categories") ? "active" : "" ?>">
-                                        <a class="nav-link <?= ($this->uri->segment(1) == "service_categories") ? "active" : "" ?>" href="<?= base_url("service_categories"); ?>">Hizmet Kategorileri</a>
+                                        <a class="nav-link <?= ($this->uri->segment(1) == "service_categories") ? "active" : "" ?>" href="<?= base_url("service_categories"); ?>">Faaliyet Kategorileri</a>
                                     </li>
                                     <li class="nav-item  <?= ($this->uri->segment(1) == "services") ? "active" : "" ?>">
-                                        <a class="nav-link <?= ($this->uri->segment(1) == "services") ? "active" : "" ?>" href="<?= base_url("services"); ?>">Hizmetler</a>
+                                        <a class="nav-link <?= ($this->uri->segment(1) == "services") ? "active" : "" ?>" href="<?= base_url("services"); ?>">Faaliyetler</a>
                                     </li>
                                 </ul>
                             </li>
@@ -147,22 +147,6 @@
                         <a class="nav-link" href="<?= base_url("homeitems"); ?>">
                             <i class="fa fa-sticky-note"></i>
                             <span class="nav-link-text">Anasayfa İçerikleri</span>
-                        </a>
-                    </li>
-                <?php } ?>
-                <?php if (isAllowedViewModule("our_works")) { ?>
-                    <li class="nav-item <?= ($this->uri->segment(1) == "our_works") ? "active" : "" ?> ">
-                        <a class="nav-link" href="<?= base_url("our_works"); ?>">
-                            <i class="fa fa-apple"></i>
-                            <span class="nav-link-text">Markalarımız</span>
-                        </a>
-                    </li>
-                <?php } ?>
-                <?php if (isAllowedViewModule("departments")) { ?>
-                    <li class="nav-item <?= ($this->uri->segment(1) == "departments") ? "active" : "" ?> ">
-                        <a class="nav-link" href="<?= base_url("departments"); ?>">
-                            <i class="fa fa-user"></i>
-                            <span class="nav-link-text">Departmanlar</span>
                         </a>
                     </li>
                 <?php } ?>

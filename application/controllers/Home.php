@@ -56,11 +56,7 @@ class Home extends MY_Controller
          * Service Categories
          */
         $this->viewData->service_categories = $this->general_model->get_all("service_categories", null, "id ASC", ["isActive" => 1, "lang" => $this->viewData->lang], [], [], [8]);
-        /**
-         * Our Works
-         */
-        $this->viewData->our_works = $this->general_model->get_all("our_works", null, "rand()", ["isActive" => 1, "lang" => $this->viewData->lang], [], [], [6]);
-
+        
         $this->viewData->meta_title = clean(strto("lower|ucwords", lang("home"))) . " - " . $this->viewData->settings->company_name;
         $this->viewData->meta_desc  = str_replace("”", "\"", @stripslashes($this->viewData->settings->meta_description));
 

@@ -1,44 +1,39 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
-<!--Page Header Start-->
-<section class="page-header">
-    <div class="page-header__bg" style="background-image: url(<?= get_picture("settings_v", $settings->category_logo) ?>);"></div>
-    <div class="container">
-        <div class="page-header__inner">
-            <h2><?= $page_title ?></h2>
+<!-- Page Title -->
+<section class="page-title p_relative centred">
+    <div class="bg-layer p_absolute l_0 parallax_none parallax-bg" data-parallax='{"y": 100}' style="background-image: url(<?= get_picture("settings_v", $settings->category_logo) ?>);"></div>
+    <div class="auto-container">
+        <div class="content-box">
+            <h1 class="d_block fs_60 lh_70 fw_bold mb_10"><?= $page_title ?></h1>
         </div>
     </div>
 </section>
-<!--Page Header End-->
+<!-- End Page Title -->
 
-<!--Project V-1 Start-->
-<section class="project-v-1">
-    <div class="container-fluid px-5">
+
+
+<!-- project-nine -->
+<section class="project-nine project-page-3 p_relative pt_100 pb_100">
+    <div class="auto-container">
         <?php if (!empty($service_categories)) : ?>
-            <div class="row align-items-stretch align-self-stretch align-content-stretch">
+            <div class="items-container row align-items-stretch align-self-stretch align-content-stretch clearfix">
                 <?php foreach ($service_categories as $k => $v) : ?>
-                    <!--Project One Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 mb-3">
-                        <div class="project-one__single h-100">
-                            <div class="project-one__img">
-                                <img data-src="<?= get_picture("service_categories_v", $v->img_url) ?>" class="img-fluid lazyload" alt="<?= $v->title ?>" title="<?= $v->title ?>" />
-                            </div>
-                            <div class="project-one__content-box">
-                                <div class="project-one__content">
-                                    <h3 class="project-one__title"><a href="<?= base_url(lang("routes_services") . "/" . $v->seo_url) ?>" rel="dofollow" title="<?= lang("viewServices") ?>"><?= $v->title ?></a></h3>
-                                </div>
-                                <div class="project-one__btn">
-                                    <a href="<?= base_url(lang("routes_services") . "/" . $v->seo_url) ?>" rel="dofollow" title="<?= lang("viewServices") ?>"><i class="fa fa-arrow-right"></i></a>
+                    <div class="col-lg-4 col-md-6 col-sm-12 masonry-item small-column mb-3">
+                        <div class="project-block-one h-100">
+                            <div class="inner-box p_relative d_block b_radius_5">
+                                <figure class="image-box"><img data-src="<?= get_picture("service_categories_v", $v->img_url) ?>" class="img-fluid lazyload" alt="<?= $v->title ?>" title="<?= $v->title ?>" /></figure>
+                                <div class="content-box p_absolute l_0 d_block pl_30 pr_30 pb_30">
+                                    <div class="shape p_absolute l_0 b_0" style="background-image: url(<?= asset_url("public/images/shape/shape-47.webp") ?>);"></div>
+                                    <h4 class="d_block fs_20 lh_30 font_family_oxygen"><a href="<?= base_url(lang("routes_services") . "/" . $v->seo_url) ?>" rel="dofollow" title="<?= lang("viewServices") ?>"><?= $v->title ?></a></h4>
+                                    <div class="link p_absolute b_20 r_30"><a class="p_relative d_iblock w_50 h_50 lh_50 text-center b_radius_50 fs_14" href="<?= base_url(lang("routes_services") . "/" . $v->seo_url) ?>" rel="dofollow" title="<?= lang("viewServices") ?>"><i class="fa fa-arrow-right"></i></a></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--Project One Single End-->
                 <?php endforeach ?>
                 <?php if (!empty($links)) : ?>
-                    <div class="col-12 text-center">
-                        <div class="blog-page__pagination">
-                            <?= @$links ?>
-                        </div>
+                    <div class="pagination-wrapper">
+                        <?= @$links ?>
                     </div>
                 <?php endif ?>
             </div>
@@ -51,8 +46,6 @@
                 <p class="mb-0"><?= lang("youCanSearchDifferentServiceCategories") ?></p>
             </div>
         <?php endif ?>
-
-
     </div>
 </section>
-<!--Project V-1 End-->
+<!-- project-nine end -->
